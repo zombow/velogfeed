@@ -17,6 +17,7 @@ app.get("/", async (req, res) => {
     });
 
     res.json(items);
+    res.send("Text Test 가나다라");
 });
 
 app.listen(process.env.PORT || 3000, () => {
