@@ -4,7 +4,7 @@ const Parser = require("rss-parser");
 const app = express();
 const parser = new Parser();
 
-app.get("/", async (req, res) => {
+app.get("/feed", async (req, res) => {
     const feed = await parser.parseURL("https://v2.velog.io/rss/@dksduddnr33");
 
     const items = feed.items.map((item) => {
@@ -22,4 +22,3 @@ app.get("/", async (req, res) => {
 app.listen(process.env.PORT || 3000, () => {
     console.log("Server is running on port", process.env.PORT || 3000);
 });
-
