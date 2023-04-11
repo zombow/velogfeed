@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node feed.js",
-    "start": "node feed.js"
+    "dev": "node index.js",
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
