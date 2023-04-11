@@ -4,7 +4,7 @@ const Parser = require("rss-parser");
 const app = express();
 const parser = new Parser();
 
-app.get("/feed", async (req, res) => {
+app.get("/", async (req, res) => {
     const feed = await parser.parseURL("https://v2.velog.io/rss/@dksduddnr33");
 
     const items = feed.items.map((item) => {
