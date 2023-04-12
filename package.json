@@ -2,7 +2,7 @@
   "name": "velogfeed",
   "version": "0.0.1",
   "description": "",
-  "main": "src/front.js",
+  "main": "index.js",
   "scripts": {
     "dev": "node index.js",
     "start": "node index.js"
