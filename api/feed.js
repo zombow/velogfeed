@@ -1,22 +1,25 @@
-const express = require('express');
 const Parser = require('rss-parser');
-
-const app = express();
 const parser = new Parser();
 
-app.get('/api/feed', async (req, res) => {
-    const { username, postnum } = req.query;
-    const feed = await parser.parseURL(`https://velog.io/rss/@${username}`);
+module.exports = async (req, res) => {
+    try {
+        // 요청 파라미터에서 사용자 이름을 가져옴
+        const username = req.query.username;
+        if (!username) {
+            return res.status(400).send('username parameter is required');
+        }
 
-    let items = [];
-    for (let i = 0; i < feed.items.length && i < postnum; i++) {
-        const item = feed.items[i];
-        items.push({
-            title: item.title,
-            link: item.link,
-            contentSnippet: item.contentSnippet
-        });
+        // velog RSS 피드 URL
+        const feedUrl = `https://v2.velog.io/rss/@${username}`;
+        const feed = await parser.parseURL(feedUrl);
+
+        // CORS 허용
+        res.setHeader('Access-Control-Allow-Origin', '*');
+
+        // JSON 형식으로 파싱된 피드를 반환
+        res.json(feed);
+    } catch (err) {
+        console.error(err);
+        res.status(500).send('Server Error');
     }
-
-    res.json({ items });
-});
+};
