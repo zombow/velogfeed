@@ -11,3 +11,5 @@ app.use(function (req, res, next) {
 
 // api/feed 경로로 GET 요청이 오면 feed.js 모듈을 호출합니다.
 app.get('/api/feed', require('./api/feed'));
+// app 객체를 내보냅니다.
+module.exports = app;
