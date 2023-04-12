@@ -1,9 +1,8 @@
 {
-  "builds": [
-    {
-      "src": "index.js",
-      "use": "@vercel/node"
-    }
-  ],
-  "dependencies": {}
+  "build": {
+    "env": {
+      "CI": "true"
+    },
+    "command": "npm install"
+  }
 }
