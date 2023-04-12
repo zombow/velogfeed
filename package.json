@@ -1,17 +1,18 @@
 {
   "name": "velogfeed",
   "version": "0.0.1",
-  "description": "",
+  "description": "myvelogfeed api",
   "main": "index.js",
   "scripts": {
     "dev": "node index.js",
     "start": "node index.js"
   },
-  "author": "",
+  "author": "zombow <82148187+zombow@users.noreply.github.com>",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.21.1",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "rss-parser": "^3.12.0"
-  }
+  },
+  "repository": "https://github.com/zombow/velogfeed.git"
 }
