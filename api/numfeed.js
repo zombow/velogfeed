@@ -1,3 +1,4 @@
+const createLatestPostsCard = require("../src/card/postcard");
 const Parser = require('rss-parser');
 const parser = new Parser();
 
