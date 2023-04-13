@@ -23,14 +23,18 @@ module.exports = async (req, res) => {
         // CORS 허용
         res.setHeader('Access-Control-Allow-Origin', '*');
 
-        // JSON 형식으로 파싱된 피드를 반환
-        const items = feed.items.map(item => ({
+        // 글 정보를 가져옴
+        const item = feed.items[postnum];
+
+        // 카드 형식으로 정보를 변환
+        const card = {
             title: item.title,
             description: item.contentSnippet.slice(0, 15),
-            tag: item.tag
-        }));
+            tag: item.categories[0] || ''
+        };
 
-        res.json(items[postnum]);
+        // JSON 형식으로 카드를 반환
+        res.json(card);
     } catch (err) {
         console.error(err);
         res.status(500).send('Server Error');
