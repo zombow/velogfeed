@@ -9,11 +9,11 @@ module.exports = async (req, res) => {
             return res.status(400).send('username parameter is required. this is numfeed');
         }
         // 요청 파라미터에서 글순서를 가져옴
-        let numfeed = parseInt(req.query.numfeed);
-        if (!numfeed) {
-            numfeed = 0;
+        let postnum = parseInt(req.query.postnum);
+        if (!postnum) {
+            postnum = 0;
         } else {
-            numfeed = parseInt(numfeed);
+            postnum = parseInt(postnum);
         }
 
         // velog RSS 피드 URL
@@ -24,7 +24,7 @@ module.exports = async (req, res) => {
         res.setHeader('Access-Control-Allow-Origin', '*');
 
         // JSON 형식으로 파싱된 피드를 반환
-        res.json(feed.items[numfeed]);
+        res.json(feed.items[postnum]);
     } catch (err) {
         console.error(err);
         res.status(500).send('Server Error');
