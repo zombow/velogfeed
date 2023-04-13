@@ -24,7 +24,13 @@ module.exports = async (req, res) => {
         res.setHeader('Access-Control-Allow-Origin', '*');
 
         // JSON 형식으로 파싱된 피드를 반환
-        res.json(feed.items[postnum]);
+        const items = feed.items.map(item => ({
+            title: item.title,
+            description: item.contentSnippet.slice(0, 15),
+            categories: item.categories
+        }));
+
+        res.json(items[postnum]);
     } catch (err) {
         console.error(err);
         res.status(500).send('Server Error');
