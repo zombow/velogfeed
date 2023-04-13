@@ -1,5 +1,4 @@
 const Parser = require('rss-parser');
-const createLatestPostsCard = require("../src/card/postcard");
 const parser = new Parser();
 
 module.exports = async (req, res) => {
@@ -30,5 +29,4 @@ module.exports = async (req, res) => {
         console.error(err);
         res.status(500).send('Server Error');
     }
-    return res.send(createLatestPostsCard(posts));
 };
