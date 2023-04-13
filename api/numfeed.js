@@ -27,7 +27,7 @@ module.exports = async (req, res) => {
         const items = feed.items.map(item => ({
             title: item.title,
             description: item.contentSnippet.slice(0, 15),
-            categories: item.categories
+            tag: item.tag
         }));
 
         res.json(items[postnum]);
