@@ -6,7 +6,7 @@ module.exports = async (req, res) => {
         // 요청 파라미터에서 사용자 이름을 가져옴
         const username = req.query.username;
         if (!username) {
-            return res.status(400).send('유저 파라미터가 비어있습니다.');
+            return res.status(400).send('username parameter is required. this is numfeed');
         }
         // 요청 파라미터에서 글순서를 가져옴
         const feednum = req.query.numfeed;
@@ -23,7 +23,7 @@ module.exports = async (req, res) => {
         res.setHeader('Access-Control-Allow-Origin', '*');
 
         // JSON 형식으로 파싱된 피드를 반환
-        res.json(feed.items[numfeed]);
+        res.json(feed.items[feednum]);
     } catch (err) {
         console.error(err);
         res.status(500).send('Server Error');
