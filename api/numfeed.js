@@ -9,16 +9,15 @@ module.exports = async (req, res) => {
             return res.status(400).send('username parameter is required. this is numfeed');
         }
         // 요청 파라미터에서 글순서를 가져옴
-        let feednum = req.query.numfeed;
-        if (!feednum) {
+        const feednum = req.query.numfeed;
+        if (!numfeed) {
             feednum = 0;
-        } else {
-            feednum = parseInt(feednum);
         }
 
         // velog RSS 피드 URL
         const feedUrl = `https://v2.velog.io/rss/@${username}`;
         const feed = await parser.parseURL(feedUrl);
+
 
         // CORS 허용
         res.setHeader('Access-Control-Allow-Origin', '*');
