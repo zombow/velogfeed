@@ -9,7 +9,7 @@ module.exports = async (req, res) => {
             return res.status(400).send('username parameter is required. this is numfeed');
         }
         // 요청 파라미터에서 글순서를 가져옴
-        let numfeed = req.query.numfeed;
+        let numfeed = parseInt(req.query.numfeed);
         if (!numfeed) {
             numfeed = 0;
         } else {
