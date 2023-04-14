@@ -25,13 +25,13 @@ module.exports = async (req, res) => {
 
         // CORS 허용
         res.setHeader('Access-Control-Allow-Origin', '*');
-        res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
-        res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
         // JSON 형식으로 파싱된 피드와 함께 SVG 코드를 반환합니다.
+        const feedItem = feed.items[postnum];
+        const svg = postcardSVG.replace('{title}', feedItem.title).replace('{link}', feedItem.link);
         res.json({
-            feedItem: feed.items[postnum],
-            postcardSVG: postcardSVG,
+            feedItem: feedItem,
+            postcardSVG: svg,
         });
     } catch (err) {
         console.error(err);
