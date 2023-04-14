@@ -4,29 +4,6 @@ const parser = new Parser();
 // postcard.js 파일에서 SVG 코드를 가져옵니다.
 const postcardSVG = require('../src/card/post-card');
 
-function postcardSVG(title, description) {
-    return `
-    <svg xmlns="http://www.w3.org/2000/svg" width="300" height="200">
-      <style>
-        rect {
-          fill: #fff;
-          stroke: #999;
-        }
-        text.title {
-          font-size: 18px;
-          font-weight: bold;
-        }
-        text.description {
-          font-size: 14px;
-        }
-      </style>
-      <rect x="0" y="0" width="300" height="200" rx="10" ry="10"></rect>
-      <text x="10" y="30" class="title">${title}</text>
-      <text x="10" y="60" class="description">${description}</text>
-    </svg>
-  `;
-}
-
 module.exports = async (req, res) => {
     try {
         // 요청 파라미터에서 사용자 이름을 가져옴
