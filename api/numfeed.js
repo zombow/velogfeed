@@ -2,7 +2,7 @@ const Parser = require('rss-parser');
 const parser = new Parser();
 
 // postcard.js 파일에서 SVG 코드를 가져옵니다.
-const postcardSVG = require('./postcard');
+const postcardSVG = require('./src/postcard');
 
 module.exports = async (req, res) => {
     try {
@@ -11,6 +11,7 @@ module.exports = async (req, res) => {
         if (!username) {
             return res.status(400).send('username parameter is required. this is numfeed');
         }
+
         // 요청 파라미터에서 글순서를 가져옴
         let postnum = parseInt(req.query.postnum);
         if (!postnum) {
@@ -27,11 +28,9 @@ module.exports = async (req, res) => {
         res.setHeader('Access-Control-Allow-Origin', '*');
 
         // JSON 형식으로 파싱된 피드와 함께 SVG 코드를 반환합니다.
-        const feedItem = feed.items[postnum];
-        const svg = postcardSVG.replace('{title}', feedItem.title).replace('{link}', feedItem.link);
         res.json({
-            feedItem: feedItem,
-            postcardSVG: svg,
+            feedItem: feed.items[postnum],
+            postcardSVG: postcardSVG,
         });
     } catch (err) {
         console.error(err);
