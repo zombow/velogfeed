@@ -12,8 +12,7 @@
   "dependencies": {
     "axios": "^0.21.4",
     "express": "^4.18.2",
-    "rss-parser": "^3.13.0",
-    "./src/card/postcard": "file:src/card/postcard.js"
+    "rss-parser": "^3.13.0"
   },
   "repository": "https://github.com/zombow/velogfeed.git"
 }
