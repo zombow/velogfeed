@@ -29,7 +29,12 @@ module.exports = async (req, res) => {
         // JSON 형식으로 파싱된 피드를 반환
         const post = feed.items[postnum];
         const svg = postcardSVG(post.title, post.link);
-        res.send(svg);
+        const data = {
+            title: post.title,
+            link: post.link,
+            svg: svg
+        }
+        res.json(data);
     } catch (err) {
         console.error(err);
         res.status(500).send('Server Error');
