@@ -2,7 +2,7 @@ const Parser = require('rss-parser');
 const parser = new Parser();
 
 // postcard.js 파일에서 SVG 코드를 가져옵니다.
-const postcardSVG = require('./Postcard');
+const postcardSVG = require('./postcard');
 
 module.exports = async (req, res) => {
     try {
@@ -25,6 +25,8 @@ module.exports = async (req, res) => {
 
         // CORS 허용
         res.setHeader('Access-Control-Allow-Origin', '*');
+        res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+        res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
         // JSON 형식으로 파싱된 피드와 함께 SVG 코드를 반환합니다.
         res.json({
