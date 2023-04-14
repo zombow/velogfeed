@@ -31,8 +31,8 @@ module.exports = async (req, res) => {
         const svg = postcardSVG(post.title, post.link);
         const data = {
             title: post.title,
+            svg: svg,
             link: post.link,
-            svg: svg
         }
         res.json(data);
     } catch (err) {
