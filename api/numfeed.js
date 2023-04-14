@@ -29,7 +29,6 @@ module.exports = async (req, res) => {
         // JSON 형식으로 파싱된 피드와 함께 SVG 코드를 반환합니다.
         res.json({
             feedItem: feed.items[postnum],
-            postcardSVG: postcardSVG,
         });
     } catch (err) {
         console.error(err);
