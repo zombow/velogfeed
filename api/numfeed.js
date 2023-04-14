@@ -1,9 +1,6 @@
 const Parser = require('rss-parser');
 const parser = new Parser();
 
-// postcard.js 파일에서 SVG 코드를 가져옵니다.
-const postcardSVG = require('./src/postcard');
-
 module.exports = async (req, res) => {
     try {
         // 요청 파라미터에서 사용자 이름을 가져옴
