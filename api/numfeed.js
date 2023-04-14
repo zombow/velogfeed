@@ -11,7 +11,6 @@ module.exports = async (req, res) => {
         if (!username) {
             return res.status(400).send('username parameter is required. this is numfeed');
         }
-
         // 요청 파라미터에서 글순서를 가져옴
         let postnum = parseInt(req.query.postnum);
         if (!postnum) {
@@ -27,11 +26,8 @@ module.exports = async (req, res) => {
         // CORS 허용
         res.setHeader('Access-Control-Allow-Origin', '*');
 
-        // JSON 형식으로 파싱된 피드와 함께 SVG 코드를 반환합니다.
-        res.json({
-            feedItem: feed.items[postnum],
-            postcardSVG: postcardSVG,
-        });
+        // JSON 형식으로 파싱된 피드를 반환
+        res.json(feed.items[postnum]);
     } catch (err) {
         console.error(err);
         res.status(500).send('Server Error');
