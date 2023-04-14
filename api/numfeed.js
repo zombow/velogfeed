@@ -23,10 +23,9 @@ module.exports = async (req, res) => {
         const feedUrl = `https://v2.velog.io/rss/@${username}`;
         const feed = await parser.parseURL(feedUrl);
 
-        // CORS 허용
-        res.setHeader('Access-Control-Allow-Origin', '*');
-
         // JSON 형식으로 파싱된 피드와 함께 SVG 코드를 반환합니다.
+        res.setHeader('Content-Type', 'application/json');
+        res.setHeader('Access-Control-Allow-Origin', '*');
         res.json({
             feedItem: feed.items[postnum],
             postcardSVG: postcardSVG,
