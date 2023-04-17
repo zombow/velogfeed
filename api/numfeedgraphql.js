@@ -42,9 +42,9 @@ module.exports = (req, res) => {
         .then(response => response.json())
         .then(result => {
             if (!result.data) {
-                return res.status(400).send('User not found');
+                return res.status(400).send('result.data not found');
             }
-
+            console.log(result);
             const post = result.data.user.posts.edges[postnum % 10]?.node;
             if (!post) {
                 return res.status(400).send('Post not found');
