@@ -45,6 +45,8 @@ module.exports = async (req, res) => {
             body: JSON.stringify({ query })
         });
 
+        console.log(response);
+
         const result = await response.json();
         const post = result.data.user.posts.edges[postnum % 10].node;
 
