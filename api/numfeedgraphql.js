@@ -12,22 +12,24 @@ module.exports = (req, res) => {
     const endpointUrl = 'https://v2.velog.io/graphql';
 
     const query = `
-    query {
-      user(username: "${username}") {
-        posts(page: ${postnum / 10 + 1}, perPage: 10) {
-          edges {
-            node {
-              title
-              body
-              user {
-                username
-              }
-              publishedAt
-            }
+   query {
+  user(username: "${username}") {
+    username
+    posts(page: ${postnum / 10 + 1}, perPage: 10) {
+      edges {
+        node {
+          title
+          body
+          user {
+            username
           }
+          publishedAt
         }
       }
     }
+  }
+}
+
   `;
 
     fetch(endpointUrl, {
