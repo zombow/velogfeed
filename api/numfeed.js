@@ -30,8 +30,6 @@ module.exports = async (req, res) => {
         const post = feed.items[postnum];
         const svg = postcardSVG(post.title, post.description);
         const data = {
-            link: post.link,
-            description: post.description,
             svg: svg,
         }
         res.json(data);
