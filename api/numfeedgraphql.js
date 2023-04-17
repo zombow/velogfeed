@@ -1,5 +1,5 @@
 const fetch = require('node-fetch');
-const { createSVG } = require('../src/card/post-card');
+const { postcardSVG } = require('../src/card/post-card');
 
 module.exports = async (req, res) => {
     try {
@@ -48,7 +48,7 @@ module.exports = async (req, res) => {
         const result = await response.json();
         const post = result.data.user.posts.edges[postnum % 10].node;
 
-        const svg = createSVG(post.title, post.body);
+        const svg = postcardSVG(post.title, post.body);
         const data = {
             svg
         };
