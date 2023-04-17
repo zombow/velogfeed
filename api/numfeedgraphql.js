@@ -48,6 +48,13 @@ module.exports = async (req, res) => {
         console.log(response);
 
         const result = await response.json();
+        if (!result.data) {
+            return res.status(400).send('User not found');
+        }
+        const post = result.data.user?.posts?.edges[postnum % 10]?.node;
+        if (!post) {
+            return res.status(400).send('Post not found');
+        }
         const post = result.data.user.posts.edges[postnum % 10].node;
 
         const svg = postcardSVG(post.title, post.body);
