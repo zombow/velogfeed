@@ -28,10 +28,10 @@ module.exports = async (req, res) => {
 
         // JSON 형식으로 파싱된 피드를 반환
         const post = feed.items[postnum];
-        const svg = postcardSVG(post.title, post.link);
+        const svg = postcardSVG(post.title, post.description);
         const data = {
             link: post.link,
-            title: post.title,
+            description: post.description,
             svg: svg,
         }
         res.json(data);
