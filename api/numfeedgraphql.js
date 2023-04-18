@@ -37,14 +37,6 @@ query {
     })
         .then(response => response.json())
         .then(result => {
-            //if (!result.data) {
-           //     return res.status(400).send('result.data not found');
-         //  }
-           // const user = result.data.user;
-         //   if (!user) {
-          //      return res.status(400).send('User not found');
-         //   }
-
             res.setHeader('Access-Control-Allow-Origin', '*');
             res.send(result.data);
         })
