@@ -12,6 +12,7 @@ module.exports = (req, res) => {
    query {
      user(username: "${username}") {
        username
+       posts
      }
    }
   `;
@@ -36,7 +37,7 @@ module.exports = (req, res) => {
             }
 
             res.setHeader('Access-Control-Allow-Origin', '*');
-            res.send(user);
+            res.send(data.body);
         })
         .catch(err => {
             console.error(err);
