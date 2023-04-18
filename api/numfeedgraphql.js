@@ -15,12 +15,11 @@ module.exports = (req, res) => {
       posts {
         title
         short_description
-          }
-        }
       }
     }
   }
 `;
+
 
 
     fetch(endpointUrl, {
@@ -34,9 +33,9 @@ module.exports = (req, res) => {
     })
         .then(response => response.json())
         .then(result => {
-           // if (!result.data) {
-           //     return res.status(400).send('result.data not found');
-           //}
+            if (!result.data) {
+                return res.status(400).send('result.data not found');
+           }
             const user = result.data.user;
             if (!user) {
                 return res.status(400).send('User not found');
