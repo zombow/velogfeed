@@ -12,6 +12,7 @@ module.exports = (req, res) => {
    query {
      user(username: "${username}") {
        username
+       post
      }
    }
   `;
