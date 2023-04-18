@@ -9,7 +9,7 @@ module.exports = (req, res) => {
     const endpointUrl = 'https://v2.velog.io/graphql';
 
     const query = `
- query {
+query {
   user(username: "${username}") {
     username
     posts {
@@ -31,8 +31,7 @@ module.exports = (req, res) => {
       likes
     }
   }
-}
-
+}`;
 
 
 
