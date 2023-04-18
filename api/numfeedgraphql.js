@@ -38,7 +38,7 @@ query {
         .then(response => response.json())
         .then(result => {
             res.setHeader('Access-Control-Allow-Origin', '*');
-            res.send(result.data);
+            res.send(result);
         })
         .catch(err => {
             console.error(err);
