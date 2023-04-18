@@ -9,16 +9,30 @@ module.exports = (req, res) => {
     const endpointUrl = 'https://v2.velog.io/graphql';
 
     const query = `
-  query {
-    user(username: "${username}") {
-      username
-      posts {
-        title
-        short_description
+ query {
+  user(username: "${username}") {
+    username
+    posts {
+      id
+      title
+      short_description
+      thumbnail
+      user {
+        username
+        profile {
+          thumbnail
+        }
       }
+      url_slug
+      released_at
+      updated_at
+      comments_count
+      tags
+      likes
     }
   }
-`;
+}
+
 
 
 
