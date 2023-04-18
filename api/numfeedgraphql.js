@@ -12,28 +12,16 @@ module.exports = (req, res) => {
   query {
     user(username: "${username}") {
       username
-       posts(cursor: $cursor, username: $username, temp_only: $temp_only, tag: $tag, limit: $limit) {
-         id
-         title
-         short_description
-         thumbnail
-         user {
-           username
-           profile {
-             thumbnail
-           }
-         }
-         url_slug
-         released_at
-         updated_at
-         comments_count
-         tags
-         likes
+      posts {
+        title
+        short_description
+          }
         }
       }
     }
   }
 `;
+
 
     fetch(endpointUrl, {
         method: 'POST',
