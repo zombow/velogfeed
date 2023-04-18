@@ -37,7 +37,7 @@ module.exports = (req, res) => {
             }
 
             res.setHeader('Access-Control-Allow-Origin', '*');
-            res.send(data.body);
+            res.send(data);
         })
         .catch(err => {
             console.error(err);
