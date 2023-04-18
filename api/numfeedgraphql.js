@@ -10,25 +10,15 @@ module.exports = (req, res) => {
 
     const query = `
 query {
-  user(username: "${username}") {
-    username
-    posts {
-      id
-      title
-      short_description
-      thumbnail
-      user {
-        username
-        profile {
-          thumbnail
-        }
+  __schema {
+    types {
+      name
+    }
+    queryType {
+      fields {
+        name
+        description
       }
-      url_slug
-      released_at
-      updated_at
-      comments_count
-      tags
-      likes
     }
   }
 }`;
