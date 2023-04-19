@@ -28,9 +28,9 @@ const fetcher = (variables) => {
     });
 };
 
-async function fetchPost(name, tag) {
+async function fetchPost(name) {
     try {
-        const { data } = await fetcher({ username: name, limit: 1, tag: tag });
+        const { data } = await fetcher({ username: name, limit: 1 });
         return data.data.posts[0];
     } catch (e) {
         throw new Error(e);
