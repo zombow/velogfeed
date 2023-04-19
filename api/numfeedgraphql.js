@@ -1,48 +1,15 @@
-const fetch = require('node-fetch');
+const fetchPost = require("../src/fetcher/post-fetcher");
 
-module.exports = (req, res) => {
-    const username = req.query.username;
-    if (!username) {
-        return res.status(400).send('username parameter is required.');
+module.exports = async (req, res) => {
+    const { name, tag } = req.query;
+    try {
+        const post = await fetchPost(name, tag);
+        const url = new String(
+            `https://velog.io/@${post.user.username}/${post.url_slug}`
+        );
+        res.send(`<script>window.location.href='${url}'</script>`);
+        return;
+    } catch (e) {
+        return res.send(e.message);
     }
-
-    const endpointUrl = 'https://v2.velog.io/graphql';
-
-    const query = `
-query IntrospectionQuery {
-  __schema {
-    types {
-      name
-      kind
-      description
-      fields {
-        name
-        description
-      }
-    }
-  }
-}
-
-`;
-
-
-
-    fetch(endpointUrl, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': '*',
-            'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
-        },
-        body: JSON.stringify({ query })
-    })
-        .then(response => response.json())
-        .then(result => {
-            res.setHeader('Access-Control-Allow-Origin', '*');
-            res.send(result);
-        })
-        .catch(err => {
-            console.error(err);
-            res.status(500).send('Server Error');
-        });
 };
