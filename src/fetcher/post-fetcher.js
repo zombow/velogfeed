@@ -28,7 +28,7 @@ const fetcher = (variables) => {
     });
 };
 
-async function fetchPost(username, tag, postnum) {
+async function fetchPost(username, postnum, tag) {
     try {
         const { data } = await fetcher({ username: username, limit: 20, tag: tag });
         let num = postnum;
