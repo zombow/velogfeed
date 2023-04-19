@@ -1,10 +1,10 @@
 const fetchPost = require("../src/fetcher/post-fetcher");
 
 module.exports = async (req, res) => {
-    const { name } = req.query;
-    console.log(name);
+    const { username } = req.query;
+    console.log(username);
     try {
-        const post = await fetchPost(name);
+        const post = await fetchPost(username);
         const url = new String(
             `https://velog.io/@${post.user.username}/${post.url_slug}`
         );
