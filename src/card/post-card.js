@@ -22,7 +22,7 @@
         }
       </style>
       <rect x="0" y="0" width="400" height="180" fill="#FFF"/>
-      <image class="thumbnail" xlink:href="${thumbnail}" x="0" y="0" width="${imageWidth}" height="${imageHeight}"/>
+      <image class="thumbnail" xlink:href="${thumbnail}" x="20" y="40" width="${imageWidth}" height="${imageHeight}"/>
       <text x="20" y="40" class="title">${title}</text>
       <text x="20" y="80" class="short_description">${short_description}</text>
     </svg>
