@@ -7,7 +7,7 @@ module.exports = async (req, res) => {
         const url = new String(
             `https://velog.io/@${post.user.username}/${post.url_slug}`
         );
-        res.send(`<script>window.location.href='${url}'</script>`);
+        res.send(post);
         return;
     } catch (e) {
         return res.send(e.message);
