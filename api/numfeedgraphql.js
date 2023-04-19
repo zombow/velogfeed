@@ -2,9 +2,9 @@ const fetchPost = require("../src/fetcher/post-fetcher");
 const postcardSVG = require("../src/card/post-card");
 
 module.exports = async (req, res) => {
-    const { username, postnum } = req.query;
+    const { username, postnum, tag } = req.query;
     try {
-        const post = await fetchPost(username, postnum);
+        const post = await fetchPost({ username, postnum, tag });
         const url = new String(
             `https://velog.io/@${post.user.username}/${post.url_slug}`
         );
