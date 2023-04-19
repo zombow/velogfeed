@@ -1,7 +1,7 @@
 const fetchPost = require("../src/fetcher/post-fetcher");
 
 module.exports = async (req, res) => {
-    const { name } = req.username;
+    const { name } = req.query;
     try {
         const post = await fetchPost(name);
         const url = new String(
