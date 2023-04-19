@@ -1,4 +1,4 @@
-﻿const postcardSVG = (title, contentSnippet) => {
+﻿const postcardSVG = (title, short_description) => {
   return `
     <svg xmlns="http://www.w3.org/2000/svg" width="400" height="180">
       <style>
@@ -9,7 +9,7 @@
           font-weight: bold;
           fill: #333;
         }
-        .contentSnippet {
+        .short_description {
           font-family: Arial;
           font-size: 16px;
           fill: #333;
@@ -17,7 +17,7 @@
       </style>
       <rect x="0" y="0" width="400" height="180" fill="#FFF"/>
       <text x="20" y="40" class="title">${title}</text>
-      <text x="20" y="80" class="contentSnippet">${contentSnippet}</text>
+      <text x="20" y="80" class="short_description">${short_description}</text>
     </svg>
   `;
 };

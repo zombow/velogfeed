@@ -1,7 +1,8 @@
 const fetchPost = require("../src/fetcher/post-fetcher");
+const postcardSVG = require("../src/card/post-card");
 
 module.exports = async (req, res) => {
-    const { username, tag } = req.query;
+    const { username, tag, short_description } = req.query;
     try {
         const post = await fetchPost(username, tag);
         const url = new String(
@@ -11,7 +12,8 @@ module.exports = async (req, res) => {
             url: url,
             post: post
         }
-        res.send(datas);
+        const postSVG = postcardSVG(datas, short_description);
+        res.send(postSVG);
         return;
     } catch (e) {
         return res.send(e.message);
