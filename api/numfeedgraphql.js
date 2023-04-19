@@ -7,7 +7,11 @@ module.exports = async (req, res) => {
         const url = new String(
             `https://velog.io/@${post.user.username}/${post.url_slug}`
         );
-        res.send(post, url);
+        const datas = {
+            url: url,
+            post: post
+        }
+        res.send(datas);
         return;
     } catch (e) {
         return res.send(e.message);
