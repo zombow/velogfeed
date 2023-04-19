@@ -1,5 +1,8 @@
-﻿const postcardSVG = (title, short_description) => {
-  return `
+﻿const postcardSVG = (title, thumbnail, short_description) => {
+    const imageWidth = 80;
+    const imageHeight = 80;
+
+    return `
     <svg xmlns="http://www.w3.org/2000/svg" width="400" height="180">
       <style>
         /* SVG 스타일을 여기에 추가합니다. */
@@ -14,8 +17,11 @@
           font-size: 16px;
           fill: #333;
         }
+        .thumbnail {
+        }
       </style>
       <rect x="0" y="0" width="400" height="180" fill="#FFF"/>
+      <image class="thumbnail" xlink:href="${thumbnail}" x="300" y="20" width="${imageWidth}" height="${imageHeight}"/>
       <text x="20" y="40" class="title">${title}</text>
       <text x="20" y="80" class="short_description">${short_description}</text>
     </svg>

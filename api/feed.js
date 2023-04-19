@@ -8,12 +8,13 @@ module.exports = async (req, res) => {
         const url = new String(
             `https://velog.io/@${post.user.username}/${post.url_slug}`
         );
-        const postSVG = postcardSVG(post.title, post.short_description);
+        const postSVG = postcardSVG(post.title, post.thumbnail, post.short_description);
         const postinfo = {
             post: post,
             url: url,
             title: post.title,
             short_description: post.short_description,
+            thumbnail : post.thumbnail,
             svg: postSVG,
         }
         res.send(postinfo);
