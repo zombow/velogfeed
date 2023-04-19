@@ -14,7 +14,7 @@ module.exports = async (req, res) => {
             url: post.url,
             title: post.title,
             short_description: post.short_description,
-            svg: postSVG;
+            svg: postSVG,
         }
         res.send(postinfo);
         return;
