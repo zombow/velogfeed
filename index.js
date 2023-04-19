@@ -11,8 +11,6 @@ app.use(function (req, res, next) {
 
 // api/feed 경로로 GET 요청이 오면 feed.js 모듈을 호출합니다.
 app.get('/api/feed', require('./api/feed'));
-app.get('/api/numfeed', require('./api/numfeed'));
-app.get('/api/numfeedgraphql', require('./api/numfeedgraphql'));
 
 
 // app 객체를 내보냅니다.
