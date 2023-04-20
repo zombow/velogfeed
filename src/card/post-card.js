@@ -22,9 +22,13 @@
           height: ${imageHeight}px;
         }
       </style>
-      <image class="thumbnail" xlink:href="${thumbnail}" x="0" y="0"/>
-      <text x="20" y="200" class="title">${title}</text>
-      <text x="20" y="220" class="short_description">${short_description}</text>
+      <g transform="translate(0,0)">
+        <image class="thumbnail" xlink:href="${thumbnail}" x="0" y="0"/>
+      </g>
+      <g transform="translate(0,200)">
+        <text class="title" x="20" y="0">${title}</text>
+        <text class="short_description" x="20" y="20">${short_description}</text>
+      </g>
     </svg>
   `;
 };
