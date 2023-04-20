@@ -1,5 +1,4 @@
-﻿module.exports = postcardSVG;
-const postcardSVG = (title, thumbnail, short_description) => {
+﻿const postcardSVG = (title, thumbnail, short_description) => {
     const imageWidth = "100%";
     const imageHeight = "auto";
     const strokeWidth = 4;
@@ -22,7 +21,7 @@ const postcardSVG = (title, thumbnail, short_description) => {
         .thumbnail{
           width: ${imageWidth};
           height: ${imageHeight};
-            max-height: 200px;
+          max-height: 200px;
         }
       </style>
       <rect x="0" y="0" width="500" height="300" stroke="#333" stroke-width="${strokeWidth}" fill="none" />
