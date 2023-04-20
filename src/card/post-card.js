@@ -23,7 +23,7 @@
           height: ${imageHeight};
         }
       </style>
-      <rect x="0" y="0" width="500" height="300" stroke="#333" stroke-width="${strokeWidth}" fill="none" />
+      <rect x="${strokeWidth / 2}" y="${strokeWidth / 2}" width="${500 - strokeWidth}" height="${300 - strokeWidth}" stroke="#333" stroke-width="${strokeWidth}" fill="none" />
       <g transform="translate(0,0)">
         <image class="thumbnail" xlink:href="${thumbnail}" x="0" y="0"/>
       </g>
