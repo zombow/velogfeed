@@ -25,7 +25,7 @@
       <g transform="translate(0,0)">
         <image class="thumbnail" xlink:href="${thumbnail}" x="0" y="0"/>
       </g>
-      <g transform="translate(0,200)">
+      <g transform="translate(0,300)">
         <text class="title" x="20" y="0">${title}</text>
         <text class="short_description" x="20" y="20">${short_description}</text>
       </g>
