@@ -1,5 +1,5 @@
 ﻿const postcardSVG = (title, thumbnail, short_description) => {
-    const imageWidth = "50%";
+    const imageWidth = "100%";
     const imageHeight = "auto";
     const strokeWidth = 4;
 
