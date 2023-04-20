@@ -22,11 +22,12 @@ const postcardSVG = (title, thumbnail, short_description) => {
         .thumbnail{
           width: ${imageWidth};
           height: ${imageHeight};
+            max-height: 200px;
         }
       </style>
       <rect x="0" y="0" width="500" height="300" stroke="#333" stroke-width="${strokeWidth}" fill="none" />
       <g transform="translate(0,0)">
-        <image class="thumbnail" xlink:href="${thumbnail}" x="0" y="0" preserveAspectRatio="xMidYMid slice"/>
+        <image class="thumbnail" xlink:href="${thumbnail}" x="0" y="0"  preserveAspectRatio="xMidYMid slice"/>
       </g>
       <g transform="translate(0,210)">
         <text class="title" x="20" y="0">${title}</text>
