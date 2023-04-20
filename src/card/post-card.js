@@ -1,9 +1,10 @@
 ﻿const postcardSVG = (title, thumbnail, short_description) => {
-    const imageWidth = 400;
+    const imageWidth = 500;
     const imageHeight = 180;
+    const strokeWidth = 4;
 
     return `
-    <svg xmlns="http://www.w3.org/2000/svg" width="400" height="240">
+    <svg xmlns="http://www.w3.org/2000/svg" width="500" height="300">
       <style>
         /* SVG 스타일을 여기에 추가합니다. */
         .title {
@@ -22,6 +23,7 @@
           height: ${imageHeight}px;
         }
       </style>
+      <rect x="0" y="0" width="500" height="300" stroke="#333" stroke-width="${strokeWidth}" fill="none" />
       <g transform="translate(0,0)">
         <image class="thumbnail" xlink:href="${thumbnail}" x="0" y="0"/>
       </g>
