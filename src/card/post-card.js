@@ -3,7 +3,7 @@
     const imageHeight = 180;
 
     return `
-    <svg xmlns="http://www.w3.org/2000/svg" width="400" height="180">
+    <svg xmlns="http://www.w3.org/2000/svg" width="400" height="240">
       <style>
         /* SVG 스타일을 여기에 추가합니다. */
         .title {
@@ -23,8 +23,8 @@
         }
       </style>
       <image class="thumbnail" xlink:href="${thumbnail}" x="0" y="0"/>
-      <text x="20" y="140" class="title">${title}</text>
-      <text x="20" y="160" class="short_description">${short_description}</text>
+      <text x="20" y="200" class="title">${title}</text>
+      <text x="20" y="220" class="short_description">${short_description}</text>
     </svg>
   `;
 };
