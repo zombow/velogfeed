@@ -1,6 +1,4 @@
 ﻿const postcardSVG = (title, thumbnail, short_description) => {
-    const imageWidth = 500;
-    const imageHeight = 200;
     const strokeWidth = 4;
 
     return `
@@ -18,14 +16,13 @@
           font-size: 16px;
           fill: #333;
         }
-        .thumbnail{
-          width: ${imageWidth}px;
-          height: ${imageHeight}px;
+        .thumbnail {
+          max-height: 200px;
         }
       </style>
       <rect x="0" y="0" width="500" height="300" stroke="#333" stroke-width="${strokeWidth}" fill="none" />
       <g transform="translate(0,0)">
-        <image class="thumbnail" xlink:href="${thumbnail}" x="0" y="0"/>
+        <image class="thumbnail" xlink:href="${thumbnail}" x="0" y="0" preserveAspectRatio="xMidYMid slice"/>
       </g>
       <g transform="translate(0,210)">
         <text class="title" x="20" y="0">${title}</text>
