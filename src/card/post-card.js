@@ -33,4 +33,9 @@
         <text class="title" x="20" y="0">${title}</text>
         <text class="short_description" x="20" y="20">${short_description}</text>
       </g>
-      <rect x="${strokeWidth}" y="${strokeWidth}" width="${svgWidth - strokeWidth}" height="${svgHeight - strokeWidth}" stroke
+      <rect x="${strokeWidth}" y="${strokeWidth}" width="${svgWidth - strokeWidth}" height="${svgHeight - strokeWidth}" stroke ="#333" stroke-width="${strokeWidth}" fill="none" />
+    </svg>
+  `;
+};
+
+module.exports = postcardSVG;
