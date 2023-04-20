@@ -1,6 +1,6 @@
 ﻿const postcardSVG = (title, thumbnail, short_description) => {
     const imageWidth = 400;
-    const imageHeight = 120;
+    const imageHeight = 180;
 
     return `
     <svg xmlns="http://www.w3.org/2000/svg" width="400" height="180">
