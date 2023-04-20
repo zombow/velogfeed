@@ -3,8 +3,11 @@
   const imageHeight = "100%";
   const strokeWidth = 4;
 
+    const svgWidth = 500;
+    const svgHeight = 500;
+
   return `
-    <svg xmlns="http://www.w3.org/2000/svg" width="500" height="300">
+    <svg xmlns="http://www.w3.org/2000/svg" width="${svgWidth}" height="${svgHeight}">
       <style>
         /* SVG 스타일을 여기에 추가합니다. */
         .title {
@@ -30,7 +33,7 @@
         <text class="title" x="20" y="0">${title}</text>
         <text class="short_description" x="20" y="20">${short_description}</text>
       </g>
-      <rect x="${strokeWidth / 2}" y="${strokeWidth / 2}" width="${500 - strokeWidth}" height="${300 - strokeWidth}" stroke="#333" stroke-width="${strokeWidth}" fill="none" />
+      <rect x="${strokeWidth}" y="${strokeWidth}" width="${svgWidth - strokeWidth}" height="${svgHeight - strokeWidth}" stroke="#333" stroke-width="${strokeWidth}" fill="none" />
     </svg>
   `;
 };
