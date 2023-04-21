@@ -7,7 +7,7 @@
 
   // 썸네일 이미지의 크기와 위치를 설정합니다.
   const thumbnailWidth = svgWidth;
-  const thumbnailHeight = svgHeight * 0.7;
+  const thumbnailHeight = svgHeight * 0.6;
   const thumbnailX = 0;
   const thumbnailY = 0;
 
@@ -39,7 +39,7 @@
       </style>
       <g transform="translate(${thumbnailX}, ${thumbnailY})">
         <rect x="0" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}" fill="#ccc"/>
-        <image class="thumbnail" xlink:href="${thumbnail}" x="0" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}"/>
+        <image class="thumbnail" xlink:href="${thumbnail}" x="10" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}"/>
       </g>
       <g transform="translate(${infoX}, ${infoY})">
         <rect x="0" y="0" width="${infoWidth}" height="${infoHeight}" fill="#eee"/>
