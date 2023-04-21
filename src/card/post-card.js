@@ -1,29 +1,23 @@
 ﻿const postcardSVG = (title, thumbnail, short_description) => {
-    const imageWidth = "100%";
-    const imageHeight = "100%";
-    const strokeWidth = 2;
-    const svgWidth = 500;
-    const svgHeight = 300;
+  const imageWidth = "100%";
+  const imageHeight = "100%";
+  const strokeWidth = 2;
+  const svgWidth = 500;
+  const svgHeight = 300;
 
-    // 썸네일 이미지의 크기와 위치를 설정합니다.
-    const thumbnailWidth = svgWidth;
-    const thumbnailHeight = svgHeight * 0.65;
-    const thumbnailX = 0;
-    const thumbnailY = 0;
+  // 썸네일 이미지의 크기와 위치를 설정합니다.
+  const thumbnailWidth = svgWidth;
+  const thumbnailHeight = svgHeight * 0.65;
+  const thumbnailX = 0;
+  const thumbnailY = 0;
 
-    // 제목과 요약 정보 영역의 크기와 위치를 설정합니다.
-    const infoWidth = svgWidth;
-    const infoHeight = svgHeight * 0.35;
-    const infoX = 0;
-    const infoY = thumbnailHeight;
+  // 제목과 요약 정보 영역의 크기와 위치를 설정합니다.
+  const infoWidth = svgWidth;
+  const infoHeight = svgHeight * 0.35;
+  const infoX = 0;
+  const infoY = thumbnailHeight;
 
-    // 썸네일 이미지 비율에 따라 높이를 계산합니다.
-    const thumbnailImage = new Image();
-    thumbnailImage.src = thumbnail;
-    const thumbnailImageRatio = thumbnailImage.height / thumbnailImage.width;
-    const thumbnailImageHeight = thumbnailWidth * thumbnailImageRatio;
-
-    return `
+  return `
     <svg xmlns="http://www.w3.org/2000/svg" width="${svgWidth}" height="${svgHeight}">
       <style>
         /* SVG 스타일을 여기에 추가합니다. */
@@ -45,7 +39,7 @@
       </style>
       <g transform="translate(${thumbnailX}, ${thumbnailY})">
         <rect x="0" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}" fill="#ccc"/>
-        <image class="thumbnail" xlink:href="${thumbnail}" x="0" y="${(thumbnailHeight - thumbnailImageHeight) / 2}" width="${thumbnailWidth}" height="${thumbnailImageHeight}"/>
+        <image class="thumbnail" xlink:href="${thumbnail}" x="0" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}"/>
       </g>
       <g transform="translate(${infoX}, ${infoY})">
         <rect x="0" y="0" width="${infoWidth}" height="${infoHeight}" fill="#eee"/>
