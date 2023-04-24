@@ -33,8 +33,8 @@
           fill: #333;
         }
         .thumbnail{
-          width: ${thumbnailWidth};
-          height: ${thumbnailHeight};
+          width: ${svgWidth};
+          height: ${svgHeight};
         }
       </style>
       <g transform="translate(${thumbnailX}, ${thumbnailY})">
