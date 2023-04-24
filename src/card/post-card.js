@@ -33,8 +33,8 @@
           fill: #333;
         }
         .thumbnail{
-          width: ${imageWidth};
-          height: ${imageHeight};
+          width: ${thumbnailWidth};
+          height: ${thumbnailHeight};
         }
       </style>
       <g transform="translate(${thumbnailX}, ${thumbnailY})">
