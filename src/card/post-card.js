@@ -31,12 +31,12 @@
           fill: #333;
         }
         .thumbnail{
-          object-fit: cover;
+            object-fit: cover;
         }
       </style>
       <g transform="translate(${thumbnailX}, ${thumbnailY})">
         <rect x="0" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}" fill="#ccc"/>
-        <image class="thumbnail" xlink:href="${thumbnail}" x="0" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}"/>
+        <image class="thumbnail" xlink:href="${thumbnail}" x="0" y="0"/>
       </g>
       <g transform="translate(${infoX}, ${infoY})">
         <rect x="0" y="0" width="${infoWidth}" height="${infoHeight}" fill="#eee"/>
