@@ -30,13 +30,13 @@
           font-size: 16px;
           fill: #333;
         }
+        .thumbnail{
+        }
       </style>
-      <defs>
-        <pattern id="thumbnail-pattern" x="0" y="0" width="1" height="1" preserveAspectRatio="xMidYMid slice">
-          <image xlink:href="${thumbnail}" x="0" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}"></image>
-        </pattern>
-      </defs>
-      <rect x="${thumbnailX}" y="${thumbnailY}" width="${thumbnailWidth}" height="${thumbnailHeight}" fill="url(#thumbnail-pattern)" />
+      <g transform="translate(${thumbnailX}, ${thumbnailY})">
+        <rect x="0" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}" fill="#ccc"/>
+        <image class="thumbnail" xlink:href="${thumbnail}" x="0" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}" style="object-fit: cover;"/>
+      </g>
       <g transform="translate(${infoX}, ${infoY})">
         <rect x="0" y="0" width="${infoWidth}" height="${infoHeight}" fill="#eee"/>
         <text class="title" x="20" y="40">${title}</text>
