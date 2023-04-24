@@ -1,6 +1,4 @@
 ﻿const postcardSVG = (title, thumbnail, short_description) => {
-  const imageWidth = "100%";
-  const imageHeight = "100%";
   const strokeWidth = 2;
   const svgWidth = 500;
   const svgHeight = 300;
@@ -33,8 +31,6 @@
           fill: #333;
         }
         .thumbnail{
-          width: ${thumbnailWidth};
-          height: ${thumbnailHeight};
         }
       </style>
       <g transform="translate(${thumbnailX}, ${thumbnailY})">
