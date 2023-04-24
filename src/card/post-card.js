@@ -39,7 +39,7 @@
       </style>
       <g transform="translate(${thumbnailX}, ${thumbnailY})">
         <rect x="0" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}" fill="#ccc"/>
-        <image class="thumbnail" xlink:href="${thumbnail}" x="0" y="0" width="${imageWidth}" height="${100}"/>
+        <image class="thumbnail" xlink:href="${thumbnail}" x="0" y="0" width="${thumbnailWidth}" height="${100}"/>
       </g>
       <g transform="translate(${infoX}, ${infoY})">
         <rect x="0" y="0" width="${infoWidth}" height="${infoHeight}" fill="#eee"/>
