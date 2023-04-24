@@ -34,8 +34,10 @@
         }
       </style>
       <g transform="translate(${thumbnailX}, ${thumbnailY})">
-        <rect x="0" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}" fill="#ccc"/>
-        <image class="thumbnail" xlink:href="${thumbnail}" x="0" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}" style="object-fit: cover"/>
+       <rect x="0" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}" fill="url(#thumbnail)" />
+       <pattern id="thumbnail" patternUnits="userSpaceOnUse" width="${thumbnailWidth}" height="${thumbnailHeight}">
+       <image xlink:href="${thumbnail}" width="${thumbnailWidth}" height="${thumbnailHeight}" />
+       </pattern>
       </g>
       <g transform="translate(${infoX}, ${infoY})">
         <rect x="0" y="0" width="${infoWidth}" height="${infoHeight}" fill="#eee"/>
