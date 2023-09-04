@@ -28,7 +28,7 @@
         .short_description {
           font-family: Arial;
           font-size: 16px;
-          fill: #333;
+          fill: #555;
         }
         .thumbnail{
         }
