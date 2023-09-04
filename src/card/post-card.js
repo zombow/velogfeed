@@ -39,7 +39,7 @@
       </g>
       <g transform="translate(${infoX}, ${infoY})">
         <rect x="0" y="0" width="${infoWidth}" height="${infoHeight}" fill="#eee"/>
-        <text class="title" x="40" y="40">${title}</text>
+        <text class="title" x="20" y="40">${title}</text>
         <text class="short_description" x="20" y="60">${short_description}</text>
       </g>
       <rect x= 0 y= 0 width="${svgWidth}" height="${svgHeight}" stroke="#333" stroke-width="${strokeWidth}" fill="none" />
