@@ -28,13 +28,17 @@ const fetcher = (variables) => {
     });
 };
 
-async function fetchPosts({ username, tag, postnum }) {
+async function fetchPost({ username, tag, postnum }) {
     try {
-        const { data } = await fetcher({ username: username, limit: postnum || 20, tag: tag });
-        return data.data.posts;
+        const { data } = await fetcher({ username: username, limit: 20, tag: tag });
+        let num = postnum;
+        if (!postnum) {
+            num = 0;
+        }
+        return data.data.posts[num];
     } catch (e) {
         throw new Error(e);
     }
 }
 
-module.exports = fetchPosts;
+module.exports = fetchPost;
