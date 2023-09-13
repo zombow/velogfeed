@@ -5,6 +5,7 @@ module.exports = async (req, res) => {
     const { username, postnum, tag } = req.query;
     try {
         const posts = await fetchPosts({ username, postnum, tag });
+
         const postcards = posts.map(post => {
             const url = `https://velog.io/@${post.user.username}/${post.url_slug}`;
             const postSVG = postcardSVG(post.title, post.thumbnail, post.short_description);
@@ -19,6 +20,7 @@ module.exports = async (req, res) => {
         });
 
         res.send(postcards);
+        return;
     } catch (e) {
         return res.send(e.message);
     }
