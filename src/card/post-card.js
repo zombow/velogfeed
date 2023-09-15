@@ -1,19 +1,19 @@
 ﻿const postcardSVG = (title, thumbnail, short_description) => {
-    const strokeWidth = 5;
-    const svgWidth = 800;
-    const svgHeight = 450;
+    const strokeWidth = 2;
+    const svgWidth = 500;
+    const svgHeight = 300;
 
     // 썸네일 이미지의 크기와 위치를 설정합니다.
     const thumbnailWidth = svgWidth;
     const thumbnailHeight = svgHeight * 0.65;
     const thumbnailX = 0;
-    const thumbnailY = (svgHeight - thumbnailHeight) / 2;
+    const thumbnailY = 0;
 
     // 제목과 요약 정보 영역의 크기와 위치를 설정합니다.
     const infoWidth = svgWidth;
     const infoHeight = svgHeight * 0.35;
     const infoX = 0;
-    const infoY = (svgHeight - infoHeight) / 2;
+    const infoY = thumbnailHeight;
 
     return `
     <svg xmlns="http://www.w3.org/2000/svg" width="${svgWidth}" height="${svgHeight}">
