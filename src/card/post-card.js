@@ -1,7 +1,7 @@
 ﻿const postcardSVG = (title, thumbnail, short_description) => {
     const strokeWidth = 2;
     const svgWidth = 700;
-    const svgHeight = 350;
+    const svgHeight = 400;
 
     // 썸네일 이미지의 크기와 위치를 설정합니다.
     const thumbnailWidth = svgWidth;
