@@ -3,8 +3,8 @@ const { request } = require("../util");
 const fetcher = (variables) => {
     return request({
         query: `
-            query Posts($cursor: ID, $username: String, $temp_only: Boolean, $tag: String, $limit: Int) {
-                posts(cursor: $cursor, username: $username, temp_only: $temp_only, tag: $tag, limit: $limit) {
+            query Posts($cursor: ID, $username: String, $temp_only: Boolean, $tag: String, $postnum: Int) {
+                posts(cursor: $cursor, username: $username, temp_only: $temp_only, tag: $tag, limit: $postnum) {
                   id
                   title
                   short_description
@@ -28,9 +28,9 @@ const fetcher = (variables) => {
     });
 };
 
-async function fetchPosts({ username, tag, postnum }) {
+async function fetchPosts({ username, postnum, tag}) {
     try {
-        const { data } = await fetcher({ username: username, tag: tag, limit: postnum});
+        const { data } = await fetcher({ username: username, limit: postnum, tag: tag });
         return data.data.posts;
     } catch (e) {
         throw new Error(e);
