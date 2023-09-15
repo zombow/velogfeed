@@ -10,9 +10,18 @@ module.exports = async (req, res) => {
         // postnum 값에 따라 필터링하여 포스트 정보를 가져옵니다.
         const filteredPosts = posts.slice(0, postnum);
 
+
         for (const post of filteredPosts) {
             const url = `https://velog.io/@${post.user.username}/${post.url_slug}`;
-            const postSVG = postcardSVG(post.title, post.thumbnail, post.short_description);
+            const maxTitleLength = 20; // 제목 최대 길이
+            const maxDescriptionLength = 50; // 요약 정보 최대 길이
+
+            const title = post.title.length > maxTitleLength ? post.title.slice(0, maxTitleLength) + '...' : post.title;
+            const shortDescription = post.short_description.length > maxDescriptionLength ? post.short_description.slice(0, maxDescriptionLength) + '...' : post.short_description;
+
+            const postSVG = postcardSVG(title, post.thumbnail, shortDescription);
+            //const postSVG = postcardSVG(post.title, post.thumbnail, post.short_description);
+
             const postinfo = {
                 post: post,
                 url: url,

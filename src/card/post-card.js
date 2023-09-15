@@ -15,15 +15,6 @@
     const infoX = 0;
     const infoY = thumbnailHeight;
 
-    const maxTitleLength = 20; // 제목 최대 길이
-    const maxDescriptionLength = 50; // 요약 정보 최대 길이
-
-    const title = post.title.length > maxTitleLength ? post.title.slice(0, maxTitleLength) + '...' : post.title;
-    const shortDescription = post.short_description.length > maxDescriptionLength ? post.short_description.slice(0, maxDescriptionLength) + '...' : post.short_description;
-
-    const postSVG = postcardSVG(title, post.thumbnail, shortDescription);
-
-
     return `
     <svg xmlns="http://www.w3.org/2000/svg" width="${svgWidth}" height="${svgHeight}">
       <style>
