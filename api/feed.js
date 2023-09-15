@@ -13,14 +13,7 @@ module.exports = async (req, res) => {
 
         for (const post of filteredPosts) {
             const url = `https://velog.io/@${post.user.username}/${post.url_slug}`;
-            const maxTitleLength = 28; // 제목 최대 길이
-            const maxDescriptionLength = 40; // 요약 정보 최대 길이
-
-            const title = post.title.length > maxTitleLength ? post.title.slice(0, maxTitleLength) + '...' : post.title;
-            const shortDescription = post.short_description.length > maxDescriptionLength ? post.short_description.slice(0, maxDescriptionLength) + '...' : post.short_description;
-
-            const postSVG = postcardSVG(title, post.thumbnail, shortDescription);
-            //const postSVG = postcardSVG(post.title, post.thumbnail, post.short_description);
+            const postSVG = postcardSVG(post.title, post.thumbnail, post.short_description);
 
             const postinfo = {
                 post: post,
