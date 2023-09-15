@@ -21,13 +21,13 @@
         /* SVG 스타일을 여기에 추가합니다. */
         .title {
           font-family: Arial;
-          font-size: 20px;
+          font-size: 30px;
           font-weight: bold;
           fill: #333;
         }
         .short_description {
           font-family: Arial;
-          font-size: 16px;
+          font-size: 24px;
           fill: #333;
         }
         .thumbnail{
