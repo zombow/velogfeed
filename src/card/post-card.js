@@ -15,6 +15,14 @@
     const infoX = 0;
     const infoY = thumbnailHeight;
 
+    <defs>
+        <clipPath id="textClip">
+            // 클리핑 영역을 정의합니다.
+            <rect x="30" y="40" width="700" height="140" />
+        </clipPath>
+    </defs>
+
+
     return `
     <svg xmlns="http://www.w3.org/2000/svg" width="${svgWidth}" height="${svgHeight}">
       <style>
@@ -34,7 +42,7 @@
         }
       </style>
       <g transform="translate(${thumbnailX}, ${thumbnailY})">
-        <rect x="0" y="00" width="${thumbnailWidth}" height="${thumbnailHeight}" fill="#ccc"/>
+        <rect x="0" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}" fill="#ccc"/>
         <image class="thumbnail" xlink:href="${thumbnail}" x="0" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" />
       </g>
       <g transform="translate(${infoX}, ${infoY})">
