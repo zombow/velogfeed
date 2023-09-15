@@ -7,9 +7,7 @@ module.exports = async (req, res) => {
         const posts = await fetchPosts({ username, postnum, tag });
         const postinfoList = [];
 
-        const filteredPosts = posts.slice(0, postnum);
-
-        for (const post of filteredPosts) {
+        for (const post of posts) {
             const url = `https://velog.io/@${post.user.username}/${post.url_slug}`;
             const postSVG = postcardSVG(post.title, post.thumbnail, post.short_description);
             const postinfo = {
