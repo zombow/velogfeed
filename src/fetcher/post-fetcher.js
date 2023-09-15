@@ -30,7 +30,8 @@ const fetcher = (variables) => {
 
 async function fetchPosts({ username, tag, postnum }) {
     try {
-        const { data } = await fetcher({ username: username, limit: 20, tag: tag });
+        const postlimit = postnum;
+        const { data } = await fetcher({ username: username, limit: postlimit, tag: tag });
         return data.data.posts;
     } catch (e) {
         throw new Error(e);
