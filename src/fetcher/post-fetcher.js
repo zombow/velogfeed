@@ -28,17 +28,13 @@ const fetcher = (variables) => {
     });
 };
 
-async function fetchPost({ username, tag, postnum }) {
+async function fetchPosts({ username, tag, postnum }) {
     try {
         const { data } = await fetcher({ username: username, limit: 20, tag: tag });
-        let num = postnum;
-        if (!postnum) {
-            num = 0;
-        }
-        return data.data.posts[num];
+        return data.data.posts;
     } catch (e) {
         throw new Error(e);
     }
 }
 
-module.exports = fetchPost;
+module.exports = fetchPosts;
