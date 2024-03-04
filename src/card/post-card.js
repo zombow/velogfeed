@@ -34,18 +34,20 @@
         .thumbnail{
         }
       </style>
-      <!-- 테두리 그리기 -->
-      <rect x="${strokeWidth/2}" y="${strokeWidth/2}" width="${svgWidth - strokeWidth}" height="${svgHeight - strokeWidth}" stroke="#333" stroke-width="${strokeWidth}" fill="none" rx="${cornerRadius}" ry="${cornerRadius}" />
-      <g transform="translate(${thumbnailX}, ${thumbnailY})">
+      <g transform="translate(${strokeWidth}, ${strokeWidth})" rx="${cornerRadius}" ry="${cornerRadius}">
+        <!-- 테두리 그리기 -->
+        <rect x="0" y="0" width="${svgWidth - strokeWidth * 2}" height="${svgHeight - strokeWidth * 2}" stroke="#333" stroke-width="${strokeWidth}" fill="none"/>
         <!-- 썸네일 이미지 -->
-        <rect x="0" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}" fill="#ccc"/>
-        <image class="thumbnail" xlink:href="${thumbnail}" x="0" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" />
-      </g>
-      <g transform="translate(${infoX}, ${infoY})">
+        <g transform="translate(${thumbnailX}, ${thumbnailY})">
+          <rect x="0" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}" fill="#ccc"/>
+          <image class="thumbnail" xlink:href="${thumbnail}" x="0" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" />
+        </g>
         <!-- 제목과 요약 정보 -->
-        <rect x="0" y="0" width="${infoWidth}" height="${infoHeight}" fill="#eee"/>
-        <text class="title" x="20" y="40">${title}</text>
-        <text class="short_description" x="30" y="80">${short_description}</text>
+        <g transform="translate(${infoX}, ${infoY})">
+          <rect x="0" y="0" width="${infoWidth}" height="${infoHeight}" fill="#eee"/>
+          <text class="title" x="20" y="40">${title}</text>
+          <text class="short_description" x="30" y="80">${short_description}</text>
+        </g>
       </g>
     </svg>
   `;
