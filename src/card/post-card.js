@@ -3,6 +3,7 @@
     const svgWidth = 700;
     const svgHeight = 400;
     const cornerRadius = 20; // 모서리 반지름 설정
+    const thumbnailCornerRadius = 20; // 썸네일 모서리 반지름 설정
 
     // 썸네일 이미지의 크기와 위치를 설정합니다.
     const thumbnailWidth = svgWidth;
@@ -20,7 +21,7 @@
     const clipPathId = 'thumbnailClipPath';
     const clipPath = `
         <clipPath id="${clipPathId}">
-            <rect x="0" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}" rx="${cornerRadius}" ry="${cornerRadius}" />
+            <rect x="0" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}" rx="${thumbnailCornerRadius}" ry="${thumbnailCornerRadius}" />
         </clipPath>
     `;
 
@@ -50,8 +51,8 @@
             <image class="thumbnail" xlink:href="${thumbnail}" x="0" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}" clip-path="url(#${clipPathId})" preserveAspectRatio="xMidYMid slice" />
         </g>
         <g transform="translate(${infoX}, ${infoY})">
-            <!-- 카드를 그립니다. -->
-            <rect x="0" y="0" width="${infoWidth}" height="${infoHeight}" rx="${cornerRadius}" ry="${cornerRadius}" stroke="#333" stroke-width="${strokeWidth}" fill="#eee" />
+            <!-- 썸네일의 하단 부분을 제외한 영역을 그립니다. -->
+            <rect x="0" y="0" width="${infoWidth}" height="${infoHeight}" rx="${cornerRadius}" ry="${cornerRadius - thumbnailCornerRadius}" stroke="#333" stroke-width="${strokeWidth}" fill="#eee" />
             <text class="title" x="20" y="40">${title}</text>
             <text class="short_description" x="30" y="80">${short_description}</text>
         </g>
