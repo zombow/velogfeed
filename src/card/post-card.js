@@ -16,33 +16,45 @@
     const infoX = 0;
     const infoY = thumbnailHeight;
 
+    // ClipPath를 생성합니다.
+    const clipPathId = 'thumbnailClipPath';
+    const clipPath = `
+        <clipPath id="${clipPathId}">
+            <rect x="0" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}" rx="${cornerRadius}" ry="${cornerRadius}" />
+        </clipPath>
+    `;
+
     return `
     <svg xmlns="http://www.w3.org/2000/svg" width="${svgWidth}" height="${svgHeight}">
-      <style>
-        /* SVG 스타일을 여기에 추가합니다. */
-        .title {
-          font-family: Arial;
-          font-size: 28px;
-          font-weight: bold;
-          fill: #333;
-        }
-        .short_description {
-          font-family: Arial;
-          font-size: 22px;
-          fill: #333;
-        }
-        .thumbnail{
-        }
-      </style>
-      <g transform="translate(${thumbnailX}, ${thumbnailY})">
-        <rect x="0" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}" rx="${cornerRadius}" ry="${cornerRadius}" stroke="#333" stroke-width="${strokeWidth}" fill="#ccc"/>
-        <image class="thumbnail" xlink:href="${thumbnail}" x="0" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" />
-      </g>
-      <g transform="translate(${infoX}, ${infoY})">
-        <!-- 카드를 그립니다. -->
-        <text class="title" x="20" y="40">${title}</text>
-        <text class="short_description" x="30" y="80">${short_description}</text>
-      </g>
+        <defs>
+            ${clipPath}
+        </defs>
+        <style>
+            /* SVG 스타일을 여기에 추가합니다. */
+            .title {
+                font-family: Arial;
+                font-size: 28px;
+                font-weight: bold;
+                fill: #333;
+            }
+            .short_description {
+                font-family: Arial;
+                font-size: 22px;
+                fill: #333;
+            }
+            .thumbnail{
+            }
+        </style>
+        <g transform="translate(${thumbnailX}, ${thumbnailY})">
+            <!-- 라운드 적용된 이미지를 그립니다. -->
+            <image class="thumbnail" xlink:href="${thumbnail}" x="0" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}" clip-path="url(#${clipPathId})" preserveAspectRatio="xMidYMid slice" />
+        </g>
+        <g transform="translate(${infoX}, ${infoY})">
+            <!-- 카드를 그립니다. -->
+            <rect x="0" y="0" width="${infoWidth}" height="${infoHeight}" rx="${cornerRadius}" ry="${cornerRadius}" stroke="#333" stroke-width="${strokeWidth}" fill="#eee" />
+            <text class="title" x="20" y="40">${title}</text>
+            <text class="short_description" x="30" y="80">${short_description}</text>
+        </g>
     </svg>
   `;
 };
