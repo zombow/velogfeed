@@ -42,9 +42,17 @@
         <text class="title" x="20" y="40">${title}</text>
         <text class="short_description" x="30" y="80">${short_description}</text>
       </g>
-      <rect x= 0 y= 0 width="${svgWidth}" height="${svgHeight}" stroke="#333" stroke-width="${strokeWidth}" fill="none" />
+      <rect x= 0 y= 0 width="${svgWidth}" height="${svgHeight}" stroke="#333" stroke-width="${strokeWidth}" fill="none" id="cardBorder" />
     </svg>
   `;
 };
 
 module.exports = postcardSVG;
+
+// SVG 카드 테두리를 잘라내기 위한 후처리 코드
+const svgString = postcardSVG(title, thumbnail, short_description);
+const parser = new DOMParser();
+const svgDocument = parser.parseFromString(svgString, 'image/svg+xml');
+const cardBorder = svgDocument.getElementById('cardBorder');
+cardBorder.setAttribute('visibility', 'hidden'); // 테두리를 숨깁니다.
+
