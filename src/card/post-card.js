@@ -39,10 +39,10 @@
   </g>
   <g transform="translate(${infoX}, ${infoY})">
     <!-- 제목 텍스트를 감싸는 사각형 요소 -->
-    <rect x="0" y="0" width="${infoWidth}" height="${infoHeight}" fill="#eee" rx="10" ry="10"/>
+    <rect x="0" y="0" width="${infoWidth}" height="${infoHeight}" fill="#eee" rx="100" ry="100"/>
     <text class="title" x="20" y="40">${title}</text>
     <!-- 요약 텍스트를 감싸는 사각형 요소 -->
-    <rect x="0" y="50" width="${infoWidth}" height="${infoHeight - 50}" fill="#eee" rx="10" ry="10"/>
+    <rect x="0" y="50" width="${infoWidth}" height="${infoHeight - 50}" fill="#eee" rx="100" ry="100"/>
     <text class="short_description" x="20" y="90">${short_description}</text>
   </g>
   <rect x= 0 y= 0 width="${svgWidth}" height="${svgHeight}" stroke="#333" stroke-width="${strokeWidth}" fill="none" />
