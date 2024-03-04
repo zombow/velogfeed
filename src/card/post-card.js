@@ -1,9 +1,7 @@
 ﻿const postcardSVG = (title, thumbnail, short_description) => {
-    const strokeWidth = 2;
     const svgWidth = 700;
     const svgHeight = 400;
-    const cornerRadiusTop = 15; // 상단 두 모서리의 라운드 설정
-    const cornerRadiusBottom = 15; // 하단 두 모서리의 라운드 설정
+    const borderRadius = '15px'; // 상단 왼쪽, 상단 오른쪽, 하단 오른쪽, 하단 왼쪽 순으로 각각의 라운드 설정
 
     // 썸네일 이미지의 크기와 위치를 설정합니다.
     const thumbnailWidth = svgWidth;
@@ -36,16 +34,7 @@
         }
       </style>
       <!-- 테두리 그리기 -->
-      <path d="M 0,${cornerRadiusTop} 
-         A ${cornerRadiusTop},${cornerRadiusTop} 0 0 1 ${cornerRadiusTop},0
-         L ${svgWidth - cornerRadiusTop},0
-         A ${cornerRadiusTop},${cornerRadiusTop} 0 0 1 ${svgWidth},${cornerRadiusTop}
-         L ${svgWidth},${svgHeight - cornerRadiusBottom}
-         A ${cornerRadiusBottom},${cornerRadiusBottom} 0 0 1 ${svgWidth - cornerRadiusBottom},${svgHeight}
-         L ${cornerRadiusBottom},${svgHeight}
-         A ${cornerRadiusBottom},${cornerRadiusBottom} 0 0 1 0,${svgHeight - cornerRadiusBottom}
-         Z" 
-      fill="none" stroke="rgba(51, 51, 51, 0.5)" stroke-width="${strokeWidth}"stroke-dasharray="10,10"/>
+      <rect x="0" y="0" width="${svgWidth}" height="${svgHeight}" fill="none" rx="${borderRadius}" ry="${borderRadius}" stroke="rgba(51, 51, 51, 0.5)" stroke-width="1"/>
       <g transform="translate(${thumbnailX}, ${thumbnailY})">
         <!-- 썸네일 이미지 -->
         <image class="thumbnail" xlink:href="${thumbnail}" x="0" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" /> 
