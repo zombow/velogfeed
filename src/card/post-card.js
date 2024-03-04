@@ -2,6 +2,7 @@
     const strokeWidth = 2;
     const svgWidth = 700;
     const svgHeight = 400;
+    const cornerRadius = 20; // 모서리 반지름 설정
 
     // 썸네일 이미지의 크기와 위치를 설정합니다.
     const thumbnailWidth = svgWidth;
@@ -34,25 +35,16 @@
         }
       </style>
       <g transform="translate(${thumbnailX}, ${thumbnailY})">
-        <rect x="0" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}" fill="#ccc"/>
+        <rect x="0" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}" fill="#ccc" rx="${cornerRadius}" ry="${cornerRadius}"/>
         <image class="thumbnail" xlink:href="${thumbnail}" x="0" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" />
       </g>
       <g transform="translate(${infoX}, ${infoY})">
-        <rect x="0" y="0" width="${infoWidth}" height="${infoHeight}" fill="#eee"/>
+        <rect x="0" y="0" width="${infoWidth}" height="${infoHeight}" fill="#eee" rx="${cornerRadius}" ry="${cornerRadius}"/>
         <text class="title" x="20" y="40">${title}</text>
         <text class="short_description" x="30" y="80">${short_description}</text>
       </g>
-      <rect x= 0 y= 0 width="${svgWidth}" height="${svgHeight}" stroke="#333" stroke-width="${strokeWidth}" fill="none" id="cardBorder" />
     </svg>
   `;
 };
-// SVG 카드 테두리를 잘라내기 위한 후처리 코드
-const svgString = postcardSVG(title, thumbnail, short_description);
-const parser = new DOMParser();
-const svgDocument = parser.parseFromString(svgString, 'image/svg+xml');
-const cardBorder = svgDocument.getElementById('cardBorder');
-cardBorder.setAttribute('visibility', 'hidden'); // 테두리를 숨깁니다.
 
 module.exports = postcardSVG;
-
-
