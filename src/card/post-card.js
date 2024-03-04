@@ -35,9 +35,8 @@
         }
       </style>
       <g transform="translate(${thumbnailX}, ${thumbnailY})">
-        <rect x="0" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}" fill="#ccc"/>
+        <rect x="0" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}" rx="${cornerRadius}" ry="${cornerRadius}" stroke="#333" stroke-width="${strokeWidth}" fill="#ccc"/>
         <image class="thumbnail" xlink:href="${thumbnail}" x="0" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" />
-        <rect x="0" y="0" width="${infoWidth}" height="${infoHeight}" rx="${cornerRadius}" ry="${cornerRadius}" stroke="#333" stroke-width="${strokeWidth}" fill="#eee" />
       </g>
       <g transform="translate(${infoX}, ${infoY})">
         <!-- 카드를 그립니다. -->
