@@ -35,14 +35,12 @@
         }
       </style>
       <g transform="translate(${thumbnailX}, ${thumbnailY})">
-        <!-- 썸네일의 상단을 라운드 형태로 만듭니다. -->
-        <rect x="0" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}" rx="${cornerRadius}" ry="${cornerRadius}" fill="#ccc"/>
+        <rect x="0" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}" fill="#ccc"/>
         <image class="thumbnail" xlink:href="${thumbnail}" x="0" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" />
+        <rect x="0" y="0" width="${infoWidth}" height="${infoHeight}" rx="${cornerRadius}" ry="${cornerRadius}" stroke="#333" stroke-width="${strokeWidth}" fill="#eee" />
       </g>
       <g transform="translate(${infoX}, ${infoY})">
-        <!-- ShortDescription의 하단을 라운드 형태로 만듭니다. -->
-        <rect x="0" y="0" width="${infoWidth}" height="${infoHeight}" stroke="#333" stroke-width="${strokeWidth}" fill="#eee" />
-        <rect x="0" y="${infoHeight - cornerRadius}" width="${infoWidth}" height="${cornerRadius}" fill="#eee" rx="${cornerRadius}" ry="${cornerRadius}" />
+        <!-- 카드를 그립니다. -->
         <text class="title" x="20" y="40">${title}</text>
         <text class="short_description" x="30" y="80">${short_description}</text>
       </g>
