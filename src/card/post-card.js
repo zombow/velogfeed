@@ -1,5 +1,5 @@
 ﻿const postcardSVG = (title, thumbnail, short_description) => {
-    const strokeWidth = 2;
+    const strokeWidth = 1;
     const svgWidth = 700;
     const svgHeight = 400;
     const cornerRadiusTop = 20; // 상단 두 모서리의 라운드 설정
