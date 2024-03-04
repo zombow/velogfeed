@@ -1,7 +1,8 @@
 ﻿const postcardSVG = (title, thumbnail, short_description) => {
     const svgWidth = 700;
     const svgHeight = 400;
-    const borderRadius = '15px'; // 상단 왼쪽, 상단 오른쪽, 하단 오른쪽, 하단 왼쪽 순으로 각각의 라운드 설정
+    const borderRadiusX = '15px 15px 15px 15px'; // 가로 방향 둥글기
+    const borderRadiusY = '15px 15px 15px 15px'; // 세로 방향 둥글기
 
     // 썸네일 이미지의 크기와 위치를 설정합니다.
     const thumbnailWidth = svgWidth;
@@ -34,7 +35,7 @@
         }
       </style>
       <!-- 테두리 그리기 -->
-      <rect x="0" y="0" width="${svgWidth}" height="${svgHeight}" fill="none" rx="${borderRadius}" ry="${borderRadius}" stroke="rgba(51, 51, 51, 0.5)" stroke-width="1"/>
+      <rect x="0" y="0" width="${svgWidth}" height="${svgHeight}" fill="orange" style="border-radius: ${borderRadiusX} / ${borderRadiusY};"/>
       <g transform="translate(${thumbnailX}, ${thumbnailY})">
         <!-- 썸네일 이미지 -->
         <image class="thumbnail" xlink:href="${thumbnail}" x="0" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" /> 
