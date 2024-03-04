@@ -21,7 +21,7 @@
         /* SVG 스타일을 여기에 추가합니다. */
         .title {
           font-family: Arial;
-          font-size: 28px;
+          font-size: 52px;
           font-weight: bold;
           fill: #333;
         }
