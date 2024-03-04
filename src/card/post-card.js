@@ -1,8 +1,8 @@
 ﻿const postcardSVG = (title, thumbnail, short_description) => {
-    const strokeWidth = 1;
+    const strokeWidth = 2;
     const svgWidth = 700;
     const svgHeight = 400;
-    const cornerRadius = 30; // 모서리의 라운드 설정
+    const cornerRadius = 15; // 모서리의 라운드 설정
 
     // 썸네일 이미지의 크기와 위치를 설정합니다.
     const thumbnailWidth = svgWidth;
@@ -36,17 +36,19 @@
       </style>
       <g transform="translate(${thumbnailX}, ${thumbnailY})">
         <!-- 썸네일 이미지 -->
-        <rect x="0" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}" fill="#ccc" />
+        <rect x="0" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}" fill="#ccc" rx="${cornerRadius}" ry="${cornerRadius}" />
         <image class="thumbnail" xlink:href="${thumbnail}" x="0" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" />
       </g>
       <g transform="translate(${infoX}, ${infoY})">
         <!-- 제목과 요약 정보 -->
-        <rect x="0" y="0" width="${infoWidth}" height="${infoHeight}" fill="#eee" rx="${cornerRadius}" ry="${cornerRadius}" />
-        <text class="title" x="20" y="40">${title}</text>
-        <text class="short_description" x="30" y="80">${short_description}</text>
+        <g>
+          <rect x="0" y="0" width="${infoWidth}" height="${infoHeight}" fill="#eee" />
+          <text class="title" x="20" y="40">${title}</text>
+          <text class="short_description" x="30" y="80">${short_description}</text>
+        </g>
       </g>
       <!-- 테두리 그리기 -->
-      <rect x="0" y="0" width="${svgWidth}" height="${svgHeight}" stroke="#333" stroke-width="${strokeWidth}" fill="none" />
+      <rect x="0" y="0" width="${svgWidth}" height="${svgHeight}" stroke="#333" stroke-width="${strokeWidth}" fill="none" rx="${cornerRadius}" ry="${cornerRadius}" />
     </svg>
   `;
 };
