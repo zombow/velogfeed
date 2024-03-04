@@ -37,7 +37,6 @@
           stroke: #333;
           stroke-width: ${strokeWidth};
           fill: #eee;
-          border-radius: ${cornerRadius}px; /* 모서리를 둥글게 만듭니다. */
         }
       </style>
       <g transform="translate(${thumbnailX}, ${thumbnailY})">
@@ -45,7 +44,7 @@
         <image class="thumbnail" xlink:href="${thumbnail}" x="0" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" />
       </g>
       <g transform="translate(${infoX}, ${infoY})">
-        <rect class="card" x="0" y="0" width="${infoWidth}" height="${infoHeight}" />
+        <path class="card" d="M0 0 L${infoWidth} 0 L${infoWidth} ${infoHeight} L0 ${infoHeight} Z" rx="${cornerRadius}" ry="${cornerRadius}" />
         <text class="title" x="20" y="40">${title}</text>
         <text class="short_description" x="30" y="80">${short_description}</text>
       </g>
