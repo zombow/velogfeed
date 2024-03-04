@@ -1,5 +1,5 @@
 ﻿const postcardSVG = (title, thumbnail, short_description) => {
-    const strokeWidth = 1;
+    const strokeWidth = 3;
     const svgWidth = 700;
     const svgHeight = 400;
     const cornerRadiusTop = 40; // 상단 두 모서리의 라운드 설정
@@ -36,7 +36,7 @@
         }
       </style>
       <!-- 테두리 그리기 -->
-      <rect x="0" y="0" width="${svgWidth}" height="${svgHeight}" stroke="#333" stroke-width="${strokeWidth}" fill="none" rx="${cornerRadiusTop}" ry="${cornerRadiusTop}" />
+      <rect x="0" y="0" width="${svgWidth}" height="${svgHeight}" stroke="#333" stroke-width="${strokeWidth}" fill="none" rx="${cornerRadiusTop}" ry="${cornerRadiusBottom}" />
       <g transform="translate(${thumbnailX}, ${thumbnailY})">
         <!-- 썸네일 이미지 -->
         <image class="thumbnail" xlink:href="${thumbnail}" x="0" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" /> 
