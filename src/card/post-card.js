@@ -35,7 +35,7 @@
         }
       </style>
       <!-- 테두리 그리기 -->
-      <rect x="0" y="0" width="${svgWidth}" height="${svgHeight}" stroke="#333" stroke-width="${strokeWidth}" fill="none" rx="${cornerRadius}" ry="${cornerRadius}" />
+      <rect x="${strokeWidth/2}" y="${strokeWidth/2}" width="${svgWidth - strokeWidth}" height="${svgHeight - strokeWidth}" stroke="#333" stroke-width="${strokeWidth}" fill="none" rx="${cornerRadius}" ry="${cornerRadius}" />
       <g transform="translate(${thumbnailX}, ${thumbnailY})">
         <!-- 썸네일 이미지 -->
         <rect x="0" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}" fill="#ccc"/>
