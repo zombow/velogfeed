@@ -34,18 +34,14 @@
         .thumbnail{
         }
         .card {
-          stroke: #333;
-          stroke-width: ${strokeWidth};
           fill: #eee;
-          border-radius: ${cornerRadius}px; /* 모서리 둥글게 설정 */
         }
       </style>
       <g transform="translate(${thumbnailX}, ${thumbnailY})">
-        <rect x="0" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}" fill="#ccc"/>
+        <rect class="card" x="0" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}" rx="${cornerRadius}" ry="${cornerRadius}" />
         <image class="thumbnail" xlink:href="${thumbnail}" x="0" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" />
       </g>
       <g transform="translate(${infoX}, ${infoY})">
-        <rect class="card" x="0" y="0" width="${infoWidth}" height="${infoHeight}" />
         <text class="title" x="20" y="40">${title}</text>
         <text class="short_description" x="30" y="80">${short_description}</text>
       </g>
