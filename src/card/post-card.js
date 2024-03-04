@@ -46,13 +46,13 @@
     </svg>
   `;
 };
-
-module.exports = postcardSVG;
-
 // SVG 카드 테두리를 잘라내기 위한 후처리 코드
 const svgString = postcardSVG(title, thumbnail, short_description);
 const parser = new DOMParser();
 const svgDocument = parser.parseFromString(svgString, 'image/svg+xml');
 const cardBorder = svgDocument.getElementById('cardBorder');
 cardBorder.setAttribute('visibility', 'hidden'); // 테두리를 숨깁니다.
+
+module.exports = postcardSVG;
+
 
