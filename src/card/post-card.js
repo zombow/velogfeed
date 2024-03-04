@@ -2,8 +2,8 @@
     const strokeWidth = 2;
     const svgWidth = 700;
     const svgHeight = 400;
-    const cornerRadiusTop = 50; // 상단 두 모서리의 라운드 설정
-    const cornerRadiusBottom = 50; // 하단 두 모서리의 라운드 설정
+    const cornerRadiusTop = 15; // 상단 두 모서리의 라운드 설정
+    const cornerRadiusBottom = 15; // 하단 두 모서리의 라운드 설정
 
     // 썸네일 이미지의 크기와 위치를 설정합니다.
     const thumbnailWidth = svgWidth;
