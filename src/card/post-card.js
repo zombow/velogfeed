@@ -40,7 +40,8 @@
         <image class="thumbnail" xlink:href="${thumbnail}" x="0" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" />
       </g>
       <!-- 제목과 요약 정보 -->
-      <rect x="${infoX}" y="${infoY}" width="${infoWidth}" height="${infoHeight}" fill="#eee" rx="${cornerRadius}" ry="${cornerRadius}" />
+      <rect x="${infoX}" y="${infoY}" width="${infoWidth}" height="${infoHeight}" fill="#eee" />
+      <rect x="${infoX}" y="${infoY + infoHeight - cornerRadius}" width="${infoWidth}" height="${cornerRadius}" fill="#eee" rx="${cornerRadius}" ry="${cornerRadius}" />
       <text class="title" x="${infoX + 20}" y="${infoY + 40}">${title}</text>
       <text class="short_description" x="${infoX + 30}" y="${infoY + 80}">${short_description}</text>
       <!-- 테두리 그리기 -->
