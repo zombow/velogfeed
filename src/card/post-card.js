@@ -2,8 +2,8 @@
     const strokeWidth = 2;
     const svgWidth = 700;
     const svgHeight = 400;
-    const cornerRadiusThumbnail = "20 20 0 0"; // 썸네일 이미지의 라운드 설정 (상단의 두 모서리만)
-    const cornerRadiusShortDescription = "0 0 20 20"; // Short description의 라운드 설정 (하단의 두 모서리만)
+    const cornerRadiusTop = 20; // 상단 두 모서리의 라운드 설정
+    const cornerRadiusBottom = 0; // 하단 두 모서리의 라운드 설정
 
     // 썸네일 이미지의 크기와 위치를 설정합니다.
     const thumbnailWidth = svgWidth;
@@ -35,15 +35,13 @@
         .thumbnail{
         }
       </style>
+      <!-- 테두리 그리기 -->
+      <rect x="0" y="0" width="${svgWidth}" height="${svgHeight}" stroke="#333" stroke-width="${strokeWidth}" fill="none" rx="${cornerRadiusTop}" ry="${cornerRadiusTop}" />
       <g transform="translate(${thumbnailX}, ${thumbnailY})">
-        <!-- 썸네일 이미지 테두리 -->
-        <rect x="0" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}" fill="#ccc" rx="${cornerRadiusThumbnail}" ry="${cornerRadiusThumbnail}"/>
         <!-- 썸네일 이미지 -->
         <image class="thumbnail" xlink:href="${thumbnail}" x="0" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" />
       </g>
       <g transform="translate(${infoX}, ${infoY})">
-        <!-- Short description 테두리 -->
-        <rect x="0" y="0" width="${infoWidth}" height="${infoHeight}" fill="#eee" rx="${cornerRadiusShortDescription}" ry="${cornerRadiusShortDescription}"/>
         <!-- 제목 -->
         <text class="title" x="20" y="40">${title}</text>
         <!-- Short description -->
