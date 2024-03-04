@@ -1,53 +1,57 @@
-﻿const postcardSVG = (title, thumbnail, short_description) => {
-    const strokeWidth = 2;
-    const svgWidth = 700;
-    const svgHeight = 400;
-    const cornerRadius = 15; // 모서리의 라운드 설정
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postcard</title>
+<style>
+    .postcard {
+    width: 700px;
+    height: 400px;
+    border: 2px solid #333;
+    border-radius: 15px;
+    box-sizing: border-box;
+    font-family: Arial;
+}
 
-    // 썸네일 이미지의 크기와 위치를 설정합니다.
-    const thumbnailWidth = svgWidth;
-    const thumbnailHeight = svgHeight * 0.65;
-    const thumbnailX = 0;
-    const thumbnailY = 0;
+    .thumbnail {
+    width: 100%;
+    height: 65%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
 
-    // 제목과 요약 정보 영역의 크기와 위치를 설정합니다.
-    const infoWidth = svgWidth;
-    const infoHeight = svgHeight * 0.35;
-    const infoX = 0;
-    const infoY = thumbnailHeight;
+    .info {
+    width: 100%;
+    height: 35%;
+    background-color: #eee;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
 
-    return `
-    <svg xmlns="http://www.w3.org/2000/svg" width="${svgWidth}" height="${svgHeight}">
-      <style>
-        /* SVG 스타일을 여기에 추가합니다. */
-        .title {
-          font-family: Arial;
-          font-size: 28px;
-          font-weight: bold;
-          fill: #333;
-        }
-        .short_description {
-          font-family: Arial;
-          font-size: 22px;
-          fill: #333;
-        }
-        .thumbnail{
-        }
-      </style>
-      <g transform="translate(${thumbnailX}, ${thumbnailY})">
-        <!-- 썸네일 이미지 -->
-        <rect x="0" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}" fill="#ccc" rx="${cornerRadius}" ry="${cornerRadius}" />
-        <image class="thumbnail" xlink:href="${thumbnail}" x="0" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" />
-      </g>
-      <!-- 제목과 요약 정보 -->
-      <rect x="${infoX}" y="${infoY}" width="${infoWidth}" height="${infoHeight}" fill="#eee" />
-      <rect x="${infoX}" y="${infoY + infoHeight - cornerRadius}" width="${infoWidth}" height="${cornerRadius}" fill="#eee" rx="${cornerRadius}" ry="${cornerRadius}" />
-      <text class="title" x="${infoX + 20}" y="${infoY + 40}">${title}</text>
-      <text class="short_description" x="${infoX + 30}" y="${infoY + 80}">${short_description}</text>
-      <!-- 테두리 그리기 -->
-      <rect x="0" y="0" width="${svgWidth}" height="${svgHeight}" stroke="#333" stroke-width="${strokeWidth}" fill="none" rx="${cornerRadius}" ry="${cornerRadius}" />
+    .title {
+    font-size: 28px;
+    font-weight: bold;
+    fill: #333;
+}
+
+    .short_description {
+    font-size: 22px;
+    fill: #333;
+}
+</style>
+</head>
+<body>
+<div class="postcard">
+    <svg class="thumbnail" viewBox="0 0 700 260">
+        <image xlink:href="thumbnail.jpg" width="700" height="260" preserveAspectRatio="xMidYMid slice" />
     </svg>
-  `;
-};
-
-module.exports = postcardSVG;
+    <div class="info">
+        <div class="title">Title</div>
+        <div class="short_description">Short Description</div>
+    </div>
+</div>
+</body>
+</html>
