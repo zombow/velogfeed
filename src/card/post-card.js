@@ -45,7 +45,7 @@
          L ${cornerRadiusBottom},${svgHeight}
          A ${cornerRadiusBottom},${cornerRadiusBottom} 0 0 1 0,${svgHeight - cornerRadiusBottom}
          Z" 
-      fill="none" stroke="rgba(51, 51, 51, 0.5)" stroke-width="${strokeWidth}"stroke-dasharray="0,1"/>
+      fill="none" stroke="rgba(51, 51, 51, 0.5)" stroke-width="${strokeWidth}"stroke-dasharray="10,10"/>
       <g transform="translate(${thumbnailX}, ${thumbnailY})">
         <!-- 썸네일 이미지 -->
         <image class="thumbnail" xlink:href="${thumbnail}" x="0" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" /> 
