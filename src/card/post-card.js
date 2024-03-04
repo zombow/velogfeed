@@ -16,12 +16,13 @@
     const infoY = thumbnailHeight;
 
     return `
-    <svg xmlns="http://www.w3.org/2000/svg" width="${svgWidth}" height="${svgHeight}">
+    <svg xmlns="http://www.w3.org/2000/svg" width="200" height="100">
+        <rect width="200" height="100" fill="#f0f0f0" stroke="#333" stroke-width="2" rx="10" ry="10"/>
       <style>
         /* SVG 스타일을 여기에 추가합니다. */
         .title {
           font-family: Arial;
-          font-size: 52px;
+          font-size: 28px;
           font-weight: bold;
           fill: #333;
         }
