@@ -16,7 +16,7 @@
     const descriptionY = "85%";
 
     return `
-    <svg xmlns="http://www.w3.org/2000/svg" width="${svgWidth}" height="${svgHeight}">
+    <svg xmlns="http://www.w3.org/2000/svg" width="${svgWidth}" height="${svgHeight}"style="display: block; margin: auto;">
       <rect width="100%" height="100%" fill="#eee" rx="${cornerRadius}" ry="${cornerRadius}" />
       <image xlink:href="${thumbnail}" width="${thumbnailWidth}" height="${thumbnailHeight}" x="${thumbnailX}" y="${thumbnailY}" preserveAspectRatio="xMidYMid slice" />
       <text x="${titleX}" y="${titleY}" font-family="Arial" font-size="2vw" font-weight="bold" fill="#333">${title}</text>
