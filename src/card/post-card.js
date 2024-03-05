@@ -16,10 +16,20 @@
     const infoX = 0;
     const infoY = thumbnailHeight;
 
-    // viewBox 계산
-    const viewBoxWidth = svgWidth + strokeWidth * 2; // 너비
-    const viewBoxHeight = svgHeight + strokeWidth * 2; // 높이
-    const viewBox = `0 0 ${viewBoxWidth} ${viewBoxHeight}`;
+    // 현재 윈도우의 너비와 높이를 가져옵니다.
+    const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight;
+
+    // 뷰박스의 너비와 높이를 현재 윈도우의 너비와 높이로 설정합니다.
+    const viewBoxWidth = windowWidth;
+    const viewBoxHeight = windowHeight;
+
+    // viewBox의 x와 y 값을 설정합니다.
+    const viewBoxX = 0;
+    const viewBoxY = 0;
+
+    // viewBox 값을 문자열로 조합합니다.
+    const viewBox = `${viewBoxX} ${viewBoxY} ${viewBoxWidth} ${viewBoxHeight}`;
 
     return `
     <svg xmlns="http://www.w3.org/2000/svg" width="${svgWidth}" height="${svgHeight}" viewBox="${viewBox}">
@@ -45,14 +55,4 @@
         <image class="thumbnail" xlink:href="${thumbnail}" x="0" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" />
       </g>
       <!-- 제목과 요약 정보 -->
-      <rect x="${infoX}" y="${infoY}" width="${infoWidth}" height="${infoHeight}" fill="#eee" />
-      <rect x="${infoX}" y="${infoY + infoHeight - cornerRadius}" width="${infoWidth}" height="${cornerRadius}" fill="#eee" rx="${cornerRadius}" ry="${cornerRadius}" />
-      <text class="title" x="${infoX + 20}" y="${infoY + 40}">${title}</text>
-      <text class="short_description" x="${infoX + 30}" y="${infoY + 80}">${short_description}</text>
-      <!-- 테두리 그리기 -->
-      <rect x="0" y="0" width="${svgWidth}" height="${svgHeight}" stroke="#333" stroke-width="${strokeWidth}" fill="none" rx="${cornerRadius}" ry="${cornerRadius}" />
-    </svg>
-  `;
-};
-
-module.exports = postcardSVG;
+      <rect x="${inf
