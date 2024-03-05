@@ -7,14 +7,14 @@ module.exports = async (req, res) => {
         const posts = await fetchPosts({ username, postnum, tag });
         const postinfoList = [];
 
-        // postnum °ª¿¡ µû¶ó ÇÊÅÍ¸µÇÏ¿© Æ÷½ºÆ® Á¤º¸¸¦ °¡Á®¿É´Ï´Ù.
+        // postnum ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Í¸ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½É´Ï´ï¿½.
         const filteredPosts = posts.slice(0, postnum);
 
 
         for (const post of filteredPosts) {
             const url = `https://velog.io/@${post.user.username}/${post.url_slug}`;
             const postSVG = postcardSVG(post.title, post.thumbnail, post.short_description);
-
+            
             const postinfo = {
                 post: post,
                 url: url,
