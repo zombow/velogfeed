@@ -6,6 +6,7 @@
         <text x="50%" y="70%" font-family="Arial" font-size="2vw" font-weight="bold" fill="#333" text-anchor="middle">${title}</text>
         <text x="50%" y="80%" font-family="Arial" font-size="1vw" fill="#333" text-anchor="middle">${short_description}</text>
         <rect width="100%" height="100%" stroke="#333" stroke-width="2" fill="none" rx="15" ry="15" />
+        
     </svg>
   `;
 };
