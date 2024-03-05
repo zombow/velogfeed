@@ -1,32 +1,14 @@
 ﻿const postcardSVG = (title, thumbnail, short_description) => {
     const strokeWidth = 2;
+    const svgWidth = "100%";
+    const svgHeight = "100%";
     const cornerRadius = 15; // 모서리의 라운드 설정
 
-    // 윈도우의 너비와 높이를 가져옵니다.
-    const windowWidth = window.innerWidth;
-    const windowHeight = window.innerHeight;
-
-    // SVG의 너비와 높이를 설정합니다.
-    const svgWidth = windowWidth * 0.8; // 윈도우 너비의 80%
-    const svgHeight = windowHeight * 0.8; // 윈도우 높이의 80%
-
-    // 썸네일 이미지의 크기와 위치를 설정합니다.
-    const thumbnailWidth = svgWidth;
-    const thumbnailHeight = svgHeight * 0.65;
-    const thumbnailX = 0;
-    const thumbnailY = 0;
-
-    // 제목과 요약 정보 영역의 크기와 위치를 설정합니다.
-    const infoWidth = svgWidth;
-    const infoHeight = svgHeight * 0.35;
-    const infoX = 0;
-    const infoY = thumbnailHeight;
-
-    // 제목과 요약 정보의 텍스트 위치를 설정합니다.
-    const titleX = 20;
-    const titleY = infoY + 40;
-    const descriptionX = 20; // 수정된 부분: 텍스트의 x 위치를 변경합니다.
-    const descriptionY = titleY + 40; // 수정된 부분: 텍스트의 y 위치를 변경합니다.
+    // 제목과 요약 정보 텍스트의 위치 설정
+    const titleX = "5%";
+    const titleY = "10%";
+    const descriptionX = "5%";
+    const descriptionY = "20%";
 
     return `
     <svg xmlns="http://www.w3.org/2000/svg" width="${svgWidth}" height="${svgHeight}">
@@ -34,30 +16,23 @@
         /* SVG 스타일을 여기에 추가합니다. */
         .title {
           font-family: Arial;
-          font-size: 28px;
+          font-size: 4vw; /* 텍스트 크기를 화면 크기에 상대적으로 설정합니다. */
           font-weight: bold;
           fill: #333;
         }
         .short_description {
           font-family: Arial;
-          font-size: 22px;
+          font-size: 3vw; /* 텍스트 크기를 화면 크기에 상대적으로 설정합니다. */
           fill: #333;
         }
         .thumbnail{
         }
       </style>
-      <g transform="translate(${thumbnailX}, ${thumbnailY})">
-        <!-- 썸네일 이미지 -->
-        <rect x="0" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}" fill="#ccc" rx="${cornerRadius}" ry="${cornerRadius}" />
-        <image class="thumbnail" xlink:href="${thumbnail}" x="0" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" />
-      </g>
-      <!-- 제목과 요약 정보 -->
-      <rect x="${infoX}" y="${infoY}" width="${infoWidth}" height="${infoHeight}" fill="#eee" />
-      <rect x="${infoX}" y="${infoY + infoHeight - cornerRadius}" width="${infoWidth}" height="${cornerRadius}" fill="#eee" rx="${cornerRadius}" ry="${cornerRadius}" />
+      <rect x="0" y="0" width="100%" height="100%" fill="#eee" rx="${cornerRadius}" ry="${cornerRadius}" />
+      <image class="thumbnail" xlink:href="${thumbnail}" width="100%" height="65%" preserveAspectRatio="xMidYMid slice" />
       <text class="title" x="${titleX}" y="${titleY}">${title}</text>
       <text class="short_description" x="${descriptionX}" y="${descriptionY}">${short_description}</text>
-      <!-- 테두리 그리기 -->
-      <rect x="0" y="0" width="${svgWidth}" height="${svgHeight}" stroke="#333" stroke-width="${strokeWidth}" fill="none" rx="${cornerRadius}" ry="${cornerRadius}" />
+      <rect x="0" y="0" width="100%" height="100%" stroke="#333" stroke-width="${strokeWidth}" fill="none" rx="${cornerRadius}" ry="${cornerRadius}" />
     </svg>
   `;
 };
