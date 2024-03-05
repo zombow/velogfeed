@@ -17,10 +17,10 @@
     const infoY = "65%";
 
     // 제목과 요약 정보의 텍스트 위치를 설정합니다.
-    const titleX = infoX + 20;
-    const titleY = infoY + 40;
-    const descriptionX = infoX + 30;
-    const descriptionY = infoY + 80;
+    const titleX = "5%";
+    const titleY = "10%";
+    const descriptionX = "5%";
+    const descriptionY = "20%";
 
     return `
     <svg xmlns="http://www.w3.org/2000/svg" width="${svgWidth}" height="${svgHeight}">
