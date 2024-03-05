@@ -1,6 +1,6 @@
 ﻿const postcardSVG = (title, thumbnail, short_description) => {
     const strokeWidth = 2;
-    const svgWidth = "100%";
+    const svgWidth = "700 * 100%";
     const svgHeight = "100%";
     const cornerRadius = 15;
 
