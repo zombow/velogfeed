@@ -52,14 +52,4 @@
         <image class="thumbnail" xlink:href="${thumbnail}" x="0" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" />
       </g>
       <!-- 제목과 요약 정보 -->
-      <rect x="${infoX}" y="${infoY}" width="${infoWidth}" height="${infoHeight}" fill="#eee" />
-      <rect x="${infoX}" y="${infoY + infoHeight - cornerRadius}" width="${infoWidth}" height="${cornerRadius}" fill="#eee" rx="${cornerRadius}" ry="${cornerRadius}" />
-      <text class="title" x="${titleX}" y="${titleY}">${title}</text>
-      <text class="short_description" x="${descriptionX}" y="${descriptionY}">${short_description}</text>
-      <!-- 테두리 그리기 -->
-      <rect x="0" y="0" width="${svgWidth}" height="${svgHeight}" stroke="#333" stroke-width="${strokeWidth}" fill="none" rx="${cornerRadius}" ry="${cornerRadius}" />
-    </svg>
-  `;
-};
-
-module.exports = postcardSVG;
+      <rect x="${infoX}" y="${infoY}" width="${infoWidth}" height="${infoHeight}" 
