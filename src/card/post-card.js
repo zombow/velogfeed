@@ -1,11 +1,8 @@
 ﻿const postcardSVG = (title, thumbnail, short_description) => {
-    // strokeWidth, cornerRadius는 동일하게 유지됩니다.
     const strokeWidth = 2;
+    const svgWidth = 700;
+    const svgHeight = 400;
     const cornerRadius = 15; // 모서리의 라운드 설정
-
-    // SVG 요소의 너비와 높이를 윈도우 크기에 따라 동적으로 조절합니다.
-    const svgWidth = window.innerWidth < 700 ? window.innerWidth : 700;
-    const svgHeight = window.innerHeight < 400 ? window.innerHeight : 400;
 
     // 썸네일 이미지의 크기와 위치를 설정합니다.
     const thumbnailWidth = svgWidth;
