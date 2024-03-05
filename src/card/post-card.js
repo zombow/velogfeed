@@ -59,7 +59,7 @@ const latestCardStyle = `
     </style>
 `;
 
-const postcardSVG = (data) => {
+const createLatestCard = (data) => {
     console.log(data);
     return `
         <svg xmlns="http://www.w3.org/2000/svg" width="430" height="160" viewBox="0 0 430 160" fill="none">
@@ -74,4 +74,4 @@ const postcardSVG = (data) => {
     `;
 };
 
-module.exports = postcardSVG;
+module.exports = createLatestCard;
