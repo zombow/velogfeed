@@ -22,7 +22,7 @@
 
             <text x="${textMargin}%" y="${75 - titleHeight / 2}%" font-family="Arial" font-size="20" font-weight="bold" fill="#333" text-anchor="start">${shortenedTitle}</text>
 
-            <text x="${textMargin}%" y="${85 + titleHeight / 2 + descriptionHeight / 2}%" font-family="Arial" font-size="16" fill="#333" text-anchor="start">${shortenedDescription}</text>
+            <text x="${textMargin}%" y="${85 + titleHeight + descriptionHeight / 2}%" font-family="Arial" font-size="16" fill="#333" text-anchor="start">${shortenedDescription}</text>
 
             <rect width="100%" height="100%" stroke="#333" stroke-width="2" fill="none" rx="15" ry="15" />
         </svg>
@@ -37,6 +37,7 @@ function measureTextHeight(text, font, fontSize) {
     const metrics = context.measureText(text);
     return metrics.actualBoundingBoxAscent + metrics.actualBoundingBoxDescent;
 }
+
 
 
 module.exports = postcardSVG;
