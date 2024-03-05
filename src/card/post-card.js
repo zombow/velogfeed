@@ -1,24 +1,33 @@
 ﻿const postcardSVG = (title, thumbnail, short_description) => {
-    const postcardStyle = `
-    <style>
-        .postcard-title { font: bold 20px 'Arial'; fill: #333; }
-        .postcard-description { font: 16px 'Arial'; fill: #333; }
-        /* 다른 스타일 정의 */
-    </style>
-  `;
-
-    const postcardContent = `
-    <rect width="100%" height="100%" fill="#eee" rx="15" ry="15" />
-    <image xlink:href="${thumbnail}" width="100%" height="65%" x="0" y="0" preserveAspectRatio="xMidYMid slice" />
-    <text x="2%" y="75%" class="postcard-title" text-anchor="start">${title}</text>
-    <text x="2%" y="85%" class="postcard-description" text-anchor="start">${short_description}</text>
-    <rect width="100%" height="100%" stroke="#333" stroke-width="2" fill="none" rx="15" ry="15" />
-  `;
-
     return `
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300" style="width: 20vw; height: auto; max-width: 500px; min-width: 400px;">
-        ${postcardStyle}
-        ${postcardContent}
+    <svg xmlns="http://www.w3.org/2000/svg" width="430" height="160" viewBox="0 0 430 160" fill="none">
+        <style>
+            .header {
+                font: bold 14px 'Segoe UI', Ubuntu, Sans-Serif;
+                fill: #343A40;
+                animation: fadeInAnimation 0.8s ease-in-out forwards;
+            }
+            .log-title { font: bold 14px 'Segoe UI', Ubuntu, Sans-Serif; fill: #212529 }
+            .log-description { font-size: 12px; fill: #495057}
+            .tag-item { font-size: 12px; fill: #0CA678;}
+            .heart-count { font-size: 12px; fill: #495057;}
+            .log-title:hover{ fill: #0CA678; text-decoration: underline;}
+            .list-style{font-size:14px; fill: #212529; }
+        </style>
+        <rect x="0.5" y="0.5" rx="4.5" height="99%" stroke="#e4e2e2" width="429" fill="#fffefe" stroke-opacity="1"/>
+        <g data-testid="card-title" transform="translate(25, 35)">
+            <g transform="translate(0, 0)">
+                <text class="header" data-testid="header">${title}</text>
+            </g>
+        </g>
+        <g data-testid="main-card-body" transform="translate(0, 45)">
+            <svg x="25" width="400" height="400" viewBox="0 0 400 400">
+                <g transform="translate(0, 0)">
+                    <text class="list-style" x="5" y="20">•</text>
+                    <text class="log-title" x="20" y="20">${short_description}</text>
+                </g>
+            </svg>
+        </g>
     </svg>
   `;
 };
