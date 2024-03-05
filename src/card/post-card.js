@@ -1,6 +1,6 @@
 ﻿const postcardSVG = (title, thumbnail, short_description) => {
-    const svgWidth = "80vw"; // 카드의 너비를 화면 너비의 80%로 설정
-    const svgHeight = "80vh"; // 카드의 높이를 화면 높이의 80%로 설정
+    const svgWidth = "30vw"; // 카드의 너비를 화면 너비의 80%로 설정
+    const svgHeight = "30vh"; // 카드의 높이를 화면 높이의 80%로 설정
     const cornerRadius = "15px"; // 모서리의 라운드 설정
 
     // 썸네일 이미지의 크기와 위치를 설정합니다.
