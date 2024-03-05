@@ -1,8 +1,12 @@
 ﻿const postcardSVG = (title, thumbnail, short_description) => {
     const strokeWidth = 2;
-    const svgWidth = 700;
-    const svgHeight = 400;
     const cornerRadius = 15; // 모서리의 라운드 설정
+
+    // 윈도우 창의 크기를 기준으로 SVG의 너비와 높이를 조정합니다.
+    const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight;
+    const svgWidth = windowWidth > 700 ? 700 : windowWidth - 20; // 최대 너비는 700으로 제한하고, 윈도우 너비보다 작을 경우 윈도우 너비에 맞게 조정합니다.
+    const svgHeight = svgWidth * 0.57; // SVG의 높이를 너비의 비율로 조정합니다.
 
     // 썸네일 이미지의 크기와 위치를 설정합니다.
     const thumbnailWidth = svgWidth;
