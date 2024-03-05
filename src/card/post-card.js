@@ -25,8 +25,8 @@
     // 제목과 요약 정보의 텍스트 위치를 설정합니다.
     const titleX = 20;
     const titleY = infoY + 40;
-    const descriptionX = 30;
-    const descriptionY = infoY + 80;
+    const descriptionX = 20; // 수정된 부분: 텍스트의 x 위치를 변경합니다.
+    const descriptionY = titleY + 40; // 수정된 부분: 텍스트의 y 위치를 변경합니다.
 
     return `
     <svg xmlns="http://www.w3.org/2000/svg" width="${svgWidth}" height="${svgHeight}">
@@ -52,4 +52,14 @@
         <image class="thumbnail" xlink:href="${thumbnail}" x="0" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" />
       </g>
       <!-- 제목과 요약 정보 -->
-      <rect x="${infoX}" y="${infoY}" width="${infoWidth}" height="${infoHeight}" 
+      <rect x="${infoX}" y="${infoY}" width="${infoWidth}" height="${infoHeight}" fill="#eee" />
+      <rect x="${infoX}" y="${infoY + infoHeight - cornerRadius}" width="${infoWidth}" height="${cornerRadius}" fill="#eee" rx="${cornerRadius}" ry="${cornerRadius}" />
+      <text class="title" x="${titleX}" y="${titleY}">${title}</text>
+      <text class="short_description" x="${descriptionX}" y="${descriptionY}">${short_description}</text>
+      <!-- 테두리 그리기 -->
+      <rect x="0" y="0" width="${svgWidth}" height="${svgHeight}" stroke="#333" stroke-width="${strokeWidth}" fill="none" rx="${cornerRadius}" ry="${cornerRadius}" />
+    </svg>
+  `;
+};
+
+module.exports = postcardSVG;
