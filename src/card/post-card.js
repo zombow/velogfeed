@@ -1,5 +1,6 @@
 ﻿const postcardSVG = (title, thumbnail, short_description) => {
-    const maxCharacters = 20; // 최대 글자 수 설정
+    const maxTitleCharacters = 30; // 최대 글자 수 설정
+    const maxDescriptionCharacters = 50; // 최대 글자 수 설정
 
     // 텍스트가 최대 글자 수를 초과하면 일정 길이까지만 자르고 ... 추가
     const shortenText = (text, maxLength) => {
@@ -9,8 +10,8 @@
         return text;
     };
 
-    const shortenedTitle = shortenText(title, maxCharacters);
-    const shortenedDescription = shortenText(short_description, maxCharacters);
+    const shortenedTitle = shortenText(title, maxTitleCharacters);
+    const shortenedDescription = shortenText(short_description, maxDescriptionCharacters);
 
     return `
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300" style="width: 20vw; height: auto; max-width: 500px; min-width: 400px;"> <!-- SVG의 뷰박스와 크기 설정 -->
