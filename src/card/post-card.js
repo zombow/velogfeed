@@ -1,9 +1,6 @@
 ﻿const postcardSVG = (title, thumbnail, short_description) => {
-    // 타이틀과 쇼트 디스크립션에 대한 패딩 값 설정
-    const titlePaddingLeft = 10;
-    const titlePaddingTop = 10;
-    const descriptionPaddingLeft = 10;
-    const descriptionPaddingTop = 30; // 타이틀과의 간격을 조절하기 위한 값
+    // 패딩 값 설정
+    const padding = 10;
 
     return `
     <svg xmlns="http://www.w3.org/2000/svg" width="430" height="160" viewBox="0 0 430 160" fill="none">
@@ -24,14 +21,15 @@
         <g data-testid="card-title" transform="translate(25, 35)">
             <g transform="translate(0, 0)">
                 <!-- 타이틀에 패딩 적용 -->
-                <text class="header" data-testid="header" x="${titlePaddingLeft}" y="${titlePaddingTop}">${title}</text>
+                <text class="header" data-testid="header" x="${padding}" y="${padding}">${title}</text>
             </g>
         </g>
         <g data-testid="main-card-body" transform="translate(0, 45)">
             <svg x="25" width="400" height="400" viewBox="0 0 400 400">
                 <g transform="translate(0, 0)">
                     <!-- 쇼트 디스크립션에 패딩 적용 -->
-                    <text class="list-style" x="${descriptionPaddingLeft}" y="${descriptionPaddingTop}">${short_description}</text>
+                    <text class="list-style" x="${padding}" y="${padding + 20}">•</text>
+                    <text class="log-title" x="${padding + 15}" y="${padding + 35}">${short_description}</text>
                 </g>
             </svg>
         </g>
