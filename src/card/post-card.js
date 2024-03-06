@@ -21,9 +21,9 @@
         <g data-testid="card-title" transform="translate(${padding}, ${padding})">
             <g transform="translate(0, 0)">
                 <!-- 썸네일 이미지 추가 -->
-                <image xlink:href="${thumbnail}" width="50" height="50" x="${padding}" y="${padding}" />
+                <image xlink:href="${thumbnail}" width="100%" height="65%" x="${padding}" y="${padding}" />
                 <!-- 타이틀에 패딩 적용 -->
-                <text class="header" x="${padding + 60}" y="${padding + 20}" data-testid="header">${title}</text>
+                <text class="header" x="${padding}" y="${padding + 90}" data-testid="header">${title}</text>
             </g>
         </g>
         <g data-testid="main-card-body" transform="translate(${padding}, ${padding + 80})">
