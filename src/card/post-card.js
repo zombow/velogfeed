@@ -2,8 +2,8 @@
     // 패딩 값 설정
     const padding = 10;
     // 이미지의 고정된 너비와 높이 설정
-    const thumbnailWidth = 400;
-    const thumbnailHeight = 260;
+    const thumbnailWidth = 430;
+    const thumbnailHeight = 200;
 
     return `
     <svg xmlns="http://www.w3.org/2000/svg" width="430" height="330" viewBox="0 0 430 330" fill="none">
