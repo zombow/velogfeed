@@ -1,6 +1,9 @@
 ﻿const postcardSVG = (title, thumbnail, short_description) => {
     // 패딩 값 설정
     const padding = 10;
+    // 이미지의 고정된 너비와 높이 설정
+    const thumbnailWidth = 400;
+    const thumbnailHeight = 260;
 
     return `
     <svg xmlns="http://www.w3.org/2000/svg" width="430" height="330" viewBox="0 0 430 330" fill="none">
@@ -18,8 +21,8 @@
             .list-style{font-size:14px; fill: #212529; }
         </style>
         <rect x="0.5" y="0.5" rx="4.5" height="99%" stroke="#e4e2e2" width="429" fill="#fffefe" stroke-opacity="1"/>
-                <!-- 썸네일 이미지 추가 -->
-                <image xlink:href="${thumbnail}" width="100%" height="65%" />
+        <!-- 썸네일 이미지 추가 -->
+        <image xlink:href="${thumbnail}" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" />
         <g data-testid="card-title" transform="translate(${padding}, ${padding})">
             <g transform="translate(0, 0)">
                 <!-- 타이틀에 패딩 적용 -->
