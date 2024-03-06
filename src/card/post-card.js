@@ -18,18 +18,18 @@
             .list-style{font-size:14px; fill: #212529; }
         </style>
         <rect x="0.5" y="0.5" rx="4.5" height="99%" stroke="#e4e2e2" width="429" fill="#fffefe" stroke-opacity="1"/>
-        <g data-testid="card-title" transform="translate(25, 35)">
+        <g data-testid="card-title" transform="translate(${padding}, ${padding})">
             <g transform="translate(0, 0)">
                 <!-- 타이틀에 패딩 적용 -->
-                <text class="header" data-testid="header" x="${padding}" y="${padding}">${title}</text>
+                <text class="header" data-testid="header">${title}</text>
             </g>
         </g>
-        <g data-testid="main-card-body" transform="translate(0, 45)">
-            <svg x="25" width="400" height="400" viewBox="0 0 400 400">
+        <g data-testid="main-card-body" transform="translate(${padding}, ${padding + 30})">
+            <svg x="0" width="400" height="400" viewBox="0 0 400 400">
                 <g transform="translate(0, 0)">
                     <!-- 쇼트 디스크립션에 패딩 적용 -->
-                    <text class="list-style" x="${padding}" y="${padding + 20}">•</text>
-                    <text class="log-title" x="${padding + 15}" y="${padding + 35}">${short_description}</text>
+                    <text class="list-style" x="0" y="20">•</text>
+                    <text class="log-title" x="15" y="35">${short_description}</text>
                 </g>
             </svg>
         </g>
