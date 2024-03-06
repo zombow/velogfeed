@@ -3,7 +3,7 @@
     const padding = 10;
 
     return `
-    <svg xmlns="http://www.w3.org/2000/svg" width="430" height="330" viewBox="0 0 430 160" fill="none">
+    <svg xmlns="http://www.w3.org/2000/svg" width="430" height="330" viewBox="0 0 430 330" fill="none">
         <style>
             .header {
                 font: bold 14px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -18,10 +18,10 @@
             .list-style{font-size:14px; fill: #212529; }
         </style>
         <rect x="0.5" y="0.5" rx="4.5" height="99%" stroke="#e4e2e2" width="429" fill="#fffefe" stroke-opacity="1"/>
-        <!-- 썸네일 이미지 추가 -->
-        <image xlink:href="${thumbnail}" width="100%" height="65%" x="${padding}" y="${padding}" />
         <g data-testid="card-title" transform="translate(${padding}, ${padding})">
             <g transform="translate(0, 0)">
+                <!-- 썸네일 이미지 추가 -->
+                <image xlink:href="${thumbnail}" width="100%" height="65%" x="${padding}" y="${padding}" />
                 <!-- 타이틀에 패딩 적용 -->
                 <text class="header" x="${padding}" y="${padding + 90}" data-testid="header">${title}</text>
             </g>
