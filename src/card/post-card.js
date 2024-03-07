@@ -6,7 +6,7 @@
     const thumbnailHeight = 200;
 
     return `
-    <svg xmlns="http://www.w3.org/2000/svg" width="430" height="330" viewBox="0 0 430 280" fill="none">
+    <svg xmlns="http://www.w3.org/2000/svg" width="430" height="330" viewBox="0 0 430 300" fill="none">
         <style>
             .header {
                 font: bold 14px 'Segoe UI', Ubuntu, Sans-Serif;
