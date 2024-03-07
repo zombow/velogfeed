@@ -23,21 +23,15 @@
         <rect x="0.5" y="0.5" rx="4.5" height="99%" stroke="#e4e2e2" width="429" fill="#fffefe" stroke-opacity="1"/>
         <!-- 썸네일 이미지 추가 -->
         <image xlink:href="${thumbnail}" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" />
+        
+        <!-- 타이틀 -->
         <g data-testid="card-title" transform="translate(${padding}, ${padding + 190})">
-            <svg x="0" width="400" height="400" viewBox="0 0 400 400">
-                <g transform="translate(0, 0)">
-                    <!-- 타이틀에 패딩 적용 -->
-                    <text class="log-title" x="${padding}" y="35" data-testid="log-title">${title}</text>
-                </g>
-            </svg>
+            <text class="log-title" x="${padding}" y="35" data-testid="log-title">${title}</text>
         </g>
+        
+        <!-- 숏 디스크립션 -->
         <g data-testid="main-card-body" transform="translate(${padding}, ${padding + 210})">
-            <svg x="0" width="400" height="400" viewBox="0 0 400 400">
-                <g transform="translate(0, 0)">
-                    <!-- 쇼트 디스크립션에 패딩 적용 -->
-                    <text class="log-description" x=${padding} y="35">${short_description}</text>
-                </g>
-            </svg>
+            <text class="log-description" x=${padding} y="35">${short_description}</text>
         </g>
     </svg>
   `;
