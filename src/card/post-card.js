@@ -26,7 +26,7 @@
         <g data-testid="card-title" transform="translate(${padding}, ${padding + 200})">
             <g transform="translate(0, 0)">
                 <!-- 타이틀에 패딩 적용 -->
-                <text class="log-title" x="${padding}" y="35">${title}</text>
+               <text class="log-title" x="${padding}" y="${padding + 35}" data-testid="log-title">${title}</text>
             </g>
         </g>
         <g data-testid="main-card-body" transform="translate(${padding}, ${padding + 220})">
