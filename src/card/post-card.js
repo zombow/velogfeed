@@ -13,8 +13,8 @@
                 fill: #343A40;
                 animation: fadeInAnimation 0.8s ease-in-out forwards;
             }
-            .log-title { font: bold 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #212529 }
-            .log-description { font-size: 14px; fill: #495057}
+            .log-title { font: bold 20px 'Segoe UI', Ubuntu, Sans-Serif; fill: #212529 }
+            .log-description { font-size: 16px; fill: #495057}
             .tag-item { font-size: 12px; fill: #0CA678;}
             .heart-count { font-size: 12px; fill: #495057;}
             .log-title:hover{ fill: #0CA678; text-decoration: underline;}
