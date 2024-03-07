@@ -26,10 +26,10 @@
         <g data-testid="card-title" transform="translate(${padding}, ${padding})">
             <g transform="translate(0, 0)">
                 <!-- 타이틀에 패딩 적용 -->
-                <text class="header" x="${padding}" y="${padding + "200"}" data-testid="header">${title}</text>
+                <text class="header" x="${padding}" y="${padding + 200}" data-testid="header">${title}</text>
             </g>
         </g>
-        <g data-testid="main-card-body" transform="translate(${padding}, ${padding + 250})">
+        <g data-testid="main-card-body" transform="translate(${padding}, ${padding + 220})">
             <svg x="0" width="400" height="400" viewBox="0 0 400 400">
                 <g transform="translate(0, 0)">
                     <!-- 쇼트 디스크립션에 패딩 적용 -->
