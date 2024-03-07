@@ -33,7 +33,7 @@
             <svg x="0" width="400" height="400" viewBox="0 0 400 400">
                 <g transform="translate(0, 0)">
                     <!-- 쇼트 디스크립션에 패딩 적용 -->
-                    <text class="log-description" x="15" y="0">${short_description}</text>
+                    <text class="log-description" x=${padding} y=${padding + 235}>${short_description}</text>
                 </g>
             </svg>
         </g>
