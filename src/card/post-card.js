@@ -23,7 +23,7 @@
         <rect x="0.5" y="0.5" rx="4.5" height="99%" stroke="#e4e2e2" width="429" fill="#fffefe" stroke-opacity="1"/>
         <!-- 썸네일 이미지 추가 -->
         <image xlink:href="${thumbnail}" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" />
-        <g data-testid="card-title" transform="translate(${padding}, ${padding + 220})">
+        <g data-testid="card-title" transform="translate(${padding}, ${padding + 200})">
             <g transform="translate(0, 0)">
                 <!-- 타이틀에 패딩 적용 -->
                 <text class="log-title" x="${padding}" y="35" data-testid="header">${title}</text>
