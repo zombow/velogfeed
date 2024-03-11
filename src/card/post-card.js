@@ -4,10 +4,9 @@
     // 이미지의 고정된 너비와 높이 설정
     const thumbnailWidth = 430;
     const thumbnailHeight = 200;
-
-    // 이미지의 중앙 위치 계산
-    const imageX = (thumbnailWidth - thumbnailWidth) / 2;
-    const imageY = (thumbnailHeight - thumbnailHeight) / 2;
+    // 이미지의 시작점 조정을 위한 중앙 위치 계산
+    const imageX = (430 - thumbnailWidth) / 2;
+    const imageY = (300 - thumbnailHeight) / 2;
 
     return `
     <svg xmlns="http://www.w3.org/2000/svg" width="430" height="300" fill="fffefe">
@@ -27,11 +26,11 @@
         <defs>
             <clipPath id="clip-path">
                 <!-- 이미지의 상단 부분에만 라운드 적용 -->
-                <rect rx="4.5" width="99%" height="${thumbnailHeight}" />
+                <rect rx="4.5" width="50%" height="${thumbnailHeight}" />
             </clipPath>
             <clipPath id="clip-path-bottom">
                 <!-- 이미지의 하단 부분에만 라운드 적용하지 않음 -->
-                <rect y="${thumbnailHeight / 2}" width="99%" height="${thumbnailHeight}" />
+                <rect  y="${thumbnailHeight / 2}" width="50%" height="${thumbnailHeight}" />
             </clipPath>
         </defs>
         <rect x="0.5" y="0.5" rx="4.5" height="99%" width="99%" stroke="#e4e2e2" fill="#fffefe" stroke-opacity="1"/>
