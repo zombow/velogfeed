@@ -20,7 +20,7 @@
             .log-title:hover{ fill: #0CA678; text-decoration: underline;}
             .list-style{font-size:14px; fill: #212529; }
         </style>
-        <rect x="0.5" y="0.5" rx="14.5" height="99%" stroke="#e4e2e2" width="429" fill="#fffefe" stroke-opacity="1"/>
+        <path d="M5 5 L425 5 Q430 5, 430 10 L430 295 Q430 300, 425 300 L5 300 Q0 300, 0 295 L0 10 Q0 5, 5 5 Z" stroke="#e4e2e2" fill="#fffefe" />
         <!-- 썸네일 이미지 추가 -->
         <image xlink:href="${thumbnail}" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" />
         <g data-testid="card-title" transform="translate(${padding}, ${padding + 140})">
