@@ -27,10 +27,10 @@
             </clipPath>
             <clipPath id="clip-path-bottom">
                 <!-- 이미지의 하단 부분에만 라운드 적용하지 않음 -->
-                <rect y="${thumbnailHeight / 2}" width="99%" height="${thumbnailHeight}" />
+                <rect y="${thumbnailHeight / 2}" width="50%" height="${thumbnailHeight}" />
             </clipPath>
         </defs>
-        <rect rx="4.5" height="99%" width="99%" stroke="#e4e2e2" fill="#fffefe" stroke-opacity="1" style="align-content: center"/>
+        <rect rx="4.5" height="99%" width="50%" stroke="#e4e2e2" fill="#fffefe" stroke-opacity="1" style="align-content: center"/>
         <!-- 썸네일 이미지 추가 -->
         <image xlink:href="${thumbnail}" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-path)" />
         <!-- 하단 부분에만 라운드 적용하지 않은 이미지 -->
