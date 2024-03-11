@@ -23,7 +23,7 @@
         <defs>
             <clipPath id="clip-path">
                 <!-- 이미지의 상단 부분에만 라운드 적용 -->
-                <rect x="1" y="1" rx="4.5" width="98.8%"" height="${thumbnailHeight}" />
+                <rect x="1" y="1" rx="3.5" width="98.8%"" height="${thumbnailHeight}" />
             </clipPath>
             <clipPath id="clip-path-bottom">
                 <!-- 이미지의 하단 부분에만 라운드 적용하지 않음 -->
