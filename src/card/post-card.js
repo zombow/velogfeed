@@ -27,7 +27,7 @@
             </clipPath>
             <clipPath id="clip-path-bottom">
                 <!-- 이미지의 하단 부분에만 라운드 적용하지 않음 -->
-                <rect x="0.5" y="${thumbnailHeight - 1}" width="${thumbnailWidth}" height="${thumbnailHeight}" />
+                <rect x="0.5" y="${thumbnailHeight - thumbnailHeight / 2}" width="${thumbnailWidth}" height="${thumbnailHeight}" />
             </clipPath>
         </defs>
         <rect x="0.5" y="0.5" rx="4.5" height="99%" stroke="#e4e2e2" width="429" fill="#fffefe" stroke-opacity="1"/>
