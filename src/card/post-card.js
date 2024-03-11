@@ -20,9 +20,14 @@
             .log-title:hover{ fill: #0CA678; text-decoration: underline;}
             .list-style{font-size:14px; fill: #212529; }
         </style>
-        <path d="M5 5 L425 5 Q430 5, 430 10 L430 295 Q430 300, 425 300 L5 300 Q0 300, 0 295 L0 10 Q0 5, 5 5 Z" stroke="#e4e2e2" fill="#fffefe" />
+        <defs>
+            <clipPath id="clip-path">
+                <rect x="0.5" y="0.5" rx="4.5" height="170" width="429" /> <!-- 이미지의 상단 부분만 라운드 적용 -->
+            </clipPath>
+        </defs>
+        <rect x="0.5" y="0.5" rx="4.5" height="99%" stroke="#e4e2e2" width="429" fill="#fffefe" stroke-opacity="1"/>
         <!-- 썸네일 이미지 추가 -->
-        <image xlink:href="${thumbnail}" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" />
+        <image xlink:href="${thumbnail}" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-path)" />
         <g data-testid="card-title" transform="translate(${padding}, ${padding + 140})">
             <svg width="400" height="400" viewBox="0 0 400 300">
                 <g transform="translate(0, 0)">
