@@ -30,7 +30,7 @@
                 <rect y="${thumbnailHeight / 2}" width="98%" height="${thumbnailHeight}" />
             </clipPath>
         </defs>
-        <rect  rx="4.5" height="95%" width="95%" stroke="#e4e2e2" fill="#fffefe" stroke-opacity="1" style="align-content: center"/>
+        <rect  rx="4.5" height="95%" width="95%" stroke="#e4e2e2" fill="#fffefe" stroke-opacity="1" style="justify-content: center"/>
         <!-- 썸네일 이미지 추가 -->
         <image xlink:href="${thumbnail}" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-path)" />
         <!-- 하단 부분에만 라운드 적용하지 않은 이미지 -->
