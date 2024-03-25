@@ -2,8 +2,8 @@
     // 패딩 값 설정
     const padding = 10;
     // 이미지의 고정된 너비와 높이 설정
-    const thumbnailWidth = 430;
-    const thumbnailHeight = 200;
+    const thumbnailWidth = 410;
+    const thumbnailHeight = 180;
 
     // 썸네일 이미지를 원하는 위치로 이동시키기 위한 좌표 설정
     const thumbnailX = 10; // 원하는 x 좌표
@@ -26,7 +26,7 @@
         </style>
         <defs>
             <clipPath id="clip-path">
-                <rect x="1" y="1" rx="4" width= ${thumbnailWidth-thumbnailX}  height="${thumbnailHeight-thumbnailY}" />
+                <rect x="1" y="1" rx="4" width= ${thumbnailWidth}  height="${thumbnailHeight}" />
             </clipPath>
         </defs>
         <rect x="0.5" y="0.5" rx="4.5" height="99%" width="99%" stroke="#e4e2e2" fill="#fffefe" stroke-opacity="1"/>
