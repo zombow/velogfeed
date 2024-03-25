@@ -32,7 +32,7 @@
         </defs>
         <g>
             <!-- 외각선을 먼저 그림 -->
-            <rect x="0.5" y="0.5" rx="4.5" height="99%" width="99%" stroke="#red" fill="#fffefe" stroke-opacity="1"/>
+            <rect x="0.5" y="0.5" rx="4.5" height="99%" width="99%" stroke="red" fill="#fffefe" stroke-opacity="1"/>
             <!-- 썸네일 이미지 추가 -->
             <image xlink:href="${thumbnail}" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-path)" />
             <!-- 하단 부분에만 라운드 적용하지 않은 이미지 -->
