@@ -2,12 +2,12 @@
     // 패딩 값 설정
     const padding = 10;
     // 이미지의 고정된 너비와 높이 설정
-    const thumbnailWidth = 415;
-    const thumbnailHeight = 185;
+    const thumbnailWidth = 430;
+    const thumbnailHeight = 200;
 
     // 썸네일 이미지를 원하는 위치로 이동시키기 위한 좌표 설정
-    const thumbnailX = 15; // 원하는 x 좌표
-    const thumbnailY = 15; // 원하는 y 좌표
+    const thumbnailX = 10; // 원하는 x 좌표
+    const thumbnailY = 10; // 원하는 y 좌표
 
     return `
     <svg xmlns="http://www.w3.org/2000/svg" width="430" height="300" fill="fffefe">
@@ -26,7 +26,7 @@
         </style>
         <defs>
             <clipPath id="clip-path">
-                <rect x="1" y="1" rx="4" width="99%"" height="${thumbnailHeight}" />
+                <rect x="1" y="1" rx="4" width="98%"" height="${thumbnailHeight}" />
             </clipPath>
         </defs>
         <rect x="0.5" y="0.5" rx="4.5" height="99%" width="99%" stroke="#e4e2e2" fill="#fffefe" stroke-opacity="1"/>
