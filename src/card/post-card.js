@@ -26,10 +26,10 @@
         </style>
         <defs>
             <clipPath id="clip-path">
-                <rect x="1" y="1" rx="4" width= ${thumbnailWidth}  height="${thumbnailHeight}" />
+                <rect x="1" y="1" rx="4" width="99%"  height="99%" />
             </clipPath>
         </defs>
-        <rect x="0.5" y="0.5" rx="4.5" height="100%" width="100%" stroke="#e4e2e2" fill="#fffefe" stroke-opacity="1"/>
+        <rect x="0.5" y="0.5" rx="4.5" height="99%" width="99%" stroke="#e4e2e2" fill="#fffefe" stroke-opacity="1"/>
         <!-- 썸네일 이미지 추가 -->
         <image xlink:href="${thumbnail}" x="${thumbnailX}" y="${thumbnailY}" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice"  />
         <g data-testid="card-title" transform="translate(${padding}, ${padding + 140})">
