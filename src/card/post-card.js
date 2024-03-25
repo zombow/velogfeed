@@ -26,7 +26,7 @@
         </style>
         <defs>
             <clipPath id="clip-path">
-                <rect x="1" y="1" rx="4" width="97%"  height="${thumbnailHeight}" />
+                <rect x="1" y="1" rx="4" width="${thumbnailWidth}"  height="${thumbnailHeight}" />
             </clipPath>
         </defs>
         <rect x="0.5" y="0.5" rx="4.5" width="99%" height="99%" stroke="#e4e2e2" fill="#fffefe" stroke-opacity="1"/>
