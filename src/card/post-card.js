@@ -5,6 +5,10 @@
     const thumbnailWidth = 430;
     const thumbnailHeight = 200;
 
+    // 이미지의 시작 위치를 패딩 값만큼 이동시킴
+    const thumbnailX = padding;
+    const thumbnailY = padding;
+
     return `
     <svg xmlns="http://www.w3.org/2000/svg" width="430" height="300" fill="fffefe">
         <style>
@@ -23,22 +27,18 @@
         <defs>
             <clipPath id="clip-path">
                 <!-- 이미지의 상단 부분에만 라운드 적용 -->
-                <rect x="1" y="1" rx="4" width="100%"" height="${thumbnailHeight}" />
+                <rect x="${thumbnailX + 1}" y="${thumbnailY + 1}" rx="4" width="98.8%"" height="${thumbnailHeight}" />
             </clipPath>
             <clipPath id="clip-path-bottom">
                 <!-- 이미지의 하단 부분에만 라운드 적용하지 않음 -->
-                <rect x="1" y="${thumbnailHeight / 2}" width="100%" height="${thumbnailHeight}" />
+                <rect x="${thumbnailX + 1}" y="${thumbnailY + thumbnailHeight / 2}" width="98.8%" height="${thumbnailHeight}" />
             </clipPath>
         </defs>
-        <!-- 외각선을 먼저 그리는 것이 아니라 이미지를 먼저 추가 -->
-        <g>
-            <!-- 썸네일 이미지 추가 -->
-            <image xlink:href="${thumbnail}" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-path)" />
-            <!-- 하단 부분에만 라운드 적용하지 않은 이미지 -->
-            <image xlink:href="${thumbnail}" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-path-bottom)" />
-        </g>
-        <!-- 외각선을 이미지 위에 그림 -->
-        <rect x="0.5" y="0.5" rx="4.5" height="99%" width="99%" stroke="red" fill="#fffefe" stroke-opacity="1"/>
+        <rect x="0.5" y="0.5" rx="4.5" height="99%" width="99%" stroke="#e4e2e2" fill="#fffefe" stroke-opacity="1"/>
+        <!-- 썸네일 이미지 추가 -->
+        <image xlink:href="${thumbnail}" x="${thumbnailX}" y="${thumbnailY}" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-path)" />
+        <!-- 하단 부분에만 라운드 적용하지 않은 이미지 -->
+        <image xlink:href="${thumbnail}" x="${thumbnailX}" y="${thumbnailY}" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-path-bottom)" />
         <g data-testid="card-title" transform="translate(${padding}, ${padding + 140})">
             <svg width="400" height="400" viewBox="0 0 400 300">
                 <g transform="translate(0, 0)">
