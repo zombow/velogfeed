@@ -39,7 +39,7 @@
             </svg>
         </g>
         <g data-testid="main-card-body" transform="translate(0, 235)">
-            <svg viewBox="0 0 400 300">
+            <svg width="400" height="300" viewBox="0 0 400 300">
                 <!-- 쇼트 디스크립션에 패딩 적용 -->
                 <text class="log-description" x=${padding} y="35">${short_description}</text>
             </svg>
