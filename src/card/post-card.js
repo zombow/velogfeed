@@ -10,7 +10,7 @@
     const thumbnailY = 5; // 원하는 y 좌표
 
     return `
-<svg xmlns="http://www.w3.org/2000/svg" width="450px" height="350px" fill="fffefe">
+<svg xmlns="http://www.w3.org/2000/svg" width="440px" height="310px" fill="fffefe">
     <style>
         .header {
             font: bold 14px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -42,7 +42,7 @@
         </filter>
     </defs>
     <!-- 그림자가 있는 사각형 -->
-    <rect x="1" y="1" rx="5" width="428" height="298" stroke="#e4e2e2" fill="#fffefe" stroke-opacity="2" filter="url(#drop-shadow)"/>
+    <rect filter="url(#drop-shadow)"/>
     <!-- 썸네일 이미지 추가 -->
     <image xlink:href="${thumbnail}" x="${thumbnailX}" y="${thumbnailY}" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-path)" />
     <g data-testid="card-title" transform="translate(${(430 - (430 - (padding * 2))) / 2}, 215)">
