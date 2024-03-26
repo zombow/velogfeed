@@ -32,13 +32,13 @@
         <rect rx="5" width="${430}" height="${300}" stroke="#e4e2e2" fill="#fffefe" stroke-opacity="1"/>
         <!-- 썸네일 이미지 추가 -->
         <image xlink:href="${thumbnail}" transform="translate(${thumbnailX}, ${thumbnailY})" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-path)" />
-        <g data-testid="card-title" transform="translate(${430 - (430 - (padding*2)) / 2}, 215)">
+        <g data-testid="card-title" transform="translate(${(430 - (430 - (padding*2))) / 2}, 215)">
             <svg width=${430 - (padding*2)} height="300">
                 <!-- 타이틀에 패딩 적용 -->
                 <text class="log-title" x="${padding}" y="35" data-testid="log-title">${title}</text>
             </svg>
         </g>
-        <g data-testid="card-title" transform="translate(${430 - (430 - (padding*2)) / 2}, 215)">
+        <g data-testid="card-title" transform="translate(${(430 - (430 - (padding*2))) / 2}, 215)">
             <svg width=${430 - (padding*2)} height="300">
                 <!-- 쇼트 디스크립션에 패딩 적용 -->
                 <text class="log-description" x=${padding} y="35">${short_description}</text>
