@@ -26,12 +26,12 @@
     </style>
     <defs>
         <clipPath id="clip-path">
-            <rect rx="8" width="420"  height="190" />
+            <rect rx="8" width="430"  height="190" />
         </clipPath>
         <!-- 그림자 효과를 위한 필터 정의 -->
-        <filter id="drop-shadow" x="-20%" y="-20%" width="130%" height="130%">
+        <filter id="drop-shadow" x="-20%" y="-20%" width="120%" height="120%">
             <feGaussianBlur in="SourceAlpha" stdDeviation="2"/> 
-            <feOffset dx="0" dy="0" result="offsetblur"/>
+            <feOffset dx="0.5" dy="0.5" result="offsetblur"/>
             <feComponentTransfer>
                 <feFuncA type="linear" slope="0.5"/>
             </feComponentTransfer>
@@ -42,17 +42,17 @@
         </filter>
     </defs>
     <!-- 그림자가 있는 사각형 -->
-    <rect x="5" y="5" rx="5" width="428" height="298" fill="#fffefe" filter="url(#drop-shadow)"/>
+    <rect x="10" y="10" rx="5" width="428" height="298" fill="#fffefe" filter="url(#drop-shadow)"/>
     <!-- 썸네일 이미지 추가 -->
     <image xlink:href="${thumbnail}" x="${thumbnailX}" y="${thumbnailY}" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-path)" />
-    <g data-testid="card-title" transform="translate(${(430 - (430 - (padding * 2))) / 2}, 215)">
-        <svg width=${430 - (padding * 2)} height="300">
+    <g data-testid="card-title" transform="translate(${(440 - (440 - (padding * 2))) / 2}, 215)">
+        <svg width=${440 - (padding * 2)} height="310">
             <!-- 타이틀에 패딩 적용 -->
             <text class="log-title" x="0" y="35" data-testid="log-title">${title}</text>
         </svg>
     </g>
-    <g data-testid="card-title" transform="translate(${(430 - (430 - (padding * 2))) / 2}, 235)">
-        <svg width=${430 - (padding * 2)} height="300">
+    <g data-testid="card-title" transform="translate(${(440 - (440 - (padding * 2))) / 2}, 235)">
+        <svg width=${440 - (padding * 2)} height="310">
             <!-- 쇼트 디스크립션에 패딩 적용 -->
             <text class="log-description" x="0" y="35">${short_description}</text>
         </svg>
