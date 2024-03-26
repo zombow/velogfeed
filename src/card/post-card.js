@@ -10,7 +10,6 @@
     const thumbnailY = 5; // 원하는 y 좌표
 
     return `
-    <rect rx="5" width="${430}" height="${300}" stroke="#e4e2e2" fill="#fffefe" stroke-opacity="1"/>
     <svg xmlns="http://www.w3.org/2000/svg" width="430" height="300" fill="fffefe">
         <style>
             .header {
@@ -27,10 +26,10 @@
         </style>
         <defs>
             <clipPath id="clip-path">
-                <rect x="1" y="1" rx="8" width="${thumbnailWidth}"  height="${thumbnailHeight}" />
+                <rect rx="8" width="${thumbnailWidth}"  height="${thumbnailHeight}" />
             </clipPath>
         </defs>
-        
+        <rect rx="5" width="100%" height="100%" stroke="#e4e2e2" fill="#fffefe" stroke-opacity="1"/>
         <!-- 썸네일 이미지 추가 -->
         <image xlink:href="${thumbnail}" transform="translate(${thumbnailX}, ${thumbnailY})" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-path)" />
         <g data-testid="card-title" transform="translate(${(430 - (430 - (padding*2))) / 2}, 215)">
