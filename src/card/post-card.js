@@ -38,7 +38,7 @@
                 <text class="log-title" x="${padding}" y="35" data-testid="log-title">${title}</text>
             </svg>
         </g>
-        <g data-testid="card-title" transform="translate(${(430 - (430 - (padding*2))) / 2}, 215)">
+        <g data-testid="card-title" transform="translate(${(430 - (430 - (padding*2))) / 2}, 235)">
             <svg width=${430 - (padding*2)} height="300">
                 <!-- 쇼트 디스크립션에 패딩 적용 -->
                 <text class="log-description" x=${padding} y="35">${short_description}</text>
