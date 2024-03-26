@@ -2,8 +2,8 @@
     // 패딩 값 설정
     const padding = 10;
     // 이미지의 고정된 너비와 높이 설정
-    const thumbnailWidth = 400;
-    const thumbnailHeight = 180;
+    const thumbnailWidth = 420;
+    const thumbnailHeight = 190;
 
     // 썸네일 이미지를 원하는 위치로 이동시키기 위한 좌표 설정
     const thumbnailX = 15; // 원하는 x 좌표
@@ -26,7 +26,7 @@
     </style>
     <defs>
         <clipPath id="clip-path">
-            <rect rx="8" width="420"  height="190" />
+            <rect rx="8" width=${thumbnailWidth}  height=${thumbnailHeight} />
         </clipPath>
         <!-- 그림자 효과를 위한 필터 정의 -->
         <filter id="drop-shadow" x="-20%" y="-20%" width="130%" height="130%">
@@ -44,7 +44,7 @@
     <!-- 그림자가 있는 사각형 -->
     <rect x="5" y="5" rx="5" width="430" height="300" fill="#fffefe" filter="url(#drop-shadow)"/>
     <!-- 썸네일 이미지 추가 -->
-    <image xlink:href="${thumbnail}" x="${thumbnailX}" y="${thumbnailY}" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-path)" />
+    <image xlink:href="${thumbnail}" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-path)" />
     <g data-testid="card-title" transform="translate(${(430 - (430 - (padding * 2))) / 2}, 215)">
         <svg width=${430 - (padding * 2)} height="300">
             <!-- 타이틀에 패딩 적용 -->
