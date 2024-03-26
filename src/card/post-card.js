@@ -32,7 +32,7 @@
         <rect rx="5" width="${430}" height="${300}" stroke="#e4e2e2" fill="#fffefe" stroke-opacity="1"/>
         <!-- 썸네일 이미지 추가 -->
         <image xlink:href="${thumbnail}" transform="translate(${thumbnailX}, ${thumbnailY})" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-path)" />
-        <g data-testid="card-title" transform="translate(${padding}, ${padding + 140})">
+        <g data-testid="card-title" transform="translate(0, 220)">
             <svg viewBox="0 0 430 300">
                 <g transform="translate(0, 0)">
                     <!-- 타이틀에 패딩 적용 -->
@@ -40,7 +40,7 @@
                 </g>
             </svg>
         </g>
-        <g data-testid="main-card-body" transform="translate(${padding}, ${padding + 165})">
+        <g data-testid="main-card-body" transform="translate(0, 240)">
             <svg viewBox="0 0 430 300">
                 <g transform="translate(0, 0)">
                     <!-- 쇼트 디스크립션에 패딩 적용 -->
