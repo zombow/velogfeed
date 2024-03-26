@@ -10,7 +10,7 @@
     const thumbnailY = 5; // 원하는 y 좌표
 
     return `
-<svg xmlns="http://www.w3.org/2000/svg" width="430px" height="300px" fill="fffefe">
+<svg xmlns="http://www.w3.org/2000/svg" width="450px" height="350px" fill="fffefe">
     <style>
         .header {
             font: bold 14px 'Segoe UI', Ubuntu, Sans-Serif;
