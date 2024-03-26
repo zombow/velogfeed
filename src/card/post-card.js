@@ -29,7 +29,7 @@
             <rect rx="8" width="420"  height="190" />
         </clipPath>
         <!-- 그림자 효과를 위한 필터 정의 -->
-        <filter id="drop-shadow" x="-20%" y="-20%" width="140%" height="100%">
+        <filter id="drop-shadow" x="-20%" y="-20%" width="140%" height="130%">
             <feGaussianBlur in="SourceAlpha" stdDeviation="3"/> 
             <feOffset dx="2" dy="2" result="offsetblur"/>
             <feComponentTransfer>
