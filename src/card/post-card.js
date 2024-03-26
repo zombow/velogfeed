@@ -2,8 +2,8 @@
     // 패딩 값 설정
     const padding = 10;
     // 이미지의 고정된 너비와 높이 설정
-    const thumbnailWidth = 400;
-    const thumbnailHeight = 150;
+    const thumbnailWidth = 417;
+    const thumbnailHeight = 187;
 
     // 썸네일 이미지를 원하는 위치로 이동시키기 위한 좌표 설정
     const thumbnailX = 5; // 원하는 x 좌표
@@ -29,7 +29,7 @@
                 <rect x="1" y="1" rx="8" width="${thumbnailWidth}"  height="${thumbnailHeight}" />
             </clipPath>
         </defs>
-        <rect x="0.5" y="0.5" rx="4.5" width="99%" height="99%" stroke="#e4e2e2" fill="#fffefe" stroke-opacity="1"/>
+        <rect x="0.5" y="0.5" rx="4.5" width="${thumbnailWidth - 0.5}" height="${thumbnailHeight - 0.5}" stroke="#e4e2e2" fill="#fffefe" stroke-opacity="1"/>
         <!-- 썸네일 이미지 추가 -->
         <image xlink:href="${thumbnail}" transform="translate(${thumbnailX}, ${thumbnailY})" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-path)" />
         <g data-testid="card-title" transform="translate(${padding}, ${padding + 140})">
