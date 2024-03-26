@@ -36,7 +36,7 @@
             <svg width="430" height="300" viewBox="0 0 430 300">
                 <g transform="translate(0, 0)">
                     <!-- 타이틀에 패딩 적용 -->
-                    <text class="log-title" x="${padding}" y="35" data-testid="log-title">${title}</text>
+                    <text class="log-title" x="${padding}" data-testid="log-title">${title}</text>
                 </g>
             </svg>
         </g>
@@ -44,7 +44,7 @@
             <svg width="430" height="300" viewBox="0 0 430 300">
                 <g transform="translate(0, 0)">
                     <!-- 쇼트 디스크립션에 패딩 적용 -->
-                    <text class="log-description" x=${padding} y="35">${short_description}</text>
+                    <text class="log-description" x=${padding} >${short_description}</text>
                 </g>
             </svg>
         </g>
