@@ -6,8 +6,8 @@
     const thumbnailHeight = 190;
 
     // 썸네일 이미지를 원하는 위치로 이동시키기 위한 좌표 설정
-    const thumbnailX = 10; // 원하는 x 좌표
-    const thumbnailY = 10; // 원하는 y 좌표
+    const thumbnailX = 15; // 원하는 x 좌표
+    const thumbnailY = 15; // 원하는 y 좌표
 
     return `
 <svg xmlns="http://www.w3.org/2000/svg" width="440px" height="310px" fill="fffefe">
@@ -42,7 +42,7 @@
         </filter>
     </defs>
     <!-- 그림자가 있는 사각형 -->
-    <rect x="5" y="5" rx="5" width="428" height="298" fill="#fffefe" filter="url(#drop-shadow)"/>
+    <rect x="5" y="5" rx="5" width="430" height="300" fill="#fffefe" filter="url(#drop-shadow)"/>
     <!-- 썸네일 이미지 추가 -->
     <image xlink:href="${thumbnail}" x="${thumbnailX}" y="${thumbnailY}" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-path)" />
     <g data-testid="card-title" transform="translate(${(430 - (430 - (padding * 2))) / 2}, 215)">
