@@ -10,41 +10,55 @@
     const thumbnailY = 5; // 원하는 y 좌표
 
     return `
-    <svg xmlns="http://www.w3.org/2000/svg" width=430px height=300px fill="fffefe">
-        <style>
-            .header {
-                font: bold 14px 'Segoe UI', Ubuntu, Sans-Serif;
-                fill: #343A40;
-                animation: fadeInAnimation 0.8s ease-in-out forwards;
-            }
-            .log-title { font: bold 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #212529 }
-            .log-description { font-size: 16px; fill: #495057}
-            .tag-item { font-size: 12px; fill: #0CA678;}
-            .heart-count { font-size: 12px; fill: #495057;}
-            .log-title:hover{ fill: #0CA678; text-decoration: underline;}
-            .list-style{font-size:14px; fill: #212529; }
-        </style>
-        <defs>
-            <clipPath id="clip-path">
-                <rect rx="8" width="${thumbnailWidth}"  height="${thumbnailHeight}" />
-            </clipPath>
-        </defs>
-        <rect x="1" y="1" rx="5" width="428" height="298" stroke="#e4e2e2" fill="#fffefe" stroke-opacity="2"/>
-        <!-- 썸네일 이미지 추가 -->
-        <image xlink:href="${thumbnail}" transform="translate(${thumbnailX}, ${thumbnailY})" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-path)" />
-        <g data-testid="card-title" transform="translate(${(430 - (430 - (padding*2))) / 2}, 215)">
-            <svg width=${430 - (padding*2)} height="300">
-                <!-- 타이틀에 패딩 적용 -->
-                <text class="log-title" x="0" y="35" data-testid="log-title">${title}</text>
-            </svg>
-        </g>
-        <g data-testid="card-title" transform="translate(${(430 - (430 - (padding*2))) / 2}, 235)">
-            <svg width=${430 - (padding*2)} height="300">
-                <!-- 쇼트 디스크립션에 패딩 적용 -->
-                <text class="log-description" x="0" y="35">${short_description}</text>
-            </svg>
-        </g>
-    </svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="430px" height="300px" fill="fffefe">
+    <style>
+        .header {
+            font: bold 14px 'Segoe UI', Ubuntu, Sans-Serif;
+            fill: #343A40;
+            animation: fadeInAnimation 0.8s ease-in-out forwards;
+        }
+        .log-title { font: bold 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #212529 }
+        .log-description { font-size: 16px; fill: #495057}
+        .tag-item { font-size: 12px; fill: #0CA678;}
+        .heart-count { font-size: 12px; fill: #495057;}
+        .log-title:hover{ fill: #0CA678; text-decoration: underline;}
+        .list-style{font-size:14px; fill: #212529; }
+    </style>
+    <defs>
+        <clipPath id="clip-path">
+            <rect rx="8" width="420"  height="190" />
+        </clipPath>
+        <!-- 그림자 효과를 위한 필터 정의 -->
+        <filter id="drop-shadow" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="3"/> 
+            <feOffset dx="2" dy="2" result="offsetblur"/>
+            <feComponentTransfer>
+                <feFuncA type="linear" slope="0.5"/>
+            </feComponentTransfer>
+            <feMerge> 
+                <feMergeNode/> 
+                <feMergeNode in="SourceGraphic"/> 
+            </feMerge>
+        </filter>
+    </defs>
+    <!-- 그림자가 있는 사각형 -->
+    <rect x="1" y="1" rx="5" width="428" height="298" stroke="#e4e2e2" fill="#fffefe" stroke-opacity="2" filter="url(#drop-shadow)"/>
+    <!-- 썸네일 이미지 추가 -->
+    <image xlink:href="${thumbnail}" x="${thumbnailX}" y="${thumbnailY}" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-path)" />
+    <g data-testid="card-title" transform="translate(${(430 - (430 - (padding * 2))) / 2}, 215)">
+        <svg width=${430 - (padding * 2)} height="300">
+            <!-- 타이틀에 패딩 적용 -->
+            <text class="log-title" x="0" y="35" data-testid="log-title">${title}</text>
+        </svg>
+    </g>
+    <g data-testid="card-title" transform="translate(${(430 - (430 - (padding * 2))) / 2}, 235)">
+        <svg width=${430 - (padding * 2)} height="300">
+            <!-- 쇼트 디스크립션에 패딩 적용 -->
+            <text class="log-description" x="0" y="35">${short_description}</text>
+        </svg>
+    </g>
+</svg>
+
   `;
 };
 
