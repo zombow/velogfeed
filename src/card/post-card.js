@@ -29,7 +29,7 @@
             <rect rx="8" width="420"  height="190" />
         </clipPath>
         <!-- 그림자 효과를 위한 필터 정의 -->
-        <filter id="drop-shadow" x="-20%" y="-20%" width="140%" height="140%">
+        <filter id="drop-shadow" x="-20%" y="-20%" width="140%" height="100%">
             <feGaussianBlur in="SourceAlpha" stdDeviation="3"/> 
             <feOffset dx="2" dy="2" result="offsetblur"/>
             <feComponentTransfer>
@@ -42,7 +42,7 @@
         </filter>
     </defs>
     <!-- 그림자가 있는 사각형 -->
-    <rect x="5" y="5" rx="5" width="428" height="298" fill="#ffeeee" filter="url(#drop-shadow)"/>
+    <rect x="5" y="5" rx="5" width="428" height="298" filter="url(#drop-shadow)"/>
     <!-- 썸네일 이미지 추가 -->
     <image xlink:href="${thumbnail}" x="${thumbnailX}" y="${thumbnailY}" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-path)" />
     <g data-testid="card-title" transform="translate(${(430 - (430 - (padding * 2))) / 2}, 215)">
