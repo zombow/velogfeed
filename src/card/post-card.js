@@ -2,12 +2,12 @@
     // 패딩 값 설정
     const padding = 10;
     // 이미지의 고정된 너비와 높이 설정
-    const thumbnailWidth = 415;
-    const thumbnailHeight = 185;
+    const thumbnailWidth = 420;
+    const thumbnailHeight = 190;
 
     // 썸네일 이미지를 원하는 위치로 이동시키기 위한 좌표 설정
-    const thumbnailX = 10; // 원하는 x 좌표
-    const thumbnailY = 10; // 원하는 y 좌표
+    const thumbnailX = 5; // 원하는 x 좌표
+    const thumbnailY = 5; // 원하는 y 좌표
 
     return `
     <svg xmlns="http://www.w3.org/2000/svg" width="430" height="300" fill="fffefe">
@@ -31,7 +31,7 @@
         </defs>
         <rect x="0.5" y="0.5" rx="4.5" width="99%" height="99%" stroke="#e4e2e2" fill="#fffefe" stroke-opacity="1"/>
         <!-- 썸네일 이미지 추가 -->
-        <image xlink:href="${thumbnail}" transform="translate(${padding}, ${padding})" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-path)" />
+        <image xlink:href="${thumbnail}" transform="translate(${thumbnailX}, ${thumbnailY})" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-path)" />
         <g data-testid="card-title" transform="translate(${padding}, ${padding + 140})">
             <svg width="400" height="400" viewBox="0 0 400 300">
                 <g transform="translate(0, 0)">
