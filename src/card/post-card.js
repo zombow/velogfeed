@@ -10,6 +10,7 @@
     const thumbnailY = 5; // 원하는 y 좌표
 
     return `
+    <rect x="1" y="1" rx="8" width="${thumbnailWidth}"  height="${thumbnailHeight}" />
     <svg xmlns="http://www.w3.org/2000/svg" width="430" height="300" fill="fffefe">
         <style>
             .header {
@@ -26,7 +27,7 @@
         </style>
         <defs>
             <clipPath id="clip-path">
-                <rect x="1" y="1" rx="8" width="${thumbnailWidth}"  height="${thumbnailHeight}" />
+                
             </clipPath>
         </defs>
         <rect rx="5" width="${430}" height="${300}" stroke="#e4e2e2" fill="#fffefe" stroke-opacity="1"/>
