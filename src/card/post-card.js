@@ -29,7 +29,7 @@
                 <rect rx="8" width="${thumbnailWidth}"  height="${thumbnailHeight}" />
             </clipPath>
         </defs>
-        <rect x="0.5" y="0.5" rx="5" width="100%" height="100%" stroke="#e4e2e2" fill="#fffefe" stroke-opacity="1" viewBox="0.5 0.5 419.5 200"/>
+        <rect x="0.5" y="0.5" rx="5" width="429" height="299" stroke="#e4e2e2" fill="#fffefe" stroke-opacity="1"/>
         <!-- 썸네일 이미지 추가 -->
         <image xlink:href="${thumbnail}" transform="translate(${thumbnailX}, ${thumbnailY})" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-path)" />
         <g data-testid="card-title" transform="translate(${(430 - (430 - (padding*2))) / 2}, 215)">
