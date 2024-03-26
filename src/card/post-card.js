@@ -10,7 +10,7 @@
     const thumbnailY = 5; // 원하는 y 좌표
 
     return `
-    <svg xmlns="http://www.w3.org/2000/svg" rx="4.5" width="430" height="300" fill="fffefe"  stroke="#e4e2e2" stroke-opacity="1">
+    <svg xmlns="http://www.w3.org/2000/svg" width="430" height="300" fill="fffefe">
         <style>
             .header {
                 font: bold 14px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -29,11 +29,11 @@
                 <rect x="1" y="1" rx="8" width="${thumbnailWidth}"  height="${thumbnailHeight}" />
             </clipPath>
         </defs>
-        
+        <rect x="0.5" y="0.5" rx="4.5" width="${430 - 2}" height="${300 - 2}" stroke="#e4e2e2" fill="#fffefe" stroke-opacity="1"/>
         <!-- 썸네일 이미지 추가 -->
         <image xlink:href="${thumbnail}" transform="translate(${thumbnailX}, ${thumbnailY})" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-path)" />
         <g data-testid="card-title" transform="translate(${padding}, ${padding + 140})">
-            <svg width="400" height="400" viewBox="0 0 400 300">
+            <svg width="400" height="400" viewBox="0 0 430 300">
                 <g transform="translate(0, 0)">
                     <!-- 타이틀에 패딩 적용 -->
                     <text class="log-title" x="${padding}" y="35" data-testid="log-title">${title}</text>
@@ -41,7 +41,7 @@
             </svg>
         </g>
         <g data-testid="main-card-body" transform="translate(${padding}, ${padding + 165})">
-            <svg width="400" height="400" viewBox="0 0 400 300">
+            <svg width="400" height="400" viewBox="0 0 430 300">
                 <g transform="translate(0, 0)">
                     <!-- 쇼트 디스크립션에 패딩 적용 -->
                     <text class="log-description" x=${padding} y="35">${short_description}</text>
