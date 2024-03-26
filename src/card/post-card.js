@@ -6,8 +6,8 @@
     const thumbnailHeight = 190;
 
     // 썸네일 이미지를 원하는 위치로 이동시키기 위한 좌표 설정
-    const thumbnailX = 5; // 원하는 x 좌표
-    const thumbnailY = 5; // 원하는 y 좌표
+    const thumbnailX = 10; // 원하는 x 좌표
+    const thumbnailY = 10; // 원하는 y 좌표
 
     return `
 <svg xmlns="http://www.w3.org/2000/svg" width="440px" height="310px" fill="fffefe">
@@ -26,7 +26,7 @@
     </style>
     <defs>
         <clipPath id="clip-path">
-            <rect rx="8" width="430"  height="190" />
+            <rect rx="8" width="420"  height="190" />
         </clipPath>
         <!-- 그림자 효과를 위한 필터 정의 -->
         <filter id="drop-shadow" x="-20%" y="-20%" width="120%" height="120%">
@@ -42,17 +42,17 @@
         </filter>
     </defs>
     <!-- 그림자가 있는 사각형 -->
-    <rect x="10" y="10" rx="5" width="428" height="298" fill="#fffefe" filter="url(#drop-shadow)"/>
+    <rect x="5" y="5" rx="5" width="428" height="298" fill="#fffefe" filter="url(#drop-shadow)"/>
     <!-- 썸네일 이미지 추가 -->
     <image xlink:href="${thumbnail}" x="${thumbnailX}" y="${thumbnailY}" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-path)" />
-    <g data-testid="card-title" transform="translate(${(440 - (440 - (padding * 2))) / 2}, 215)">
-        <svg width=${440 - (padding * 2)} height="310">
+    <g data-testid="card-title" transform="translate(${(430 - (430 - (padding * 2))) / 2}, 215)">
+        <svg width=${430 - (padding * 2)} height="300">
             <!-- 타이틀에 패딩 적용 -->
             <text class="log-title" x="0" y="35" data-testid="log-title">${title}</text>
         </svg>
     </g>
-    <g data-testid="card-title" transform="translate(${(440 - (440 - (padding * 2))) / 2}, 235)">
-        <svg width=${440 - (padding * 2)} height="310">
+    <g data-testid="card-title" transform="translate(${(430 - (430 - (padding * 2))) / 2}, 235)">
+        <svg width=${430 - (padding * 2)} height="300">
             <!-- 쇼트 디스크립션에 패딩 적용 -->
             <text class="log-description" x="0" y="35">${short_description}</text>
         </svg>
