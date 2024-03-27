@@ -42,7 +42,7 @@
         </filter>
     </defs>
     <!-- 그림자가 있는 사각형 -->
-    <rect x="5" y="5" rx="5" width="430" height="300" fill="#eaeaea" filter="url(#drop-shadow)"/>
+    <rect x="5" y="5" rx="5" width="430" height="300" fill="#f2f2f2" filter="url(#drop-shadow)"/>
     <!-- 썸네일 이미지 추가 -->
     <image xlink:href="${thumbnail}" transform="translate(${thumbnailX} , ${thumbnailY})" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-path)" />
     <g data-testid="card-title" transform="translate(${(430 - (430 - (padding * 2))) / 2}, 215)">
