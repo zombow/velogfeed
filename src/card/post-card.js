@@ -26,7 +26,7 @@
     </style>
     <defs>
         <clipPath id="clip-path">
-            <rect rx="8" width=${thumbnailWidth}  height=${thumbnailHeight} />
+            <rect rx="8" transform="translate(${thumbnailX} , ${thumbnailY})" ${thumbnailWidth}  height=${thumbnailHeight} />
         </clipPath>
         <!-- 그림자 효과를 위한 필터 정의 -->
         <filter id="drop-shadow" x="-20%" y="-20%" width="130%" height="130%">
