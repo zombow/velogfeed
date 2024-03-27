@@ -26,7 +26,7 @@
     </style>
     <defs>
         <clipPath id="clip-path">
-            <rect rx="8" width=${thumbnailWidth}  height=${thumbnailHeight} />
+            <rect  x="5" y="5" stroke="red" stroke-opacity="2" rx="8" width=${thumbnailWidth}  height=${thumbnailHeight} />
         </clipPath>
         <!-- 그림자 효과를 위한 필터 정의 -->
         <filter id="drop-shadow" x="-20%" y="-20%" width="130%" height="130%">
@@ -42,7 +42,7 @@
         </filter>
     </defs>
     <!-- 그림자가 있는 사각형 -->
-    <rect x="5" y="5" rx="5" width="430" height="300" fill="#fffefe" stroke="#e4e2e2" stroke-opacity="2" filter="url(#drop-shadow)"/>
+    <rect rx="5" width="430" height="300" fill="#fffefe" filter="url(#drop-shadow)"/>
     <!-- 썸네일 이미지 추가 -->
     <image xlink:href="${thumbnail}" transform="translate(${thumbnailX} , ${thumbnailY})" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-path)" />
     <g data-testid="card-title" transform="translate(${(430 - (430 - (padding * 2))) / 2}, 215)">
