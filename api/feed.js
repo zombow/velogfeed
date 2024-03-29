@@ -13,7 +13,7 @@ module.exports = async (req, res) => {
 
         for (const post of filteredPosts) {
             const url = `https://velog.io/@${post.user.username}/${post.url_slug}`;
-            const postSVG = postcardSVG(post.title, post.thumbnail, post.short_description);
+            const postSVG = postcardSVG(post.title, post.thumbnail, post.short_description, post.tag);
             
             const postinfo = {
                 post: post,
@@ -21,6 +21,7 @@ module.exports = async (req, res) => {
                 title: post.title,
                 short_description: post.short_description,
                 thumbnail: post.thumbnail,
+                tag: post.tag,
                 svg: postSVG,
             };
             postinfoList.push(postinfo);
