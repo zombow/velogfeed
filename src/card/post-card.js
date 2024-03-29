@@ -47,22 +47,22 @@
     <rect x="${thumbnailX}" y="${thumbnailY}" rx="8"  width="${thumbnailWidth}" height="${thumbnailHeight}" stroke="#c6c9ce" stroke-width="1.5" fill="none" />
     <!-- 썸네일 이미지 추가 -->
     <image xlink:href="${thumbnail}" transform="translate(${thumbnailX} , ${thumbnailY})" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-path)" />
-    <g data-testid="card-title" transform="translate(${(430 - (430 - (padding * 2))) / 2}, 195)">
-        <svg width=${430 - (padding * 2)} height="300">
-            <!-- 타이틀에 패딩 적용 -->
-            <text class="log-title" x="0" y="35" data-testid="log-title">${tags}</text>
-        </svg>
-    </g>
     <g data-testid="card-title" transform="translate(${(430 - (430 - (padding * 2))) / 2}, 215)">
         <svg width=${430 - (padding * 2)} height="300">
             <!-- 타이틀에 패딩 적용 -->
             <text class="log-title" x="0" y="35" data-testid="log-title">${title}</text>
         </svg>
     </g>
-    <g data-testid="card-title" transform="translate(${(430 - (430 - (padding * 2))) / 2}, 240)">
+    <g data-testid="card-body" transform="translate(${(430 - (430 - (padding * 2))) / 2}, 240)">
         <svg width=${430 - (padding * 2)} height="300">
             <!-- 쇼트 디스크립션에 패딩 적용 -->
             <text class="log-description" x="0" y="35">${short_description}</text>
+        </svg>
+    </g>
+    <g data-testid="card-tag" transform="translate(${(430 - (430 - (padding * 2))) / 2}, 190)">
+        <svg width=${430 - (padding * 2)} height="300">
+            <!-- 태그 패딩 적용 -->
+            <text class="log-title" x="0" y="35" data-testid="log-title">${tags}</text>
         </svg>
     </g>
 </svg>
