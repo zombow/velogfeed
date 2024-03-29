@@ -3,8 +3,8 @@ const { request } = require("../util");
 const fetcher = (variables) => {
     return request({
         query: `
-            query Posts($cursor: ID, $username: String, $temp_only: Boolean, $tag: String, $postnum: Int) {
-                posts(cursor: $cursor, username: $username, temp_only: $temp_only, tag: $tag, limit: $postnum) {
+            query Posts($cursor: ID, $username: String, $temp_only: Boolean, $postnum: Int) {
+                posts(cursor: $cursor, username: $username, temp_only: $temp_only, limit: $postnum) {
                   id
                   title
                   short_description
