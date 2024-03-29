@@ -1,4 +1,4 @@
-﻿const postcardSVG = (title, thumbnail, short_description, tag) => {
+﻿const postcardSVG = (title, thumbnail, short_description, tagName) => {
     // 패딩 값 설정
     const padding = 20;
     // 이미지의 고정된 너비와 높이 설정
@@ -50,7 +50,7 @@
     <g data-testid="card-title" transform="translate(${(430 - (430 - (padding * 2))) / 2}, 195)">
         <svg width=${430 - (padding * 2)} height="300">
             <!-- 타이틀에 패딩 적용 -->
-            <text class="log-title" x="0" y="35" data-testid="log-title">${tag}</text>
+            <text class="log-title" x="0" y="35" data-testid="log-title">${tagName}</text>
         </svg>
     </g>
     <g data-testid="card-title" transform="translate(${(430 - (430 - (padding * 2))) / 2}, 215)">
