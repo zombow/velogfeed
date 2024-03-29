@@ -43,8 +43,9 @@
     </defs>
     <!-- 그림자가 있는 사각형 -->
     <rect x="5" y="5" rx="5" width="430" height="300" fill="#ffffff" filter="url(#drop-shadow)" />
+    <!-- 썸네일 테두리 추가 -->
+    <rect x="${thumbnailX}" y="${thumbnailY}" rx="8"  width="${thumbnailWidth}" height="${thumbnailHeight}" stroke="#fefefe" stroke-width="1" fill="none" />
     <!-- 썸네일 이미지 추가 -->
-    <rect x="${thumbnailX}" y="${thumbnailY}" rx="8"  width="${thumbnailWidth}" height="${thumbnailHeight}" stroke="#000" stroke-width="2" fill="none" />
     <image xlink:href="${thumbnail}" transform="translate(${thumbnailX} , ${thumbnailY})" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-path)" />
     <g data-testid="card-title" transform="translate(${(430 - (430 - (padding * 2))) / 2}, 215)">
         <svg width=${430 - (padding * 2)} height="300">
