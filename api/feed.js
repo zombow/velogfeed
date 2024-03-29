@@ -4,7 +4,7 @@ const postcardSVG = require("../src/card/post-card");
 module.exports = async (req, res) => {
     const { username, postnum, tag } = req.query;
     try {
-        const posts = await fetchPosts({ username, postnum, tag });
+        const posts = await fetchPosts({ username, postnum});
         const postinfoList = [];
 
         // postnum ���� ���� ���͸��Ͽ� ����Ʈ ������ �����ɴϴ�.
@@ -13,7 +13,7 @@ module.exports = async (req, res) => {
 
         for (const post of filteredPosts) {
             const url = `https://velog.io/@${post.user.username}/${post.url_slug}`;
-            const postSVG = postcardSVG(post.title, post.thumbnail, post.short_description, post.tagName);
+            const postSVG = postcardSVG(post.title, post.thumbnail, post.short_description, post.tag);
             
             const postinfo = {
                 post: post,
@@ -21,7 +21,7 @@ module.exports = async (req, res) => {
                 title: post.title,
                 short_description: post.short_description,
                 thumbnail: post.thumbnail,
-                tagName: post.tagName,
+                tag: post.tag,
                 svg: postSVG,
             };
             postinfoList.push(postinfo);

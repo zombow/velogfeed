@@ -9,6 +9,7 @@ const fetcher = (variables) => {
                   title
                   short_description
                   thumbnail
+                  tags
                   user {
                     username
                     profile {
@@ -19,7 +20,6 @@ const fetcher = (variables) => {
                   released_at
                   updated_at
                   comments_count
-                  tags
                   likes
                 }
               }
