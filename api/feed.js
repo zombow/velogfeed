@@ -16,8 +16,8 @@ module.exports = async (req, res) => {
             const postSVG = postcardSVG(post.title, post.thumbnail, post.short_description, post.tags, post.id);
             
             const postinfo = {
-                id: post.id,
                 post: post,
+                id: post.id,
                 url: url,
                 title: post.title,
                 short_description: post.short_description,
