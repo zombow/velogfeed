@@ -36,7 +36,7 @@
     return `
         <svg xmlns="http://www.w3.org/2000/svg" width="440px" height="310px" fill="fffefe">
             <style>
-                .header { font: bold 14px 'Segoe UI', Ubuntu, Sans-Serif; fill: #343A40; animation: fadeInAnimation 0.8s ease-in-out forwards; }
+                .header { font: bold 14px Georgia, Sans-Serif; fill: #343A40; animation: fadeInAnimation 0.8s ease-in-out forwards; }
                 .log-title { font: bold 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #212529 }
                 .log-description { font-size: 16px; fill: #495057}
                 .tag-item { font-size: 14px; fill: #12B886;}
@@ -79,7 +79,7 @@
                     <text class="log-title" x="0" y="35" data-testid="log-title">${title}</text>
                 </svg>
             </g>
-            <g data-testid="card-body" transform="translate(${(430 - (430 - (padding * 2))) / 2}, 230)">
+            <g data-testid="card-body" transform="translate(${(430 - (430 - (padding * 2))) / 2}, 235)">
                 <svg width=${430 - (padding * 2)} height="300">
                     <!-- 쇼트 디스크립션에 패딩 적용 -->
                     <text class="log-description" x="0" y="35">${short_description}</text>
