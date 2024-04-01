@@ -64,7 +64,7 @@
             <!-- 그림자가 있는 사각형 -->
             <rect x="5" y="5" rx="5" width="430" height="300" fill="#ffffff" filter="url(#drop-shadow)" />
             <!-- 썸네일 테두리 추가 -->
-            <rect x="${thumbnailX}" y="${thumbnailY}" rx="8"  width="${thumbnailWidth}" height="${thumbnailHeight}" stroke="#c6c9ce" stroke-width="1.5" fill="none" />
+            <rect x="${thumbnailX}" y="${thumbnailY}" rx="10"  width="${thumbnailWidth}" height="${thumbnailHeight}"  fill="none" />
             <!-- 썸네일 이미지 추가 -->
             <image xlink:href="${thumbnail}" transform="translate(${thumbnailX} , ${thumbnailY})" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-path)" />
             <g data-testid="card-title" transform="translate(${(430 - (430 - (padding * 2))) / 2}, 190)">
@@ -92,12 +92,12 @@ const calculateTagWidth = (tag) => {
         const char = tag[i];
         // 한글인 경우
         if (/[\u3131-\uD79D]/.test(char)) {
-            width += 15; // 한글 폭
+            width += 20; // 한글 폭
         } else {
-            width += 8; // 영문 및 그 외 폭
+            width += 10; // 영문 및 그 외 폭
         }
     }
-    return width + 10; // 간격을 추가하여 반환
+    return width + 12; // 간격을 추가하여 반환
 };
 
 module.exports = postcardSVG;
