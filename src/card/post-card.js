@@ -13,8 +13,8 @@
     const tagSpacing = 5;
 
     // 태그를 담을 그룹 요소의 시작 y 좌표
-    let tagGroupY = 200;
-
+    let tagGroupY = 210;
+    let tagGroupX = 35;
     // 태그를 담을 그룹 요소 생성
     const tagsGroup = tags.map((tag, index) => {
         // 태그의 길이에 따라 동적으로 너비 계산
@@ -23,7 +23,7 @@
         const tagX = index * (tagWidth + tagSpacing);
 
         return `
-            <g data-testid="tag-group-${index}" transform="translate(${tagX}, ${tagGroupY})">
+            <g data-testid="tag-group-${index}" transform="translate(${tagGroupX}, ${tagGroupY})">
                 <rect x="0" y="0" width="${tagWidth}" height="${tagHeight}" rx="5" fill="#e9ecef" stroke="#ced4da" stroke-width="1"/>
                 <text x="${tagWidth / 2}" y="${tagHeight / 2}" dominant-baseline="middle" text-anchor="middle" fill="#495057">${tag}</text>
             </g>
