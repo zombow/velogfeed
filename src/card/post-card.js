@@ -18,8 +18,8 @@
     const tagsGroup = [];
     let accumulatedWidth = 0;
     tags.forEach((tag, index) => {
-        // 태그의 길이에 따라 동적으로 너비 계산
-        const tagWidth = tag.length * 8 + 10; // 최대 너비는 150이며, 글자 수에 따라 동적으로 변경됨
+        // 태그의 폭을 계산하는 함수 호출
+        const tagWidth = calculateTagWidth(tag);
         const tagHeight = 20;
         const tagX = accumulatedWidth + padding;
 
@@ -80,9 +80,26 @@
                 </svg>
             </g>
             <!-- 태그 추가 -->
-            ${tagsGroup.join('\n')}
+             ${tagsGroup.join('\n')}
         </svg>
     `;
+};
+
+// 한글과 영문을 구분하여 태그의 폭을 계산하는 함수
+const calculateTagWidth = (tag) => {
+    let width = 0;
+    for (let i = 0; i < tag.length; i++) {
+        const char = tag[i];
+        // 한글인 경우
+        if (/[\u3131-\u314e|\u314f-\u3163|\uac00-\ud7a3]/.test(char)) {
+            width += 10; // 한글 폭
+        }
+        // 영문인 경우
+        else if (/[a-zA-Z]/.test(char)) {
+            width += 8; // 영문 폭
+        }
+    }
+    return width + 10; // 간격을 추가하여 반환
 };
 
 module.exports = postcardSVG;
