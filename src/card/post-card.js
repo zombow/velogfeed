@@ -97,7 +97,7 @@ const calculateTagWidth = (tag) => {
             width += 10; // 영문 및 그 외 폭
         }
     }
-    return width + 8; // 간격을 추가하여 반환
+    return width; // 간격을 추가하여 반환
 };
 
 module.exports = postcardSVG;
