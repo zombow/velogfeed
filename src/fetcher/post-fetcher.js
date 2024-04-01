@@ -5,7 +5,6 @@ const fetcher = (variables) => {
         query: `
             query Posts($cursor: ID, $username: String, $temp_only: Boolean, $tag: String, $postnum: Int) {
                 posts(cursor: $cursor, username: $username, temp_only: $temp_only, tag: $tag, limit: $postnum) {
-                  id
                   title
                   short_description
                   thumbnail
