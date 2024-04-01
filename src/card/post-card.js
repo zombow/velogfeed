@@ -14,7 +14,7 @@
 
     // 태그를 담을 그룹 요소의 시작 y 좌표
     let tagGroupY = 210;
-    let tagGroupX = 35;
+    let tagGroupX = padding;
     // 태그를 담을 그룹 요소 생성
     const tagsGroup = tags.map((tag, index) => {
         // 태그의 길이에 따라 동적으로 너비 계산
