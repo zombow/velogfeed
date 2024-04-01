@@ -17,13 +17,22 @@
     let tagGroupX = padding;
     // 태그를 담을 그룹 요소 생성
     const tagsGroup = tags.map((tag, index) => {
-        // 태그의 길이에 따라 동적으로 너비 계산
-        const tagWidth = tag.length * 10; // 글자 수에 따라 동적으로 변경됨
+        // 텍스트 요소의 너비를 직접 측정하여 최대 너비 계산
+        const textElement = document.createElementNS("http://www.w3.org/2000/svg", "text");
+        textElement.textContent = tag;
+        textElement.setAttribute("class", "tag-text");
+        document.body.appendChild(textElement); // 텍스트 요소를 body에 추가하여 너비를 측정
+        const tagWidth = textElement.getComputedTextLength() + 10; // 너비에 여유값 추가
+        document.body.removeChild(textElement); // 측정이 끝난 후 body에서 제거
+
         const tagHeight = 20;
-        const tagX = index * (tagWidth + tagSpacing);
+        const tagX = tagGroupX;
+
+        // 다음 태그의 X 좌표 계산
+        tagGroupX += tagWidth + tagSpacing;
 
         return `
-            <g data-testid="tag-group-${index}" transform="translate(${tagGroupX}, ${tagGroupY})">
+            <g data-testid="tag-group-${index}" transform="translate(${tagX}, ${tagGroupY})">
                 <rect x="0" y="0" width="${tagWidth}" height="${tagHeight}" rx="5" fill="#e9ecef" stroke="#ced4da" stroke-width="1"/>
                 <text x="${tagWidth / 2}" y="${tagHeight / 2}" dominant-baseline="middle" text-anchor="middle" fill="#495057">${tag}</text>
             </g>
