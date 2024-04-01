@@ -15,18 +15,22 @@
     // 태그를 담을 그룹 요소의 시작 y 좌표
     let tagGroupY = 205;
     // 태그를 담을 그룹 요소 생성
-    const tagsGroup = tags.map((tag, index) => {
+    const tagsGroup = [];
+    let accumulatedWidth = 0;
+    tags.forEach((tag, index) => {
         // 태그의 길이에 따라 동적으로 너비 계산
-        const tagWidth = Math.min(tag.length * 8, 150); // 최대 너비는 150이며, 글자 수에 따라 동적으로 변경됨
+        const tagWidth = tag.length * 8 + 10; // 최대 너비는 150이며, 글자 수에 따라 동적으로 변경됨
         const tagHeight = 20;
-        const tagX = index * ((tagWidth * 2) + tagSpacing);
+        const tagX = accumulatedWidth + padding;
 
-        return `
-            <g data-testid="tag-group-${index}" transform="translate(${tagX + padding}, ${tagGroupY})">
+        accumulatedWidth += tagWidth + tagSpacing;
+
+        tagsGroup.push(`
+            <g data-testid="tag-group-${index}" transform="translate(${tagX}, ${tagGroupY})">
                 <rect x="0" y="0" width="${tagWidth}" height="${tagHeight}" rx="5" fill="#e9ecef" stroke="#ced4da" stroke-width="1"/>
                 <text x="${tagWidth / 2}" y="${tagHeight / 2}" dominant-baseline="middle" text-anchor="middle" fill="#495057">${tag}</text>
             </g>
-        `;
+        `);
     });
 
     return `
