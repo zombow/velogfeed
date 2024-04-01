@@ -41,7 +41,7 @@
                 .log-description { font-size: 16px; fill: #495057}
                 .tag-item { font-size: 14px; fill: #12B886;}
                 .heart-count { font-size: 12px; fill: #495057;}
-                .log-title:hover{ fill: #0CA678; text-decoration: underline;}
+                .log-title:hover{ fill: #12B886; text-decoration: underline;}
                 .list-style{ font-size:14px; fill: #212529; }
             </style>
             <defs>
