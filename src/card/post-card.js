@@ -76,7 +76,7 @@
             <g data-testid="card-title" transform="translate(${(430 - (430 - (padding * 2))) / 2}, 210)">
                 <svg width=${430 - (padding * 2)} height="300">
                     <!-- 타이틀에 패딩 적용 -->
-                    <text class="log-title" x="0" y="35" >${title}</text>
+                    <text class="log-title" x="0" y="35" data-testid="log-title">${title}</text>
                 </svg>
             </g>
             <g data-testid="card-body" transform="translate(${(430 - (430 - (padding * 2))) / 2}, 230)">
