@@ -13,7 +13,7 @@
     const tagSpacing = 5;
 
     // 태그를 담을 그룹 요소의 시작 y 좌표
-    let tagGroupY = 240;
+    let tagGroupY = 200;
 
     // 태그를 담을 그룹 요소 생성
     const tagsGroup = tags.map((tag, index) => {
@@ -23,7 +23,7 @@
         const tagX = index * (tagWidth + tagSpacing);
 
         return `
-            <g data-testid="tag-group-${index}" transform ="translate(${(430 - (430 - (padding * 2))) / 2}, 190)">
+            <g data-testid="tag-group-${index}" transform="translate(${tagX}, ${tagGroupY})">
                 <rect x="0" y="0" width="${tagWidth}" height="${tagHeight}" rx="5" fill="#e9ecef" stroke="#ced4da" stroke-width="1"/>
                 <text x="${tagWidth / 2}" y="${tagHeight / 2}" dominant-baseline="middle" text-anchor="middle" fill="#495057">${tag}</text>
             </g>
