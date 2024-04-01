@@ -11,16 +11,17 @@
 
     // 각 태그의 사이 간격
     const tagSpacing = 5;
-    // 태그의 너비와 높이 설정
-    const tagWidth = 50;
-    const tagHeight = 20;
 
     // 태그를 담을 그룹 요소의 시작 y 좌표
     let tagGroupY = 240;
 
     // 태그를 담을 그룹 요소 생성
     const tagsGroup = tags.map((tag, index) => {
+        // 태그의 길이에 따라 동적으로 너비 계산
+        const tagWidth = Math.min(tag.length * 8, 150); // 최대 너비는 150이며, 글자 수에 따라 동적으로 변경됨
+        const tagHeight = 20;
         const tagX = index * (tagWidth + tagSpacing);
+
         return `
             <g data-testid="tag-group-${index}" transform="translate(${tagX}, ${tagGroupY})">
                 <rect x="0" y="0" width="${tagWidth}" height="${tagHeight}" rx="5" fill="#e9ecef" stroke="#ced4da" stroke-width="1"/>
