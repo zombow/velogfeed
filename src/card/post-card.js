@@ -80,23 +80,21 @@
                 </svg>
             </g>
             <!-- 태그 추가 -->
-             ${tagsGroup.join('\n')}
+           ${tagsGroup.join('\n')}
         </svg>
     `;
 };
 
-// 한글과 영문을 구분하여 태그의 폭을 계산하는 함수
+// 태그의 너비를 계산하는 함수
 const calculateTagWidth = (tag) => {
     let width = 0;
     for (let i = 0; i < tag.length; i++) {
         const char = tag[i];
         // 한글인 경우
-        if (/[\u3131-\u314e|\u314f-\u3163|\uac00-\ud7a3]/.test(char)) {
+        if (/[\u3131-\uD79D]/.test(char)) {
             width += 15; // 한글 폭
-        }
-        // 영문인 경우
-        else if (/[a-zA-Z]/.test(char)) {
-            width += 8; // 영문 폭
+        } else {
+            width += 8; // 영문 및 그 외 폭
         }
     }
     return width + 10; // 간격을 추가하여 반환
