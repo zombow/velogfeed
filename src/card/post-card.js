@@ -92,7 +92,7 @@ const calculateTagWidth = (tag) => {
         const char = tag[i];
         // 한글인 경우
         if (/[\u3131-\uD79D]/.test(char)) {
-            width += 10; // 한글 폭
+            width += 12; // 한글 폭
         } else {
             width += 8; // 영문 및 그 외 폭
         }
