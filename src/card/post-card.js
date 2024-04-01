@@ -94,10 +94,10 @@ const calculateTagWidth = (tag) => {
         if (/[\u3131-\uD79D]/.test(char)) {
             width += 15; // 한글 폭
         } else {
-            width += 9; // 영문 및 그 외 폭
+            width += 8; // 영문 및 그 외 폭
         }
     }
-    return width + 20; // 간격을 추가하여 반환
+    return width + 25; // 간격을 추가하여 반환
 };
 
 module.exports = postcardSVG;
