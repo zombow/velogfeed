@@ -70,7 +70,7 @@
             <g data-testid="card-username" transform="translate(${(430 - (430 - (padding * 2))) / 2}, 185)">
                 <svg width=${430 - (padding * 2)} height="300">
                     <!-- 유저네임 패딩 적용 -->
-                    <text class="log-title" x="0" y="35" data-testid="log-title">${user.username + ".Log"}</text>
+                    <text class="header" x="0" y="35" data-testid="header">${user.username + ".Log"}</text>
                 </svg>
             </g>
             <g data-testid="card-title" transform="translate(${(430 - (430 - (padding * 2))) / 2}, 210)">
