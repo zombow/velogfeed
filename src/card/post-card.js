@@ -38,6 +38,8 @@
             <style>
                 @font-face {
                 font-family: 'Warhaven';
+                font-style: normal;
+                font-weight: 700;
                 src: url('WarhavenBold.ttf') format('truetype')
                      url('WarhavenRegular.ttf') format('truetype')
                      url('WarhavenOTFBold.otf') format('opentype')
