@@ -1,4 +1,4 @@
-﻿const fonts = require("../src/fonts/_fonts");
+﻿const fonts = require("../fonts/_fonts");
 const postcardSVG = (title, thumbnail, short_description, tags, user) => {
     // 패딩 값 설정
     const padding = 20;
