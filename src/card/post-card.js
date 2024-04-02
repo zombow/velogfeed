@@ -37,10 +37,10 @@
         <svg xmlns="http://www.w3.org/2000/svg" width="440px" height="310px" fill="fffefe">
             <style>
                 @font-face {
-                font-family: 'Warhaven';
-                src: url('../fonts/WarhavenBold.ttf') format('truetype')
-                     url('../fonts/WarhavenRegular.ttf') format('truetype')
-                     url('../fonts/WarhavenOTFBold.otf') format('opentype')
+                font-family: Warhaven;
+                src: url('../fonts/WarhavenBold.ttf') format('truetype'),
+                     url('../fonts/WarhavenRegular.ttf') format('truetype'),
+                     url('../fonts/WarhavenOTFBold.otf') format('opentype'),
                      url('../fonts/WarhavenOTFRegular.otf') format('opentype');
                 }
                 .header { font: bold 14px Warhaven, Sans-Serif; fill: #343A40; animation: fadeInAnimation 0.8s ease-in-out forwards; }
