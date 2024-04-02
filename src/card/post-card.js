@@ -54,7 +54,7 @@
                 .list-style{ font-size:14px; fill: #212529; }
                 
                 /* 호버 애니메이션 */
-                .post-card-container:hover .post-card-container {
+                .post-card-container:hover {
                     animation: hoverAnimation 0.3s ease-out forwards;
                 }
 
