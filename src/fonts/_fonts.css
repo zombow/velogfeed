@@ -1,7 +1,7 @@
 @font-face {
 	font-family: 'Warhaven';
-	src: url('/src/fonts/WarhavenBold.ttf') format('truetype');
-	src: url('/src/fonts/WarhavenRegular.ttf') format('truetype');
-	src: url('/src/fonts/WarhavenOTFBold.otf') format('opentype');
-	src: url('/src/fonts/WarhavenOTFRegular.otf') format('opentype');
+	src: url('WarhavenBold.ttf') format('truetype');
+	src: url('WarhavenRegular.ttf') format('truetype');
+	src: url('WarhavenOTFBold.otf') format('opentype');
+	src: url('WarhavenOTFRegular.otf') format('opentype');
 }
