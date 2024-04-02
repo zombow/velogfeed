@@ -38,9 +38,9 @@
             <style>
                 @font-face {
                 font-family: 'Warhaven';
-                src: url('WarhavenBold.ttf') format('truetype'),
-                     url('WarhavenRegular.ttf') format('truetype'),
-                     url('WarhavenOTFBold.otf') format('opentype'),
+                src: url('WarhavenBold.ttf') format('truetype')
+                     url('WarhavenRegular.ttf') format('truetype')
+                     url('WarhavenOTFBold.otf') format('opentype')
                      url('WarhavenOTFRegular.otf') format('opentype')
                 }
                 .header { font: bold 14px 'Warhaven', Sans-Serif; fill: #343A40; animation: fadeInAnimation 0.8s ease-in-out forwards; }
