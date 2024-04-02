@@ -41,7 +41,7 @@
                 src: url('WarhavenBold.ttf') format('truetype')
                      url('WarhavenRegular.ttf') format('truetype')
                      url('WarhavenOTFBold.otf') format('opentype')
-                     url('WarhavenOTFRegular.otf') format('opentype');
+                     url('WarhavenOTFRegular.otf') format('opentype')
                 font-style: normal;
                 font-weight: 700;
                 }
