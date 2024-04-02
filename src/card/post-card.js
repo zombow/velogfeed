@@ -54,17 +54,17 @@
                 .list-style{ font-size:14px; fill: #212529; }
                 
                 /* 호버 애니메이션 */
-                .post-card-container:hover {
-                    animation: hoverAnimation 0.3s ease-out forwards;
+                .post-card-container {
+                    transition: transform 0.3s ease-out; /* 호버와 호버 해제에 대한 트랜지션 설정 */
                 }
 
-                @keyframes hoverAnimation {
-                    from {
-                        transform: translateY(0);
-                    }
-                    to {
-                        transform: translateY(-5px); /* 위로 5px 이동 */
-                    }
+                .post-card-container:hover {
+                    transform: translateY(-5px); /* 호버될 때 위로 이동하는 애니메이션 */
+                }
+
+                /* 마우스가 빠져나갈 때 다시 원래 자리로 이동하는 애니메이션 */
+                .post-card-container:not(:hover) {
+                    transform: translateY(0);
                 }
             </style>
             <defs>
