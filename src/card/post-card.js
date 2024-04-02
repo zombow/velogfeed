@@ -38,10 +38,10 @@
             <style>
                 @font-face {
                     font-family:'Warhaven';
-                    src: url('/src/fonts/WarhavenBold.ttf') format('truetype')
-                    src: url('/src/fonts/WarhavenRegular.ttf') format('truetype')
-                    src: url('/src/fonts/WarhavenOTFBold.otf') format('opentype')
-                    src: url('/src/fonts/WarhavenOTFRegular.otf') format('opentype')
+                    src: url('/src/fonts/WarhavenBold.ttf') format('truetype');
+                    src: url('/src/fonts/WarhavenRegular.ttf') format('truetype');
+                    src: url('/src/fonts/WarhavenOTFBold.otf') format('opentype');
+                    src: url('/src/fonts/WarhavenOTFRegular.otf') format('opentype');
                     
                 }
                 .header { font: bold 14px 'Warhaven', Sans-Serif; fill: #343A40; animation: fadeInAnimation 0.8s ease-in-out forwards; }
