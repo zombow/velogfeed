@@ -43,7 +43,7 @@
                      url('../fonts/WarhavenOTFBold.otf') format('opentype')
                      url('../fonts/WarhavenOTFRegular.otf') format('opentype');
                 }
-                .header { font: bold 15px Warhaven, Sans-Serif; fill: #343A40; animation: fadeInAnimation 0.8s ease-in-out forwards; }
+                .header { font: bold 15px Warhaven, Sans-Serif; fill: #343A40; animation: fadeInAnimation 0.8s ease-in-out forwards; ext-decoration: underline; }
                 .log-title { font: bold 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #212529 }
                 .log-description { font-size: 16px; fill: #495057}
                 .tag-item { font-size: 14px; fill: #12B886;}
@@ -77,7 +77,7 @@
             <g data-testid="card-username" transform="translate(${(430 - (430 - (padding * 2))) / 2}, 183)">
                 <svg width=${430 - (padding * 2)} height="300">
                     <!-- 유저네임 패딩 적용 -->
-                    <text class="header" x="0" y="35" data-testid="header">${"◆ " + user.username + ".log"}</text>
+                    <text class="header" x="0" y="35" data-testid="header">${user.username + ".log"}</text>
                 </svg>
             </g>
             <g data-testid="card-title" transform="translate(${(430 - (430 - (padding * 2))) / 2}, 208)">
