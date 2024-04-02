@@ -38,11 +38,10 @@
             <style>
                 @font-face {
                     font-family:'Warhaven';
-                    src: url('/src/fonts/WarhavenBold.ttf') format('truetype')
-                    src: url('/src/fonts/WarhavenRegular.ttf') format('truetype')
-                    src: url('/src/fonts/WarhavenOTFBold.otf') format('opentype')
-                    src: url('/src/fonts/WarhavenOTFRegular.otf') format('opentype')
-                    
+                    src: url('/src/fonts/WarhavenBold.ttf') format('truetype');
+                    src: url('/src/fonts/WarhavenRegular.ttf') format('truetype');
+                    src: url('/src/fonts/WarhavenOTFBold.otf') format('opentype');
+                    src: url('/src/fonts/WarhavenOTFRegular.otf') format('opentype');
                 }
                 .header { font: bold 14px 'Warhaven', Sans-Serif; fill: #343A40; animation: fadeInAnimation 0.8s ease-in-out forwards; }
                 .log-title { font: bold 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #212529 }
@@ -78,7 +77,7 @@
             <g data-testid="card-username" transform="translate(${(430 - (430 - (padding * 2))) / 2}, 183)">
                 <svg width=${430 - (padding * 2)} height="300">
                     <!-- 유저네임 패딩 적용 -->
-                    <text class="header" x="0" y="35" data-testid="header">${user.username + ".Log"}</text>
+                    <text class="header" x="0" y="35" data-testid="header">${user.username + ".log"}</text>
                 </svg>
             </g>
             <g data-testid="card-title" transform="translate(${(430 - (430 - (padding * 2))) / 2}, 208)">
