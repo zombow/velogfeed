@@ -33,10 +33,19 @@
         `);
     });
 
+
+    @font-face {
+        font-family: 'WarhavenB';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/WarhavenB.woff2') format('woff2');
+        font-weight: 700;
+        font-style: normal;
+    }
+
+
     return `
         <svg xmlns="http://www.w3.org/2000/svg" width="440px" height="310px" fill="fffefe">
             <style>
-                .header { font: bold 14px Tahoma, Sans-Serif; fill: #343A40; animation: fadeInAnimation 0.8s ease-in-out forwards; }
+                .header { font: bold 14px WarhavenB, Sans-Serif; fill: #343A40; animation: fadeInAnimation 0.8s ease-in-out forwards; }
                 .log-title { font: bold 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #212529 }
                 .log-description { font-size: 16px; fill: #495057}
                 .tag-item { font-size: 14px; fill: #12B886;}
