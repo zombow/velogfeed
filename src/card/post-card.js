@@ -1,4 +1,5 @@
-﻿const postcardSVG = (title, thumbnail, short_description, tags, user) => {
+﻿const fonts = require("../src/fonts/_fonts");
+const postcardSVG = (title, thumbnail, short_description, tags, user) => {
     // 패딩 값 설정
     const padding = 20;
     // 이미지의 고정된 너비와 높이 설정
@@ -36,13 +37,6 @@
     return `
         <svg xmlns="http://www.w3.org/2000/svg" width="440px" height="310px" fill="fffefe">
             <style>
-                @font-face {
-                    font-family:'Warhaven';
-                    src: url('/src/fonts/WarhavenBold.ttf') format('truetype');
-                    src: url('/src/fonts/WarhavenRegular.ttf') format('truetype');
-                    src: url('/src/fonts/WarhavenOTFBold.otf') format('opentype');
-                    src: url('/src/fonts/WarhavenOTFRegular.otf') format('opentype');
-                }
                 .header { font: bold 14px 'Warhaven', Sans-Serif; fill: #343A40; animation: fadeInAnimation 0.8s ease-in-out forwards; }
                 .log-title { font: bold 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #212529 }
                 .log-description { font-size: 16px; fill: #495057}
