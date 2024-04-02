@@ -13,7 +13,7 @@
     const tagSpacing = 5;
 
     // 태그를 담을 그룹 요소의 시작 y 좌표
-    let tagGroupY = 275;
+    let tagGroupY = 274;
     // 태그를 담을 그룹 요소 생성
     const tagsGroup = [];
     let accumulatedWidth = 0;
@@ -77,16 +77,16 @@
             <g data-testid="card-username" transform="translate(${(430 - (430 - (padding * 2))) / 2}, 183)">
                 <svg width=${430 - (padding * 2)} height="300">
                     <!-- 유저네임 패딩 적용 -->
-                    <text class="header" x="0" y="35" data-testid="header">${"△ " + user.username + ".log"}</text>
+                    <text class="header" x="0" y="35" data-testid="header">${user.username + ".log"}</text>
                 </svg>
             </g>
-            <g data-testid="card-title" transform="translate(${(430 - (430 - (padding * 2))) / 2}, 208)">
+            <g data-testid="card-title" transform="translate(${(430 - (430 - (padding * 2))) / 2}, 206)">
                 <svg width=${430 - (padding * 2)} height="300">
                     <!-- 타이틀에 패딩 적용 -->
                     <text class="log-title" x="0" y="35" data-testid="log-title">${title}</text>
                 </svg>
             </g>
-            <g data-testid="card-body" transform="translate(${(430 - (430 - (padding * 2))) / 2}, 229)">
+            <g data-testid="card-body" transform="translate(${(430 - (430 - (padding * 2))) / 2}, 227)">
                 <svg width=${430 - (padding * 2)} height="300">
                     <!-- 쇼트 디스크립션에 패딩 적용 -->
                     <text class="log-description" x="0" y="35">${short_description}</text>
