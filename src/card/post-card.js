@@ -34,37 +34,39 @@
     });
 
     return `
-    <svg xmlns="http://www.w3.org/2000/svg" width="440px" height="310px" fill="fffefe">
-        <style>
-            @font-face {
-                font-family: Warhaven;
-                src: url('../fonts/WarhavenBold.ttf') format('truetype')
-                     url('../fonts/WarhavenRegular.ttf') format('truetype')
-                     url('../fonts/WarhavenOTFBold.otf') format('opentype')
-                     url('../fonts/WarhavenOTFRegular.otf') format('opentype');
-            }
-            .header { font: bold 15px Warhaven, Sans-Serif; fill: #343A40; animation: fadeInAnimation 0.8s ease-in-out forwards;}
-            .log-title { font: bold 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #212529 }
-            .log-description { font-size: 16px; fill: #495057}
-            .tag-item { font-size: 14px; fill: #12B886;}
-            .heart-count { font-size: 12px; fill: #495057;}
-            .log-title:hover{ fill: #12B886; text-decoration: underline;}
-            .list-style{ font-size:14px; fill: #212529; }
-            
-            /* 호버 애니메이션 */
-            .header:hover {
-                animation: hoverAnimation 0.3s ease-out forwards;
-            }
+    <div class="post-card-container">
+        <svg xmlns="http://www.w3.org/2000/svg" width="440px" height="310px" fill="fffefe">
+            <style>
+                /* 기존 스타일 */
+                @font-face {
+                    font-family: Warhaven;
+                    src: url('../fonts/WarhavenBold.ttf') format('truetype')
+                         url('../fonts/WarhavenRegular.ttf') format('truetype')
+                         url('../fonts/WarhavenOTFBold.otf') format('opentype')
+                         url('../fonts/WarhavenOTFRegular.otf') format('opentype');
+                }
+                .header { font: bold 15px Warhaven, Sans-Serif; fill: #343A40; animation: fadeInAnimation 0.8s ease-in-out forwards;}
+                .log-title { font: bold 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #212529 }
+                .log-description { font-size: 16px; fill: #495057}
+                .tag-item { font-size: 14px; fill: #12B886;}
+                .heart-count { font-size: 12px; fill: #495057;}
+                .log-title:hover{ fill: #12B886; text-decoration: underline;}
+                .list-style{ font-size:14px; fill: #212529; }
+                
+                /* 호버 애니메이션 */
+                .post-card-container:hover .header {
+                    animation: hoverAnimation 0.3s ease-out forwards;
+                }
 
-            @keyframes hoverAnimation {
-                from {
-                    transform: translateY(0);
+                @keyframes hoverAnimation {
+                    from {
+                        transform: translateY(0);
+                    }
+                    to {
+                        transform: translateY(-5px); /* 위로 5px 이동 */
+                    }
                 }
-                to {
-                    transform: translateY(-5px); /* 위로 5px 이동 */
-                }
-            }
-        </style>
+            </style>
             <defs>
                 <clipPath id="clip-path">
                     <rect rx="8"  width=${thumbnailWidth} height=${thumbnailHeight} />
