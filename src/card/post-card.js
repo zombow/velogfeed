@@ -74,7 +74,7 @@
                     <feGaussianBlur in="SourceAlpha" stdDeviation="1"/> 
                     <feOffset dx="0.5" dy="0.5" result="offsetblur"/>
                     <feComponentTransfer>
-                        <feFuncA type="linear" slope="1"/>
+                        <feFuncA type="table" slope="0.5"/>
                     </feComponentTransfer>
                     <feMerge> 
                         <feMergeNode/> 
