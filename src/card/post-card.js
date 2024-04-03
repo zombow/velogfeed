@@ -38,11 +38,12 @@
         <svg xmlns="http://www.w3.org/2000/svg" width="440px" height="310px" fill="fffefe">
             <style>
                 @font-face {
-                    font-family:'WarhavenB';
-                    src: url('../fonts/Warhaven_Bold.ttf') format('truetype'),
-                    url('../fonts/WarhavenOTF_Bold.otf') format('opentype');
+                    font-family:'ForgedBlade';
+                    src: url('../fonts/DNFForgedBlade-Bold.eot') format('embedded-opentype'),
+                    url('../fonts/DNFForgedBlade-Bold.woff') format('woff');
+                    url('../fonts/DNFForgedBlade-Bold.woff2') format('woff2');
                 }                   
-                .header { font: bold 15px 'WarhavenB', Sans-Serif; fill: #343A40;}
+                .header { font: bold 15px 'ForgedBlade', Sans-Serif; fill: #343A40;}
                 .log-title { font: bold 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #212529 }
                 .log-description { font-size: 16px; fill: #495057}
                 .tag-item { font-size: 14px; fill: #12B886;}
