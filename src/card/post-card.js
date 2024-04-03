@@ -37,19 +37,13 @@
     <div class="post-card-container">
         <svg xmlns="http://www.w3.org/2000/svg" width="440px" height="310px" fill="fffefe">
             <style>
-                /* 기존 스타일 */
-                @font-face {
-                    font-family: 'Warhaven';
-                    src: url('../fonts/WarhavenRegular.ttf') format('truetype'),
-                         url('../fonts/WarhavenOTFRegular.otf') format('opentype');
-                }
                 @font-face {
                     font-family: 'WarhavenB';
                     src: url('../fonts/WarhavenBold.ttf') format('truetype'),
                          url('../fonts/WarhavenOTFBold.otf') format('opentype');
                 }
                                     
-                .header { font: bold 15px WarhavenB, Sans-Serif; fill: #343A40; animation: fadeInAnimation 0.8s ease-in-out forwards;}
+                .header { font: bold 15px 'WarhavenB', Sans-Serif; fill: #343A40; animation: fadeInAnimation 0.8s ease-in-out forwards;}
                 .log-title { font: bold 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #212529 }
                 .log-description { font-size: 16px; fill: #495057}
                 .tag-item { font-size: 14px; fill: #12B886;}
