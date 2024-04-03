@@ -35,7 +35,7 @@
 
     return `
     <div class="post-card-container">
-        <svg xmlns="http://www.w3.org/2000/svg" width="440px" height="310px" fill="fffefe">
+        <svg xmlns="http://www.w3.org/2000/svg" width="500px" height="400px" fill="fffefe">
             <style>
                 @font-face {
                     font-family: 'WarhavenB';
@@ -70,7 +70,7 @@
                     <rect rx="8"  width=${thumbnailWidth} height=${thumbnailHeight} />
                 </clipPath>
                 <!-- 그림자 효과를 위한 필터 정의 -->
-                <filter id="drop-shadow" x="-50%" y="-50%" width="130%" height="130%">
+                <filter id="drop-shadow" x="-30%" y="-30%" width="130%" height="130%">
                     <feGaussianBlur in="SourceAlpha" stdDeviation="1"/> 
                     <feOffset dx="0.5" dy="0.5" result="offsetblur"/>
                     <feComponentTransfer>
