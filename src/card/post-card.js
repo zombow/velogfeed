@@ -40,7 +40,7 @@
                 @font-face {
                     font-family:'ForgedBlade';
                     src: url('../fonts/DNFForgedBlade-Bold.eot') format('embedded-opentype'),
-                    url('../fonts/DNFForgedBlade-Bold.woff') format('woff');
+                    url('../fonts/DNFForgedBlade-Bold.woff') format('woff'),
                     url('../fonts/DNFForgedBlade-Bold.woff2') format('woff2');
                 }                   
                 .header { font: bold 15px 'ForgedBlade', Sans-Serif; fill: #343A40;}
