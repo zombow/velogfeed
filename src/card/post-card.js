@@ -39,8 +39,8 @@
             <style>
                 @font-face {
                     font-family:'WarhavenB';
-                    src: url('/var/www/html/src/fonts/Warhaven_Bold.ttf'),
-                    url('/var/www/html/src/fonts/Warhaven_Bold.ttf');
+                    src: url('../fonts/Warhaven_Bold.ttf'),
+                    url('../fonts/WarhavenOTF_Bold.otf');
                 }                   
                 .header { font: bold 15px 'WarhavenB', Sans-Serif; fill: #343A40;}
                 .log-title { font: bold 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #212529 }
