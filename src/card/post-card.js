@@ -40,10 +40,10 @@
                 /* 기존 스타일 */
                 @font-face {
                     font-family: Warhaven;
-                    src: url('../fonts/WarhavenBold.ttf') format('truetype'),
-                         url('../fonts/WarhavenRegular.ttf') format('truetype'),
-                         url('../fonts/WarhavenOTFBold.otf') format('opentype'),
-                         url('../fonts/WarhavenOTFRegular.otf') format('opentype');
+                    src: url('../fonts/WarhavenBold.ttf') format('truetype');
+                    src: url('../fonts/WarhavenRegular.ttf') format('truetype');
+                    src: url('../fonts/WarhavenOTFBold.otf') format('opentype');
+                    src: url('../fonts/WarhavenOTFRegular.otf') format('opentype');
                 }
                 .header { font: bold 15px Warhaven, Sans-Serif; fill: #343A40; animation: fadeInAnimation 0.8s ease-in-out forwards;}
                 .log-title { font: bold 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #212529 }
