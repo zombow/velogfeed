@@ -70,7 +70,7 @@
                     <rect rx="8"  width=${thumbnailWidth} height=${thumbnailHeight} />
                 </clipPath>
                 <!-- 그림자 효과를 위한 필터 정의 -->
-                <filter id="drop-shadow" x="-10%" y="-10%" width="110%" height="110%">
+                <filter id="drop-shadow" x="-20%" y="-20%" width="110%" height="110%">
                     <feGaussianBlur in="SourceAlpha" stdDeviation="1"/> 
                     <feOffset dx="0.5" dy="0.5" result="offsetblur"/>
                     <feComponentTransfer>
