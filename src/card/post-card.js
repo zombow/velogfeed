@@ -38,8 +38,9 @@
         <svg xmlns="http://www.w3.org/2000/svg" width="440px" height="310px" fill="fffefe">
             <style>
                 @font-face {
-                    font-family: 'WarhavenB';
-                    src: url('../fonts/WarhavenOTFBold.otf') format('opentype')
+                    font-family:'WarhavenB';
+                    src: url('../fonts/WarhavenBold.ttf') format('truetype'),
+                    url('../fonts/WarhavenOTFBold.otf') format('opentypetype');
                 }                   
                 .header { font: bold 15px 'WarhavenB', Sans-Serif; fill: #343A40;}
                 .log-title { font: bold 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #212529 }
