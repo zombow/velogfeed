@@ -39,13 +39,17 @@
             <style>
                 /* 기존 스타일 */
                 @font-face {
-                    font-family: Warhaven;
-                    src: url('../fonts/WarhavenBold.ttf') format('truetype');
-                    src: url('../fonts/WarhavenRegular.ttf') format('truetype');
-                    src: url('../fonts/WarhavenOTFBold.otf') format('opentype');
-                    src: url('../fonts/WarhavenOTFRegular.otf') format('opentype');
+                    font-family: 'Warhaven';
+                    src: url('../fonts/WarhavenRegular.ttf') format('truetype'),
+                         url('../fonts/WarhavenOTFRegular.otf') format('opentype');
                 }
-                .header { font: bold 15px Warhaven, Sans-Serif; fill: #343A40; animation: fadeInAnimation 0.8s ease-in-out forwards;}
+                @font-face {
+                    font-family: 'WarhavenB';
+                    src: url('../fonts/WarhavenBold.ttf') format('truetype'),
+                         url('../fonts/WarhavenOTFBold.otf') format('opentype');
+                }
+                                    
+                .header { font: bold 15px WarhavenB, Sans-Serif; fill: #343A40; animation: fadeInAnimation 0.8s ease-in-out forwards;}
                 .log-title { font: bold 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #212529 }
                 .log-description { font-size: 16px; fill: #495057}
                 .tag-item { font-size: 14px; fill: #12B886;}
@@ -72,7 +76,7 @@
                     <rect rx="8"  width=${thumbnailWidth} height=${thumbnailHeight} />
                 </clipPath>
                 <!-- 그림자 효과를 위한 필터 정의 -->
-                <filter id="drop-shadow" x="-20%" y="-20%" width="130%" height="130%">
+                <filter id="drop-shadow" x="-20%" y="-20%" width="135%" height="135%">
                     <feGaussianBlur in="SourceAlpha" stdDeviation="1"/> 
                     <feOffset dx="0.5" dy="0.5" result="offsetblur"/>
                     <feComponentTransfer>
