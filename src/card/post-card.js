@@ -39,9 +39,9 @@
             <style>
                 @font-face {
                     font-family:'ForgedBlade';
-                    src: hrep('../fonts/DNFForgedBlade-Bold.eot') format('embedded-opentype')
-                    ,hrep('../fonts/DNFForgedBlade-Bold.woff') format('woff')
-                    ,hrep('..src/fonts/DNFForgedBlade-Bold.woff2') format('woff2');
+                    src: local('../fonts/DNFForgedBlade-Bold.eot') format('embedded-opentype')
+                    ,local('../fonts/DNFForgedBlade-Bold.woff') format('woff')
+                    ,local('..src/fonts/DNFForgedBlade-Bold.woff2') format('woff2');
                 }                   
                 .header { font: bold 15px 'ForgedBlade', Sans-Serif; fill: #343A40;}
                 .log-title { font: bold 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #212529 }
