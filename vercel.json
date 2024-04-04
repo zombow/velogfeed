@@ -11,7 +11,7 @@
     {
       "src": "/(.*)\\.(woff|woff2|eot|ttf)",
       "headers": {
-        "Content-Type": "font/woff2" // 폰트 파일에 대한 MIME 유형 설정
+        "Content-Type": "font/woff2"
       },
       "continue": true
     },
