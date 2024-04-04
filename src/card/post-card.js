@@ -36,7 +36,35 @@
     return `
     <div class="post-card-container">
         <svg xmlns="http://www.w3.org/2000/svg" width="440px" height="310px" fill="fffefe">
-            <link rel="stylesheet" href="../fonts/_fonts.css">
+            <style>
+                @font-face {
+                    font-family:'ForgedBlade';
+                    src: url("/assets/fonts/DNFForgedBlade-Bold.eot") format('embedded-opentype')
+                    ,url("/assets/fonts/DNFForgedBlade-Bold.woff") format('woff'),
+                    ,url("/assets/fonts/DNFForgedBlade-Bold.woff2") format('woff2');
+                }                   
+                .header { font: bold 15px 'bitbit', Sans-Serif; fill: #343A40;}
+                .log-title { font: bold 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #212529 }
+                .log-description { font-size: 16px; fill: #495057}
+                .tag-item { font-size: 14px; fill: #12B886;}
+                .heart-count { font-size: 12px; fill: #495057;}
+                .log-title:hover{ fill: #12B886; text-decoration: underline;}
+                .list-style{ font-size:14px; fill: #212529; }
+                
+                /* 호버 애니메이션 */
+                .post-card-container {
+                    transition: transform 0.3s ease-out; /* 호버와 호버 해제에 대한 트랜지션 설정 */
+                }
+
+                .post-card-container:hover {
+                    transform: translateY(-5px); /* 호버될 때 위로 이동하는 애니메이션 */
+                }
+
+                /* 마우스가 빠져나갈 때 다시 원래 자리로 이동하는 애니메이션 */
+                .post-card-container:not(:hover) {
+                    transform: translateY(0);
+                }
+            </style>
             <defs>
                 <clipPath id="clip-path">
                     <rect rx="8"  width=${thumbnailWidth} height=${thumbnailHeight} />
