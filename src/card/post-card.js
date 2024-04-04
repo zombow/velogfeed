@@ -41,7 +41,7 @@
                     font-family:'ForgedBlade';
                     src: url('/src/fonts/DNFForgedBlade-Bold.eot') format('embedded-opentype');
                     src: url('https://github.com/zombow/velogfeed/blob/master/src/fonts/DNFForgedBlade-Bold.woff') format('woff');
-                    src: url('/src/fonts/DNFForgedBlade-Bold.woff2') format('woff2');
+                    src: url('https://github.com/zombow/velogfeed/blob/master/src/fonts/DNFForgedBlade-Bold.woff2') format('woff2');
                 }                   
                 .header { font: bold 15px 'ForgedBlade', Sans-Serif; fill: #343A40;}
                 .log-title { font: bold 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #212529 }
