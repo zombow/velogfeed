@@ -3,8 +3,8 @@ const { request } = require("../util");
 const fetcher = (variables) => {
     return request({
         query: `
-            query Posts($cursor: ID, $username: String, $temp_only: Boolean, $tag: String, $postnum: Int, &usernameFont: String, &titleFont: String, &descriptionFont: String) {
-                posts(cursor: $cursor, username: $username, temp_only: $temp_only, tag: $tag, limit: $postnum, usernameFont: $usernameFont, titleFont:$titleFont, descriptionFont: $discriptionFont) {
+            query Posts($cursor: ID, $username: String, $temp_only: Boolean, $tag: String, $postnum: Int, ) {
+                posts(cursor: $cursor, username: $username, temp_only: $temp_only, tag: $tag, limit: $postnum) {
                   title
                   short_description
                   thumbnail
@@ -27,9 +27,9 @@ const fetcher = (variables) => {
     });
 };
 
-async function fetchPosts({ username, postnum, tag, usernameFont, titleFont, descriptionFont}) {
+async function fetchPosts({ username, postnum, tag}) {
     try {
-        const { data } = await fetcher({ username: username, limit: postnum, tag: tag ,usernameFont: usernameFont, titleFont: titleFont, descriptionFont: descriptionFont});
+        const { data } = await fetcher({ username: username, limit: postnum, tag: tag});
         return data.data.posts;
     } catch (e) {
         throw new Error(e);

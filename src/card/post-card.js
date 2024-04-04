@@ -1,4 +1,4 @@
-﻿const postcardSVG = (title, thumbnail, short_description, tags, user, usernamefont ,titlefont, shortdescriptionfont) => {
+﻿const postcardSVG = (title, thumbnail, short_description, tags, user) => {
     // 패딩 값 설정
     const padding = 20;
     // 이미지의 고정된 너비와 높이 설정
