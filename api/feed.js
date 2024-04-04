@@ -4,7 +4,7 @@ const postcardSVG = require("../src/card/post-card");
 module.exports = async (req, res) => {
     const { username, postnum, tag } = req.query;
     try {
-        const posts = await fetchPosts({ username, postnum, tag });
+        const posts = await fetchPosts({ username, postnum, tag, usernamefont ,titlefont, shortdescriptionfont});
         const postinfoList = [];
 
         // postnum ���� ���� ���͸��Ͽ� ����Ʈ ������ �����ɴϴ�.

@@ -1,4 +1,4 @@
-﻿const postcardSVG = (title, thumbnail, short_description, tags, user) => {
+﻿const postcardSVG = (title, thumbnail, short_description, tags, user, usernamefont ,titlefont, shortdescriptionfont) => {
     // 패딩 값 설정
     const padding = 20;
     // 이미지의 고정된 너비와 높이 설정
@@ -43,7 +43,7 @@
                     ,url("/assets/fonts/DNFForgedBlade-Bold.woff") format('woff'),
                     ,url("/assets/fonts/DNFForgedBlade-Bold.woff2") format('woff2');
                 }                   
-                .header { font: bold 15px 'bitbit', Sans-Serif; fill: #343A40;}
+                .header { font: bold 15px ${usernamefont}, Sans-Serif; fill: #343A40;}
                 .log-title { font: bold 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #212529 }
                 .log-description { font-size: 16px; fill: #495057}
                 .tag-item { font-size: 14px; fill: #12B886;}
