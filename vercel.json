@@ -9,6 +9,11 @@
   ],
   "routes": [
     {
+      "src": "/fonts/.*",
+      "headers": { "Content-Type": "application/font-woff" },
+      "dest": "/path/to/your/fonts"
+    },
+    {
       "src": "/.*",
       "dest": "/"
     }
