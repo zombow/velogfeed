@@ -2,7 +2,7 @@ const fetchPosts = require("../src/fetcher/post-fetcher");
 const postcardSVG = require("../src/card/post-card");
 
 module.exports = async (req, res) => {
-    const { username, postnum, tag } = req.query;
+    const { username, postnum, tag, usernamefont ,titlefont, shortdescriptionfont } = req.query;
     try {
         const posts = await fetchPosts({ username, postnum, tag, usernamefont ,titlefont, shortdescriptionfont});
         const postinfoList = [];
