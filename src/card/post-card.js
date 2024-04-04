@@ -36,13 +36,8 @@
     return `
     <div class="post-card-container">
         <svg xmlns="http://www.w3.org/2000/svg" width="440px" height="310px" fill="fffefe">
-            <style>
-                @font-face {
-                    font-family:'ForgedBlade';
-                    src: url("/assets/fonts/DNFForgedBlade-Bold.eot") format('embedded-opentype')
-                    ,url("/assets/fonts/DNFForgedBlade-Bold.woff") format('woff'),
-                    ,url("/assets/fonts/DNFForgedBlade-Bold.woff2") format('woff2');
-                }                   
+            <link rel="stylesheet" href="../fonts/_fonts.css">
+            <style>     
                 .header { font: bold 15px 'ForgedBlade', Sans-Serif; fill: #343A40;}
                 .log-title { font: bold 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #212529 }
                 .log-description { font-size: 16px; fill: #495057}
