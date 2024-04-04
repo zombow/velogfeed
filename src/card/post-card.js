@@ -39,7 +39,7 @@
             <style>
                 @font-face {
                     font-family:'ForgedBlade';
-                    src: url('/src/fonts/DNFForgedBlade-Bold.woff2') format('woff2');
+                    src: url('/src/fonts/DNFForgedBlade-Bold.eot') format('embedded-opentype');
                 }                   
                 .header { font: bold 15px 'ForgedBlade', Sans-Serif; fill: #343A40;}
                 .log-title { font: bold 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #212529 }
