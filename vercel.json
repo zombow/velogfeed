@@ -4,7 +4,7 @@
     {
       "src": "index.js",
       "use": "@vercel/node",
-      "config": { "maxLambdaSize": "10mb" }
+      "config": { "maxLambdaSize": "100mb" }
     }
   ],
   "routes": [
