@@ -9,13 +9,6 @@
   ],
   "routes": [
     {
-      "src": "/(.*)\\.(woff|woff2|eot|ttf)",
-      "headers": {
-        "Content-Type": "font/woff2"
-      },
-      "continue": true
-    },
-    {
       "src": "/.*",
       "dest": "/"
     }
