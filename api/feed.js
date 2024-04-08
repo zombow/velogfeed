@@ -23,7 +23,7 @@ module.exports = async (req, res) => {
                 short_description: post.short_description,
                 thumbnail: post.thumbnail,
                 tags: post.tags,
-                //svg: postSVG,
+                svg: postSVG,
             };
             postinfoList.push(postinfo);
         }
