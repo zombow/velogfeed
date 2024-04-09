@@ -12,7 +12,7 @@
     
     // 이미지의 고정된 너비와 높이 설정
     const thumbnailWidth = 410;
-    const thumbnailHeight = 180;
+    const thumbnailHeight = 300;
     
     // 썸네일 이미지를 원하는 위치로 이동시키기 위한 좌표 설정
     const thumbnailX = 15;
