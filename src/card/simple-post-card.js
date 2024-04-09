@@ -6,14 +6,14 @@
     const thumbnailHeight = 126;
 
     // 썸네일 이미지를 원하는 위치로 이동시키기 위한 좌표 설정
-    const thumbnailX = 15; // 원하는 x 좌표
-    const thumbnailY = 15; // 원하는 y 좌표
+    const thumbnailX = 10; // 원하는 x 좌표
+    const thumbnailY = 10; // 원하는 y 좌표
 
     // 각 태그의 사이 간격
-    const tagSpacing = 5;
+    const tagSpacing = 2;
 
     // 태그를 담을 그룹 요소의 시작 y 좌표
-    let tagGroupY = 274;
+    let tagGroupY = 191;
     // 태그를 담을 그룹 요소 생성
     const tagsGroup = [];
     let accumulatedWidth = 0;
@@ -84,7 +84,7 @@
                 </filter>
             </defs>
             <!-- 그림자가 있는 사각형 -->
-            <rect x="5" y="5" rx="5" width="430" height="300" fill="#ffffff" filter="url(#drop-shadow)" />
+            <rect x="5" y="5" rx="5" width="300" height="210" fill="#ffffff" filter="url(#drop-shadow)" />
             <!-- 썸네일 테두리 추가 -->
             <rect x="${thumbnailX}" y="${thumbnailY}" rx="8"  width="${thumbnailWidth}" height="${thumbnailHeight}" stroke="#c6c9ce" stroke-width="1.5" fill="none" />
             <!-- 썸네일 이미지 추가 -->
