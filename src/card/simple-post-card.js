@@ -6,8 +6,8 @@
     const thumbnailHeight = 126;
 
     // 썸네일 이미지를 원하는 위치로 이동시키기 위한 좌표 설정
-    const thumbnailX = 10; // 원하는 x 좌표
-    const thumbnailY = 10; // 원하는 y 좌표
+    const thumbnailX = 10.5; // 원하는 x 좌표
+    const thumbnailY = 10.5; // 원하는 y 좌표
 
     // 각 태그의 사이 간격
     const tagSpacing = 2;
@@ -35,7 +35,7 @@
 
     return `
     <div class="post-card-container">
-        <svg xmlns="http://www.w3.org/2000/svg" width="440px" height="310px" fill="fffefe">
+        <svg xmlns="http://www.w3.org/2000/svg" width="307px" height="217px" fill="fffefe">
             <style>
                 @font-face {
                     font-family:'Warhaven';
