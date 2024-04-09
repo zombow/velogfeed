@@ -2,12 +2,12 @@
     // 패딩 값 설정
     const padding = 20;
     // 이미지의 고정된 너비와 높이 설정
-    const thumbnailWidth = 300;
+    const thumbnailWidth = 297;
     const thumbnailHeight = 126;
 
     // 썸네일 이미지를 원하는 위치로 이동시키기 위한 좌표 설정
-    const thumbnailX = 5; // 원하는 x 좌표
-    const thumbnailY = 5; // 원하는 y 좌표
+    const thumbnailX = 3.5; // 원하는 x 좌표
+    const thumbnailY = 3.5; // 원하는 y 좌표
 
     // 각 태그의 사이 간격
     const tagSpacing = 2;
@@ -84,7 +84,7 @@
                 </filter>
             </defs>
             <!-- 그림자가 있는 사각형 -->
-            <rect x="5" y="5" rx="5" width="297" height="210" fill="#ffffff" filter="url(#drop-shadow)" />
+            <rect x="3.5" y="3.5" rx="5" width="297" height="210" fill="#ffffff" filter="url(#drop-shadow)" />
             <!-- 썸네일 테두리 추가 -->
             <rect x="${thumbnailX}" y="${thumbnailY}" rx="5"  width="${thumbnailWidth}" height="${thumbnailHeight}" stroke="#c6c9ce" stroke-width="1.5" fill="none" />
             <!-- 썸네일 이미지 추가 -->
