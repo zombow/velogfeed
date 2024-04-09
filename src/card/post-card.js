@@ -3,12 +3,12 @@
     const padding = 20;
 
     // 그림자포함 전체 postCard 크기
-    const postcardX = 430;
-    const postcardY = 300;
+    const postcardX = 440;
+    const postcardY = 310;
 
     // 실제 cardBody 크기
-    const cardbodyX = 400;
-    const cardbodyY = 210;
+    const cardbodyX = 430;
+    const cardbodyY = 300;
     
     // 이미지의 고정된 너비와 높이 설정
     const thumbnailWidth = 410;
@@ -45,7 +45,7 @@
 
     return `
     <div class="post-card-container">
-        <svg xmlns="http://www.w3.org/2000/svg" width="440px" height="310px" fill="fffefe">
+        <svg xmlns="http://www.w3.org/2000/svg" width="${postcardX}" height="${postcardY}" fill="fffefe">
             <style>
                 @font-face {
                     font-family:'Warhaven';
@@ -94,25 +94,25 @@
                 </filter>
             </defs>
             <!-- 그림자가 있는 사각형 -->
-            <rect x="5" y="5" rx="5" width="${postcardX}" height="${postcardY}" fill="#ffffff" filter="url(#drop-shadow)" />
+            <rect x="5" y="5" rx="5" width="${cardbodyX}" height="${cardbodyY}" fill="#ffffff" filter="url(#drop-shadow)" />
             <!-- 썸네일 테두리 추가 -->
             <rect x="${thumbnailX}" y="${thumbnailY}" rx="8"  width="${thumbnailWidth}" height="${thumbnailHeight}" stroke="#c6c9ce" stroke-width="1.5" fill="none" />
             <!-- 썸네일 이미지 추가 -->
             <image xlink:href="${thumbnail}" transform="translate(${thumbnailX} , ${thumbnailY})" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-path)" />
-            <g data-testid="card-username" transform="translate(${(postcardX - (postcardX - (padding * 2))) / 2}, 183)">
-                <svg width=${postcardX - (padding * 2)} height="${postcardY}">
+            <g data-testid="card-username" transform="translate(${(cardbodyX - (cardbodyX - (padding * 2))) / 2}, 183)">
+                <svg width=${cardbodyX - (padding * 2)} height="${cardbodyY}">
                     <!-- 유저네임 패딩 적용 -->
                     <text class="header" x="0" y="35" data-testid="header">${user.username + ".log"}</text>
                 </svg>
             </g>
-            <g data-testid="card-title" transform="translate(${(postcardX - (postcardX - (padding * 2))) / 2}, 206)">
-                <svg width=${postcardX - (padding * 2)} height="${postcardY}">
+            <g data-testid="card-title" transform="translate(${(cardbodyX - (cardbodyX - (padding * 2))) / 2}, 206)">
+                <svg width=${cardbodyX - (padding * 2)} height="${cardbodyY}">
                     <!-- 타이틀에 패딩 적용 -->
                     <text class="log-title" x="0" y="35" data-testid="log-title">${title}</text>
                 </svg>
             </g>
-            <g data-testid="card-body" transform="translate(${(postcardX - (postcardX - (padding * 2))) / 2}, 227)">
-                <svg width=${postcardX - (padding * 2)} height="${postcardY}">
+            <g data-testid="card-body" transform="translate(${(cardbodyX - (cardbodyX - (padding * 2))) / 2}, 227)">
+                <svg width=${cardbodyX - (padding * 2)} height="${cardbodyY}">
                     <!-- 쇼트 디스크립션에 패딩 적용 -->
                     <text class="log-description" x="0" y="35">${short_description}</text>
                 </svg>
