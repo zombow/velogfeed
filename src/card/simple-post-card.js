@@ -6,8 +6,8 @@
     const thumbnailHeight = 126;
 
     // 썸네일 이미지를 원하는 위치로 이동시키기 위한 좌표 설정
-    const thumbnailX = 15; // 원하는 x 좌표
-    const thumbnailY = 15; // 원하는 y 좌표
+    const thumbnailX = 10.5; // 원하는 x 좌표
+    const thumbnailY = 10.5; // 원하는 y 좌표
 
     // 각 태그의 사이 간격
     const tagSpacing = 2;
