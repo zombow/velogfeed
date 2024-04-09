@@ -97,19 +97,19 @@
             <rect x="3.5" y="3.5" rx="5" width=${cardBodyX} height=${cardBodyY} fill="#ffffff" filter="url(#drop-shadow)" />
             <!-- 썸네일 이미지 추가 -->
             <image xlink:href="${thumbnail}" transform="translate(${thumbnailX} , ${thumbnailY})" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-path)" />
-            <g data-testid="card-username" transform="translate(${(cardBodyX - (cardBodyX - (padding * 2))) / 2}, 135)">
+            <g data-testid="card-username" transform="translate(${(cardBodyX - (cardBodyX - (padding * 2))) / 2}, 130)">
                 <svg width=${cardBodyX - (padding * 2)} height=${cardBodyY}>
                     <!-- 유저네임 패딩 적용 -->
                     <text class="header" x="0" y="35" data-testid="header">${user.username + ".log"}</text>
                 </svg>
             </g>
-            <g data-testid="card-title" transform="translate(${(cardBodyX - (cardBodyX - (padding * 2))) / 2}, 145)">
+            <g data-testid="card-title" transform="translate(${(cardBodyX - (cardBodyX - (padding * 2))) / 2}, 160)">
                 <svg width=${cardBodyX - (padding * 2)} height=${cardBodyY}>
                     <!-- 타이틀에 패딩 적용 -->
                     <text class="log-title" x="0" y="35" data-testid="log-title">${title}</text>
                 </svg>
             </g>
-            <g data-testid="card-body" transform="translate(${(cardBodyX - (cardBodyX - (padding * 2))) / 2}, 165)">
+            <g data-testid="card-body" transform="translate(${(cardBodyX - (cardBodyX - (padding * 2))) / 2}, 170)">
                 <svg width=${cardBodyX - (padding * 2)} height=${cardBodyY}>
                     <!-- 쇼트 디스크립션에 패딩 적용 -->
                     <text class="log-description" x="0" y="35">${short_description}</text>
