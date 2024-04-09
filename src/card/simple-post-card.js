@@ -6,8 +6,8 @@
     const thumbnailHeight = 126;
 
     // 썸네일 이미지를 원하는 위치로 이동시키기 위한 좌표 설정
-    const thumbnailX = 0; // 원하는 x 좌표
-    const thumbnailY = 0; // 원하는 y 좌표
+    const thumbnailX = 5; // 원하는 x 좌표
+    const thumbnailY = 5; // 원하는 y 좌표
 
     // 각 태그의 사이 간격
     const tagSpacing = 2;
@@ -89,20 +89,20 @@
             <rect x="${thumbnailX}" y="${thumbnailY}" rx="8"  width="${thumbnailWidth}" height="${thumbnailHeight}" stroke="#c6c9ce" stroke-width="1.5" fill="none" />
             <!-- 썸네일 이미지 추가 -->
             <image xlink:href="${thumbnail}" transform="translate(${thumbnailX} , ${thumbnailY})" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-path)" />
-            <g data-testid="card-username" transform="translate(${(430 - (430 - (padding * 2))) / 2}, 183)">
-                <svg width=${430 - (padding * 2)} height="300">
+            <g data-testid="card-username" transform="translate(${(307 - (307 - (padding * 2))) / 2}, 183)">
+                <svg width=${307 - (padding * 2)} height="300">
                     <!-- 유저네임 패딩 적용 -->
                     <text class="header" x="0" y="35" data-testid="header">${user.username + ".log"}</text>
                 </svg>
             </g>
-            <g data-testid="card-title" transform="translate(${(430 - (430 - (padding * 2))) / 2}, 206)">
-                <svg width=${430 - (padding * 2)} height="300">
+            <g data-testid="card-title" transform="translate(${(307 - (307 - (padding * 2))) / 2}, 206)">
+                <svg width=${307 - (padding * 2)} height="300">
                     <!-- 타이틀에 패딩 적용 -->
                     <text class="log-title" x="0" y="35" data-testid="log-title">${title}</text>
                 </svg>
             </g>
-            <g data-testid="card-body" transform="translate(${(430 - (430 - (padding * 2))) / 2}, 227)">
-                <svg width=${430 - (padding * 2)} height="300">
+            <g data-testid="card-body" transform="translate(${(307 - (307 - (padding * 2))) / 2}, 227)">
+                <svg width=${307 - (padding * 2)} height="300">
                     <!-- 쇼트 디스크립션에 패딩 적용 -->
                     <text class="log-description" x="0" y="35">${short_description}</text>
                 </svg>
