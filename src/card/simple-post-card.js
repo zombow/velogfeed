@@ -85,8 +85,6 @@
             </defs>
             <!-- 그림자가 있는 사각형 -->
             <rect x="3.5" y="3.5" rx="5" width="297" height="210" fill="#ffffff" filter="url(#drop-shadow)" />
-            <!-- 썸네일 테두리 추가 -->
-            <rect x="${thumbnailX}" y="${thumbnailY}" rx="5"  width="${thumbnailWidth}" height="${thumbnailHeight}" stroke="#c6c9ce" stroke-width="1.5" fill="none" />
             <!-- 썸네일 이미지 추가 -->
             <image xlink:href="${thumbnail}" transform="translate(${thumbnailX} , ${thumbnailY})" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-path)" />
             <g data-testid="card-username" transform="translate(${(297 - (297 - (padding * 2))) / 2}, 183)">
