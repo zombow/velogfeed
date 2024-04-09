@@ -1,27 +1,29 @@
 ﻿const postcardSVG = (title, thumbnail, short_description, tags, user) => {
     // 패딩 값 설정
     const padding = 20;
-    // 이미지의 고정된 너비와 높이 설정
-    const thumbnailWidth = 297;
-    const thumbnailHeight = 126;
     
     // 전체 postCard 크기
-    const postcardX = 307;
-    const postcardY = 217;
+    const postcardX = 320;
+    const postcardY = 230;
 
     // 실제 cardBody 크기
-    const cardBodyX = 297;
-    const cardBodyY = 210;
-
+    const cardBodyX = 310;
+    const cardBodyY = 220;
+    
+    // 이미지의 고정된 너비와 높이 설정
+    const thumbnailWidth = 310;
+    const thumbnailHeight = 135;
+    
     // 썸네일 이미지를 원하는 위치로 이동시키기 위한 좌표 설정
-    const thumbnailX = 3.5; // 원하는 x 좌표
-    const thumbnailY = 3.5; // 원하는 y 좌표
+    const thumbnailX = 3.5; 
+    const thumbnailY = 3.5;
 
     // 각 태그의 사이 간격
     const tagSpacing = 2;
 
     // 태그를 담을 그룹 요소의 시작 y 좌표
     let tagGroupY = 191;
+    
     // 태그를 담을 그룹 요소 생성
     const tagsGroup = [];
     let accumulatedWidth = 0;
