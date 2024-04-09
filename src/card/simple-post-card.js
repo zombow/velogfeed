@@ -3,15 +3,15 @@
     const padding = 20;
     
     // 그림자포함 전체 postCard 크기
-    const postcardX = 400;
+    const postcardX = 350;
     const postcardY = 240;
 
     // 실제 cardBody 크기
-    const cardBodyX = 390;
+    const cardBodyX = 340;
     const cardBodyY = 230;
     
     // 이미지의 고정된 너비와 높이 설정
-    const thumbnailWidth = 390;
+    const thumbnailWidth = 340;
     const thumbnailHeight = 140;
     
     // 썸네일 이미지를 원하는 위치로 이동시키기 위한 좌표 설정
