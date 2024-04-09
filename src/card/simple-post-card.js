@@ -7,7 +7,7 @@
 
     // 썸네일 이미지를 원하는 위치로 이동시키기 위한 좌표 설정
     const thumbnailX = 3.5; // 원하는 x 좌표
-    const thumbnailY = 3.5; // 원하는 y 좌표
+    const thumbnailY = 3.4; // 원하는 y 좌표
 
     // 각 태그의 사이 간격
     const tagSpacing = 2;
@@ -71,7 +71,7 @@
                     <rect rx="5"  width=${thumbnailWidth} height=${thumbnailHeight} />
                 </clipPath>
                 <!-- 그림자 효과를 위한 필터 정의 -->
-                <filter id="drop-shadow" x="-20%" y="-20%" width="130%" height="130%">
+                <filter id="drop-shadow" x="-20%" y="-20%" width="125%" height="125%">
                     <feGaussianBlur in="SourceAlpha" stdDeviation="3"/> 
                     <feOffset dx="0.5" dy="0.5" result="offsetblur"/>
                     <feComponentTransfer>
