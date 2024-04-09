@@ -2,8 +2,8 @@
     // 패딩 값 설정
     const padding = 20;
     // 이미지의 고정된 너비와 높이 설정
-    const thumbnailWidth = 200;
-    const thumbnailHeight = 180;
+    const thumbnailWidth = 286;
+    const thumbnailHeight = 126;
 
     // 썸네일 이미지를 원하는 위치로 이동시키기 위한 좌표 설정
     const thumbnailX = 15; // 원하는 x 좌표
