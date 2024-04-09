@@ -54,9 +54,9 @@
                     ,url("/assets/fonts/Warhaven_Bold.ttf") format('truetype')
                     ,url("/assets/fonts/Warhaven_Regular.ttf") format('truetype');
                 }                   
-                .header { font: bold 15px 'Warhaven', Sans-Serif; fill: #343A40;}
-                .log-title { font: bold 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #212529 }
-                .log-description { font-size: 16px; fill: #495057}
+                .header { font: bold 14px 'Warhaven', Sans-Serif; fill: #343A40;}
+                .log-title { font: bold 16px 'Segoe UI', Ubuntu, Sans-Serif; fill: #212529 }
+                .log-description { font-size: 13px; fill: #495057}
                 .tag-item { font-size: 14px; fill: #12B886;}
                 .heart-count { font-size: 12px; fill: #495057;}
                 .log-title:hover{ fill: #12B886; text-decoration: underline;}
@@ -97,26 +97,24 @@
             <rect x="3.5" y="3.5" rx="5" width=${cardBodyX} height=${cardBodyY} fill="#ffffff" filter="url(#drop-shadow)" />
             <!-- 썸네일 이미지 추가 -->
             <image xlink:href="${thumbnail}" transform="translate(${thumbnailX} , ${thumbnailY})" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-path)" />
-            <g data-testid="card-username" transform="translate(${(cardBodyX - (cardBodyX - (padding * 2))) / 2}, 120)">
+            <g data-testid="card-username" transform="translate(${(cardBodyX - (cardBodyX - (padding * 2))) / 2}, 135)">
                 <svg width=${cardBodyX - (padding * 2)} height=${cardBodyY}>
                     <!-- 유저네임 패딩 적용 -->
                     <text class="header" x="0" y="35" data-testid="header">${user.username + ".log"}</text>
                 </svg>
             </g>
-            <g data-testid="card-title" transform="translate(${(cardBodyX - (cardBodyX - (padding * 2))) / 2}, 140)">
+            <g data-testid="card-title" transform="translate(${(cardBodyX - (cardBodyX - (padding * 2))) / 2}, 145)">
                 <svg width=${cardBodyX - (padding * 2)} height=${cardBodyY}>
                     <!-- 타이틀에 패딩 적용 -->
                     <text class="log-title" x="0" y="35" data-testid="log-title">${title}</text>
                 </svg>
             </g>
-            <g data-testid="card-body" transform="translate(${(cardBodyX - (cardBodyX - (padding * 2))) / 2}, 160)">
+            <g data-testid="card-body" transform="translate(${(cardBodyX - (cardBodyX - (padding * 2))) / 2}, 165)">
                 <svg width=${cardBodyX - (padding * 2)} height=${cardBodyY}>
                     <!-- 쇼트 디스크립션에 패딩 적용 -->
                     <text class="log-description" x="0" y="35">${short_description}</text>
                 </svg>
             </g>
-            <!-- 태그 추가 -->
-           ${tagsGroup.join('\n')}
         </svg>
     `;
 };
