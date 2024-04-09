@@ -4,10 +4,18 @@
     // 이미지의 고정된 너비와 높이 설정
     const thumbnailWidth = 297;
     const thumbnailHeight = 126;
+    
+    // 전체 postCard 크기
+    const postcardX = 307;
+    const postcardY = 217;
+
+    // 실제 cardBody 크기
+    const cardBodyX = 297;
+    const cardBodyY = 210;
 
     // 썸네일 이미지를 원하는 위치로 이동시키기 위한 좌표 설정
     const thumbnailX = 3.5; // 원하는 x 좌표
-    const thumbnailY = 3.4; // 원하는 y 좌표
+    const thumbnailY = 3.5; // 원하는 y 좌표
 
     // 각 태그의 사이 간격
     const tagSpacing = 2;
@@ -35,7 +43,7 @@
 
     return `
     <div class="post-card-container">
-        <svg xmlns="http://www.w3.org/2000/svg" width="307px" height="217px" fill="fffefe">
+        <svg xmlns="http://www.w3.org/2000/svg" width=${postcardX} height=${postcardY} fill="fffefe">
             <style>
                 @font-face {
                     font-family:'Warhaven';
@@ -71,7 +79,7 @@
                     <rect rx="5"  width=${thumbnailWidth} height=${thumbnailHeight} />
                 </clipPath>
                 <!-- 그림자 효과를 위한 필터 정의 -->
-                <filter id="drop-shadow" x="-20%" y="-20%" width="125%" height="125%">
+                <filter id="drop-shadow" x="-20%" y="-20%" width="130%" height="130%">
                     <feGaussianBlur in="SourceAlpha" stdDeviation="3"/> 
                     <feOffset dx="0.5" dy="0.5" result="offsetblur"/>
                     <feComponentTransfer>
@@ -84,23 +92,23 @@
                 </filter>
             </defs>
             <!-- 그림자가 있는 사각형 -->
-            <rect x="3.5" y="3.5" rx="5" width="297" height="210" fill="#ffffff" filter="url(#drop-shadow)" />
+            <rect x="3.5" y="3.5" rx="5" width=${cardBodyX} height=${cardBodyY} fill="#ffffff" filter="url(#drop-shadow)" />
             <!-- 썸네일 이미지 추가 -->
             <image xlink:href="${thumbnail}" transform="translate(${thumbnailX} , ${thumbnailY})" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-path)" />
-            <g data-testid="card-username" transform="translate(${(297 - (297 - (padding * 2))) / 2}, 183)">
-                <svg width=${297 - (padding * 2)} height="210">
+            <g data-testid="card-username" transform="translate(${(cardBodyX - (cardBodyX - (padding * 2))) / 2}, 183)">
+                <svg width=${cardBodyX - (padding * 2)} height=${cardBodyY}>
                     <!-- 유저네임 패딩 적용 -->
                     <text class="header" x="0" y="35" data-testid="header">${user.username + ".log"}</text>
                 </svg>
             </g>
-            <g data-testid="card-title" transform="translate(${(297 - (297 - (padding * 2))) / 2}, 206)">
-                <svg width=${297 - (padding * 2)} height="210">
+            <g data-testid="card-title" transform="translate(${(cardBodyX - (cardBodyX - (padding * 2))) / 2}, 206)">
+                <svg width=${cardBodyX - (padding * 2)} height=${cardBodyY}>
                     <!-- 타이틀에 패딩 적용 -->
                     <text class="log-title" x="0" y="35" data-testid="log-title">${title}</text>
                 </svg>
             </g>
-            <g data-testid="card-body" transform="translate(${(297 - (297 - (padding * 2))) / 2}, 227)">
-                <svg width=${297 - (padding * 2)} height="210">
+            <g data-testid="card-body" transform="translate(${(cardBodyX - (cardBodyX - (padding * 2))) / 2}, 227)">
+                <svg width=${cardBodyX - (padding * 2)} height=${cardBodyY}>
                     <!-- 쇼트 디스크립션에 패딩 적용 -->
                     <text class="log-description" x="0" y="35">${short_description}</text>
                 </svg>
