@@ -15,8 +15,8 @@
     const thumbnailHeight = 180;
     
     // 썸네일 이미지를 원하는 위치로 이동시키기 위한 좌표 설정
-    const thumbnailX = 0;
-    const thumbnailY = 0; 
+    const thumbnailX = 5;
+    const thumbnailY = 5; 
     
     // 각 태그의 사이 간격
     const tagSpacing = 5;
