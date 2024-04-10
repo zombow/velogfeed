@@ -97,15 +97,16 @@
             <rect x="5" y="5" rx="5" width="${cardbodyX}" height="${cardbodyY}" fill="#ffffff" filter="url(#drop-shadow)" />
             <!-- 썸네일 테두리 추가 -->
             <rect x="${thumbnailX}" y="${thumbnailY}" rx="8"  width="${thumbnailWidth}" height="${thumbnailHeight}" fill="none" />
-            <svg width="${thumbnailWidth}" height="${thumbnailHeight}" fill="none">
-                <!-- 썸네일 이미지 추가 -->
-                <image xlink:href="${thumbnail}" transform="translate(${thumbnailX} , ${thumbnailY})" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" />
-                <!-- 둥근 상단 부분 -->
-                <path d="M0,10 L0,0 Q0,0 10,0 L${thumbnailWidth - 10},0 Q${thumbnailWidth},0 ${thumbnailWidth},10 L${thumbnailWidth},${thumbnailHeight} L0,${thumbnailHeight} Z" />
-                <!-- 직사각형 하단 부분 -->
-                <rect x="0" y="10" width="${thumbnailWidth}" height="${thumbnailHeight - 10}"/>
-            </svg>
-
+                <svg width="${thumbnailWidth}" height="${thumbnailHeight}" fill="none">
+                    <!-- 라운드 썸네일 이미지를 위한 clipPath -->
+                    <defs>
+                    <clipPath id="rounded-bottom">
+                    <rect x="0" y="0" width="${thumbnailWidth}" height="${thumbnailHeight}" rx="10" ry="10" />
+                    </clipPath>
+                    </defs>
+                    <!-- 썸네일 이미지를 적용하고 clip-path를 적용하여 상단은 라운드, 하단은 직사각형으로 보이도록 함 -->
+                    <image xlink:href="${thumbnail}" width="${thumbnailWidth}" height="${thumbnailHeight}" clip-path="url(#rounded-bottom)" />
+                </svg>
             <g data-testid="card-username" transform="translate(${(cardbodyX - (cardbodyX - (padding * 2))) / 2}, 183)">
                 <svg width=${cardbodyX - (padding * 2)} height="${cardbodyY}">
                     <!-- 유저네임 패딩 적용 -->
