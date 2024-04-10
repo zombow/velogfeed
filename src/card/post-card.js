@@ -101,8 +101,24 @@
             </defs>
             <!-- 그림자가 있는 사각형 -->
             <rect x="5" y="5" rx="5" width="${cardbodyX}" height="${cardbodyY}" fill="#ffffff" filter="url(#drop-shadow)" />
-            <!-- 썸네일 테두리 추가 -->
-            <rect x="${thumbnailX}" y="${thumbnailY}" rx="8"  width="${thumbnailWidth}" height="${thumbnailHeight}" fill="none" />
+           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+  <!-- clip-path 정의 -->
+  <defs>
+    <clipPath id="rounded-top">
+      <!-- 썸네일 상단에만 라운드 적용 -->
+      <path d="M0,10
+               H200
+               V90
+               H0
+               A10,10 0 0 1 0,10
+               Z" />
+    </clipPath>
+  </defs>
+
+  <!-- 썸네일 이미지 추가 -->
+  <image xlink:href="${thumbnail}" transform="translate(${thumbnailX} , ${thumbnailY})" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" clip-path="url(#rounded-top)" />
+</svg>
+
             <!-- 썸네일 이미지 추가 -->
             <image xlink:href="${thumbnail}" transform="translate(${thumbnailX} , ${thumbnailY})" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-path)" />
             <g data-testid="card-username" transform="translate(${(cardbodyX - (cardbodyX - (padding * 2))) / 2}, 183)">
