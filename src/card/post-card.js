@@ -103,7 +103,7 @@
                 <!-- 직사각형 하단 부분 -->
                 <rect x="0" y="10" width="${thumbnailWidth}" height="${thumbnailHeight - 10}"/>
                 <!-- 썸네일 이미지 추가 -->
-                <image xlink:href="${thumbnail}" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidyMid slice" />
+                <image xlink:href="${thumbnail}" transform="translate(${thumbnailX} , ${thumbnailY})" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidyMid slice" />
             </svg>
 
             <g data-testid="card-username" transform="translate(${(cardbodyX - (cardbodyX - (padding * 2))) / 2}, 183)">
