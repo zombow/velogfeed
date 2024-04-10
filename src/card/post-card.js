@@ -9,21 +9,21 @@
     // 실제 cardBody 크기
     const cardbodyX = 430;
     const cardbodyY = 300;
-
+    
     // 이미지의 고정된 너비와 높이 설정
-    const thumbnailWidth = 410;
+    const thumbnailWidth = 430;
     const thumbnailHeight = 180;
-
+    
     // 썸네일 이미지를 원하는 위치로 이동시키기 위한 좌표 설정
-    const thumbnailX = 15;
-    const thumbnailY = 15;
-
+    const thumbnailX = 10;
+    const thumbnailY = 10; 
+    
     // 각 태그의 사이 간격
     const tagSpacing = 5;
 
     // 태그를 담을 그룹 요소의 시작 y 좌표
     let tagGroupY = 274;
-
+    
     // 태그를 담을 그룹 요소 생성
     const tagsGroup = [];
     let accumulatedWidth = 0;
@@ -96,9 +96,9 @@
             <!-- 그림자가 있는 사각형 -->
             <rect x="5" y="5" rx="5" width="${cardbodyX}" height="${cardbodyY}" fill="#ffffff" filter="url(#drop-shadow)" />
             <!-- 썸네일 테두리 추가 -->
-            <rect x="${thumbnailX}" y="${thumbnailY}" rx="8"  width="${thumbnailWidth}" height="${thumbnailHeight}" fill="none" />
+            <rect x="${thumbnailX}" y="${thumbnailY}" rx="8" width="${thumbnailWidth}" height="${thumbnailHeight}" fill="none" />
             <!-- 썸네일 이미지 추가 -->
-            <image xlink:href="${thumbnail}" transform="translate(${thumbnailX} , ${thumbnailY})" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" style="border-top: 5px solid red;" />
+            <image xlink:href="${thumbnail}" transform="translate(${thumbnailX} , ${thumbnailY})" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-path)" />
             <g data-testid="card-username" transform="translate(${(cardbodyX - (cardbodyX - (padding * 2))) / 2}, 183)">
                 <svg width=${cardbodyX - (padding * 2)} height="${cardbodyY}">
                     <!-- 유저네임 패딩 적용 -->
