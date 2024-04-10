@@ -15,8 +15,8 @@
     const thumbnailHeight = 180;
     
     // 썸네일 이미지를 원하는 위치로 이동시키기 위한 좌표 설정
-    const thumbnailX = 10;
-    const thumbnailY = 10; 
+    const thumbnailX = 0;
+    const thumbnailY = 0; 
     
     // 각 태그의 사이 간격
     const tagSpacing = 5;
@@ -78,7 +78,7 @@
             </style>
             <defs>
                 <clipPath id="clip-path">
-                    <rect rx="8" width=${thumbnailWidth} height=${thumbnailHeight} />
+                    <rect rx="5" width=${thumbnailWidth} height=${thumbnailHeight} />
                 </clipPath>
                 <!-- 그림자 효과를 위한 필터 정의 -->
                 <filter id="drop-shadow" x="-20%" y="-20%" width="130%" height="130%">
