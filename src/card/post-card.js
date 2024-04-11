@@ -82,10 +82,10 @@
                 </clipPath>
                 <!-- 그림자 효과를 위한 필터 정의 -->
                 <filter id="drop-shadow" x="-20%" y="-20%" width="130%" height="130%">
-                    <feGaussianBlur in="SourceAlpha" stdDeviation="1"/> 
+                    <feGaussianBlur in="SourceAlpha" stdDeviation="2"/> 
                     <feOffset dx="0.5" dy="0.5" result="offsetblur"/>
                     <feComponentTransfer>
-                        <feFuncA type="linear" slope="0.7"/>
+                        <feFuncA type="linear" slope="0.3"/>
                     </feComponentTransfer>
                     <feMerge> 
                         <feMergeNode/> 
