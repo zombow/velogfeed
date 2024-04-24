@@ -44,7 +44,7 @@
     });
 
     return `
-    <div class="post-card-container">
+    <div class="post-card-container newClass">
         <svg xmlns="http://www.w3.org/2000/svg" width="${postcardX}" height="${postcardY}" fill="fffefe">
             <style>
                 @font-face {
@@ -61,7 +61,7 @@
                 .heart-count { font-size: 12px; fill: #495057;}
                 .log-title:hover{ fill: #12B886; text-decoration: underline;}
                 .list-style{ font-size:14px; fill: #212529; }
-                
+              
                 /* 호버 애니메이션 */
                 .post-card-container {
                     transition: transform 0.3s ease-out; /* 호버와 호버 해제에 대한 트랜지션 설정 */
@@ -75,6 +75,10 @@
                 .post-card-container:not(:hover) {
                     transform: translateY(0);
                 }
+                .newClass {
+                      width: clamp(200px, 50vw, 400px);
+                }
+                
             </style>
             <defs>
                 <clipPath id="clip-path">
@@ -102,7 +106,7 @@
             <g data-testid="card-username" transform="translate(${(cardbodyX - (cardbodyX - (padding * 2))) / 2}, 183)">
                 <svg width=${cardbodyX - (padding * 2)} height="${cardbodyY}">
                     <!-- 유저네임 패딩 적용 -->
-                    <text class="header" x="0" y="35" data-testid="header">${user.username + ".log"}</text>
+                    <text class="header newClass" x="0" y="35" data-testid="header">${user.username + ".log"}</text>
                 </svg>
             </g>
             <g data-testid="card-title" transform="translate(${(cardbodyX - (cardbodyX - (padding * 2))) / 2}, 206)">
