@@ -46,19 +46,12 @@
     return `
 <style >
       .newClass {
-      width: clamp(200px, 50vw, 400px);
+      width: clamp(200px, 2vw, 500px);
       }
 </style>
     <div class="post-card-container newClass">
         <svg xmlns="http://www.w3.org/2000/svg" height="${postcardY}" fill="fffefe">
-            <style>
-                @font-face {
-                    font-family:'Warhaven';
-                    src: url("/assets/fonts/Warhaven_OTF_Bold.otf") format('opentype')
-                    ,url("/assets/fonts/Warhaven_OTF_Regular.otf") format('opentype'),
-                    ,url("/assets/fonts/Warhaven_Bold.ttf") format('truetype')
-                    ,url("/assets/fonts/Warhaven_Regular.ttf") format('truetype');
-                }                   
+            <style>                  
                 .header { font: bold 15px 'Warhaven', Sans-Serif; fill: #343A40;}
                 .log-title { font: bold 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #212529 }
                 .log-description { font-size: 16px; fill: #495057}
