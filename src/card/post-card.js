@@ -130,7 +130,7 @@
         const feedElement = document.getElementById('feed');
         feedElement.innerHTML = cardHtml;
     };
-
+    updateCard();
     // 초기 카드를 반환
     return cardHtml;
 };
