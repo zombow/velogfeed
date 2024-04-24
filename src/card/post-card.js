@@ -2,28 +2,16 @@
     // 패딩 값 설정
     const padding = 20;
 
-    // 그림자포함 전체 postCard 크기
-    const postcardX = 440;
-    const postcardY = 310;
-
-    // 실제 cardBody 크기
-    const cardbodyX = 430;
-    const cardbodyY = 300;
-    
     // 이미지의 고정된 너비와 높이 설정
     const thumbnailWidth = 430;
     const thumbnailHeight = 190;
-    
-    // 썸네일 이미지를 원하는 위치로 이동시키기 위한 좌표 설정
-    const thumbnailX = 5;
-    const thumbnailY = 5; 
-    
+
     // 각 태그의 사이 간격
     const tagSpacing = 5;
 
     // 태그를 담을 그룹 요소의 시작 y 좌표
     let tagGroupY = 274;
-    
+
     // 태그를 담을 그룹 요소 생성
     const tagsGroup = [];
     let accumulatedWidth = 0;
@@ -43,7 +31,45 @@
         `);
     });
 
-    return `
+    // SVG 카드를 생성하는 함수
+    const generateCard = () => {
+        // 그림자포함 전체 postCard 크기
+        const postcardX = window.innerWidth - 40; // 윈도우 너비에서 40px을 뺀 값
+        const postcardY = 310;
+
+        // 실제 cardBody 크기
+        const cardbodyX = postcardX - 10;
+        const cardbodyY = 300;
+
+        return `
+            <div class="post-card-container">
+                <svg xmlns="http://www.w3.org/2000/svg" width="${postcardX}" height="${postcardY}" fill="fffefe">
+                    <!-- 나머지 코드는 이전과 동일 -->
+                </svg>
+            </div>
+        `;
+    };
+
+    // 초기 카드 생성
+    let cardHtml = generateCard();
+
+    // 리사이즈 이벤트 핸들러 등록
+    window.addEventListener('resize', () => {
+        // 카드 HTML을 다시 생성
+        cardHtml = generateCard();
+        // 카드를 업데이트
+        updateCard();
+    });
+
+    // 카드 업데이트 함수
+    const updateCard = () => {
+        const feedElement = document.getElementById('feed');
+        feedElement.innerHTML = cardHtml;
+    };
+
+    // 초기 카드를 반환
+    return cardHtml;
+};
     <div class="post-card-container">
         <svg xmlns="http://www.w3.org/2000/svg" width="${postcardX}" height="${postcardY}" fill="fffefe">
             <style>               
