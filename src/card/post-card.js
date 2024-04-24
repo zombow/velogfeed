@@ -44,34 +44,6 @@
         return `
             <div class="post-card-container">
                 <svg xmlns="http://www.w3.org/2000/svg" width="${postcardX}" height="${postcardY}" fill="fffefe">
-                    <!-- 나머지 코드는 이전과 동일 -->
-                </svg>
-            </div>
-        `;
-    };
-
-    // 초기 카드 생성
-    let cardHtml = generateCard();
-
-    // 리사이즈 이벤트 핸들러 등록
-    window.addEventListener('resize', () => {
-        // 카드 HTML을 다시 생성
-        cardHtml = generateCard();
-        // 카드를 업데이트
-        updateCard();
-    });
-
-    // 카드 업데이트 함수
-    const updateCard = () => {
-        const feedElement = document.getElementById('feed');
-        feedElement.innerHTML = cardHtml;
-    };
-
-    // 초기 카드를 반환
-    return cardHtml;
-};
-    <div class="post-card-container">
-        <svg xmlns="http://www.w3.org/2000/svg" width="${postcardX}" height="${postcardY}" fill="fffefe">
             <style>               
                 .header { font: bold 15px 'Warhaven', Sans-Serif; fill: #343A40;}
                 .log-title { font: bold 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #212529 }
@@ -145,6 +117,26 @@
     `;
 };
 
+    // 초기 카드 생성
+    let cardHtml = generateCard();
+
+    // 리사이즈 이벤트 핸들러 등록
+    window.addEventListener('resize', () => {
+        // 카드 HTML을 다시 생성
+        cardHtml = generateCard();
+        // 카드를 업데이트
+        updateCard();
+    });
+
+    // 카드 업데이트 함수
+    const updateCard = () => {
+        const feedElement = document.getElementById('feed');
+        feedElement.innerHTML = cardHtml;
+    };
+
+    // 초기 카드를 반환
+    return cardHtml;
+};
 // 태그의 너비를 계산하는 함수
 const calculateTagWidth = (tag) => {
     let width = 0;
