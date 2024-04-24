@@ -46,11 +46,12 @@
     return `
 <style >
       .newClass {
-      width: clamp(200px, 50vw, 500px);
+      width: clamp(200px, 50vw, {${postcardX}});
+      height: clamp(200px, 50vw, {${postcardY}})
       }
 </style>
     <div class="post-card-container newClass">
-        <svg xmlns="http://www.w3.org/2000/svg" height="${postcardY}" fill="fffefe">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="fffefe">
             <style>                  
                 .header { font: bold 15px 'Warhaven', Sans-Serif; fill: #343A40;}
                 .log-title { font: bold 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #212529 }
