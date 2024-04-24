@@ -44,8 +44,13 @@
     });
 
     return `
+<style >
+      .newClass {
+      width: clamp(200px, 50vw, 400px);
+      }
+</style>
     <div class="post-card-container newClass">
-        <svg xmlns="http://www.w3.org/2000/svg" width="${postcardX}" height="${postcardY}" fill="fffefe">
+        <svg xmlns="http://www.w3.org/2000/svg" height="${postcardY}" fill="fffefe">
             <style>
                 @font-face {
                     font-family:'Warhaven';
@@ -75,9 +80,6 @@
                 .post-card-container:not(:hover) {
                     transform: translateY(0);
                 }
-                .newClass {
-                      width: clamp(200px, 50vw, 400px);
-                }
                 
             </style>
             <defs>
@@ -106,7 +108,7 @@
             <g data-testid="card-username" transform="translate(${(cardbodyX - (cardbodyX - (padding * 2))) / 2}, 183)">
                 <svg width=${cardbodyX - (padding * 2)} height="${cardbodyY}">
                     <!-- 유저네임 패딩 적용 -->
-                    <text class="header newClass" x="0" y="35" data-testid="header">${user.username + ".log"}</text>
+                    <text class="header" x="0" y="35" data-testid="header">${user.username + ".log"}</text>
                 </svg>
             </g>
             <g data-testid="card-title" transform="translate(${(cardbodyX - (cardbodyX - (padding * 2))) / 2}, 206)">
