@@ -46,7 +46,7 @@
     return `
 <style >
       .newClass {
-      width: clamp(200px, 2vw, 500px);
+      width: clamp(200px, 50vw, 500px);
       }
 </style>
     <div class="post-card-container newClass">
