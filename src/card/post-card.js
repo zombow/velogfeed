@@ -46,8 +46,8 @@
     return `
 <style >
       .newClass {
-      width: clamp(200px, 50vw, {${postcardX}});
-      height: clamp(200px, 50vw, {${postcardY}})
+      width: clamp({${postcardX}}, 50vw, {${postcardX}});
+      height: clamp({${postcardY}}, 50vw, {${postcardY}})
       }
 </style>
     <div class="post-card-container newClass">
