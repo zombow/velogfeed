@@ -149,4 +149,4 @@
         return width + 23; // 간격을 추가하여 반환
     };
 
-    module.exports = cardHtml;
+    module.exports = postcardSVG;
