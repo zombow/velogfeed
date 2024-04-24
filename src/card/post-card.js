@@ -66,9 +66,6 @@
                 .post-card-container:not(:hover) {
                     transform: translateY(0);
                 }
-                .card{
-                    clamp:($postcardX)
-                }
             </style>
             <defs>
                 <clipPath id="clip-path">
@@ -114,10 +111,10 @@
             <!-- 태그 추가 -->
            ${tagsGroup.join('\n')}
         </svg>
-    `;
-};
-
-    // 초기 카드 생성
+            </div>
+        `;
+    };
+// 초기 카드 생성
     let cardHtml = generateCard();
 
     // 리사이즈 이벤트 핸들러 등록
@@ -138,18 +135,18 @@
     return cardHtml;
 };
 // 태그의 너비를 계산하는 함수
-const calculateTagWidth = (tag) => {
-    let width = 0;
-    for (let i = 0; i < tag.length; i++) {
-        const char = tag[i];
-        // 한글인 경우
-        if (/[\u3131-\uD79D]/.test(char)) {
-            width += 15; // 한글 폭
-        } else {
-            width += 8; // 영문 및 그 외 폭
+    const calculateTagWidth = (tag) => {
+        let width = 0;
+        for (let i = 0; i < tag.length; i++) {
+            const char = tag[i];
+            // 한글인 경우
+            if (/[\u3131-\uD79D]/.test(char)) {
+                width += 15; // 한글 폭
+            } else {
+                width += 8; // 영문 및 그 외 폭
+            }
         }
-    }
-    return width + 23; // 간격을 추가하여 반환
-};
+        return width + 23; // 간격을 추가하여 반환
+    };
 
-module.exports = postcardSVG;
+    module.exports = postcardSVG;
