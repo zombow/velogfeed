@@ -44,15 +44,9 @@
     });
 
     return `
-<style >
-      .newClass {
-      width: clamp({${postcardX}}, 10vw, {${postcardX}});
-      height: clamp({${postcardY}},10vw, {${postcardY}})
-      }
-</style>
-    <div class="post-card-container newClass">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="fffefe">
-            <style>                  
+    <div class="post-card-container">
+        <svg xmlns="http://www.w3.org/2000/svg" width="${postcardX}" height="${postcardY}" fill="fffefe">
+            <style>               
                 .header { font: bold 15px 'Warhaven', Sans-Serif; fill: #343A40;}
                 .log-title { font: bold 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #212529 }
                 .log-description { font-size: 16px; fill: #495057}
@@ -74,7 +68,9 @@
                 .post-card-container:not(:hover) {
                     transform: translateY(0);
                 }
-                
+                .card{
+                    clamp:($postcardX)
+                }
             </style>
             <defs>
                 <clipPath id="clip-path">
