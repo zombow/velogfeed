@@ -1,4 +1,4 @@
-﻿import '../util/styles.css'
+﻿require('../util/styles.css');
 const postcardSVG = (title, thumbnail, short_description, tags, user) => {
     // 패딩 값 설정
     const padding = 20;
