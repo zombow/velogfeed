@@ -3,10 +3,7 @@
     const padding = 20;
 
     // 그림자포함 전체 postCard 크기
-    let postcardX = document.querySelector("#postcard-svg");
-    window.onresize = function(event){
-        postcardX.setAttribute("width", window.innerWidth.toString());
-    }
+    const postcardX = document.documentElement.clientWidth;
     const postcardY = 310;
 
     // 실제 cardBody 크기
