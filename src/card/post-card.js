@@ -4,7 +4,7 @@
 
     // 그림자포함 전체 postCard 크기
     const postcardX = 440;
-    console.log(postcardX)
+    document.body.innerHTML += '<div>' + postcardX + '</div>'
     const postcardY = 310;
 
     // 실제 cardBody 크기
