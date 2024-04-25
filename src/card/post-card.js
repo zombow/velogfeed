@@ -5,7 +5,8 @@
     // 그림자포함 전체 postCard 크기
     const postcardX = 440;
     const postcardY = 310;
-
+    
+    let testV = document.documentElement.clientWidth;
     // 실제 cardBody 크기
     const cardbodyX = 430;
     const cardbodyY = 300;
@@ -101,7 +102,7 @@
             <g data-testid="card-title" transform="translate(${(cardbodyX - (cardbodyX - (padding * 2))) / 2}, 206)">
                 <svg width=${cardbodyX - (padding * 2)} height="${cardbodyY}">
                     <!-- 타이틀에 패딩 적용 -->
-                    <text class="log-title" x="0" y="35" data-testid="log-title">${postcardX}</text>
+                    <text class="log-title" x="0" y="35" data-testid="log-title">${testV}</text>
                 </svg>
             </g>
             <g data-testid="card-body" transform="translate(${(cardbodyX - (cardbodyX - (padding * 2))) / 2}, 227)">
