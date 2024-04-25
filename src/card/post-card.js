@@ -1,34 +1,15 @@
 ﻿let postcardSVG = (title, thumbnail, short_description, tags, user) => {
-    // 패딩 값 설정
     let padding = 20;
-
-    // 그림자포함 전체 postCard 크기
-    let postcardX = 440;
-    let postcardY = 310;
-
-    // 실제 cardBody 크기
-    let cardbodyX = 430;
-    let cardbodyY = 300;
-    
-    // 이미지의 고정된 너비와 높이 설정
     let thumbnailWidth = 430;
     let thumbnailHeight = 190;
-    
-    // 썸네일 이미지를 원하는 위치로 이동시키기 위한 좌표 설정
     let thumbnailX = 5;
-    let thumbnailY = 5; 
-    
-    // 각 태그의 사이 간격
+    let thumbnailY = 5;
     let tagSpacing = 5;
-
-    // 태그를 담을 그룹 요소의 시작 y 좌표
     let tagGroupY = 274;
-    
-    // 태그를 담을 그룹 요소 생성
+
     let tagsGroup = [];
     let accumulatedWidth = 0;
     tags.forEach((tag, index) => {
-        // 태그의 폭을 계산하는 함수 호출
         const tagWidth = calculateTagWidth(tag);
         const tagHeight = 20;
         const tagX = accumulatedWidth + padding;
@@ -45,8 +26,8 @@
 
     return `
     <div class="post-card-container">
-        <svg xmlns="http://www.w3.org/2000/svg" width="${postcardX}" height="${postcardY}" fill="fffefe">
-            <style>               
+        <svg xmlns="http://www.w3.org/2000/svg" class="post-card-svg" fill="fffefe">
+            <style>                   
                 .header { font: bold 15px 'Warhaven', Sans-Serif; fill: #343A40;}
                 .log-title { font: bold 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #212529 }
                 .log-description { font-size: 16px; fill: #495057}
@@ -121,14 +102,29 @@ let calculateTagWidth = (tag) => {
     let width = 0;
     for (let i = 0; i < tag.length; i++) {
         let char = tag[i];
-        // 한글인 경우
         if (/[\u3131-\uD79D]/.test(char)) {
-            width += 15; // 한글 폭
+            width += 15;
         } else {
-            width += 8; // 영문 및 그 외 폭
+            width += 8;
         }
     }
-    return width + 23; // 간격을 추가하여 반환
+    return width + 23;
 };
+
+// 화면 크기 변경 이벤트를 감지하여 SVG 크기 조절
+window.addEventListener('resize', () => {
+    const postCardSVG = document.querySelector('.post-card-svg');
+    const screenWidth = window.innerWidth;
+
+    // 예시로 모바일 화면이면 SVG 크기를 80%로 설정
+    if (screenWidth < 768) {
+        postCardSVG.setAttribute('width', '80%');
+        postCardSVG.removeAttribute('height'); // 높이는 자동으로 조절되도록 속성 제거
+    } else {
+        // 모바일이 아니면 원래 크기로 설정
+        postCardSVG.setAttribute('width', '440');
+        postCardSVG.setAttribute('height', '310');
+    }
+});
 
 module.exports = postcardSVG;
