@@ -1,4 +1,5 @@
-﻿const postcardSVG = (title, thumbnail, short_description, tags, user) => {
+﻿import '../util/styles.css'
+const postcardSVG = (title, thumbnail, short_description, tags, user) => {
     // 패딩 값 설정
     const padding = 20;
 
@@ -44,7 +45,7 @@
     });
 
     return `
-    <div class="post-card-container">
+    <div class="post-card-container clamp">
         <svg xmlns="http://www.w3.org/2000/svg" width="${postcardX}" height="${postcardY}" fill="fffefe">
             <style>               
                 .header { font: bold 15px 'Warhaven', Sans-Serif; fill: #343A40;}

@@ -1,0 +1,4 @@
+
+.clamp {
+    width: clamp(100px, 50%, 200px);
+}
