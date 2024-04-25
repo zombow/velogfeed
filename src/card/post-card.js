@@ -5,7 +5,7 @@
     // 그림자포함 전체 postCard 크기
     const postcardX = 440;
     const postcardY = 310;
-    document.getElementById("postcardXValue").innerText = postcardX.toString();
+    document.getElementById("postcardXValue").innerText = postcardX;
     // 실제 cardBody 크기
     const cardbodyX = 430;
     const cardbodyY = 300;
@@ -44,8 +44,6 @@
     });
 
     return `
-    <div id="postcardXValue"></div>
-    
     <div class="post-card-container">
         <svg xmlns="http://www.w3.org/2000/svg" width="${postcardX}" height="${postcardY}" fill="fffefe">
             <style>               
