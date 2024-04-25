@@ -46,14 +46,7 @@
     return `
     <div class="post-card-container">
         <svg xmlns="http://www.w3.org/2000/svg" width=${postcardX} height=${postcardY} fill="fffefe">
-            <style>
-                @font-face {
-                    font-family:'Warhaven';
-                    src: url("/assets/fonts/Warhaven_OTF_Bold.otf") format('opentype')
-                    ,url("/assets/fonts/Warhaven_OTF_Regular.otf") format('opentype'),
-                    ,url("/assets/fonts/Warhaven_Bold.ttf") format('truetype')
-                    ,url("/assets/fonts/Warhaven_Regular.ttf") format('truetype');
-                }                   
+            <style>                  
                 .header { font: bold 14px 'Warhaven', Sans-Serif; fill: #343A40;}
                 .log-title { font: bold 14px 'Segoe UI', Ubuntu, Sans-Serif; fill: #212529 }
                 .log-description { font-size: 12px; fill: #495057}
