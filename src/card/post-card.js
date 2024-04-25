@@ -1,30 +1,21 @@
-﻿const { styles } = require("../util");
-const postcardSVG = (title, thumbnail, short_description, tags, user) => {
+﻿const postcardSVG = (title, thumbnail, short_description, tags, user) => {
     // 패딩 값 설정
     const padding = 20;
 
-    // 그림자포함 전체 postCard 크기
-    const postcardX = 440;
-    const postcardY = 310;
-
-    // 실제 cardBody 크기
-    const cardbodyX = 430;
-    const cardbodyY = 300;
-    
     // 이미지의 고정된 너비와 높이 설정
     const thumbnailWidth = 430;
     const thumbnailHeight = 190;
-    
+
     // 썸네일 이미지를 원하는 위치로 이동시키기 위한 좌표 설정
     const thumbnailX = 5;
-    const thumbnailY = 5; 
-    
+    const thumbnailY = 5;
+
     // 각 태그의 사이 간격
     const tagSpacing = 5;
 
     // 태그를 담을 그룹 요소의 시작 y 좌표
     let tagGroupY = 274;
-    
+
     // 태그를 담을 그룹 요소 생성
     const tagsGroup = [];
     let accumulatedWidth = 0;
@@ -44,9 +35,25 @@ const postcardSVG = (title, thumbnail, short_description, tags, user) => {
         `);
     });
 
+    // SVG의 viewBox 값을 조정하는 함수
+    const updateSVGSize = () => {
+        const svg = document.getElementById('postcard-svg');
+        const windowWidth = window.innerWidth;
+        const windowHeight = window.innerHeight;
+
+        // SVG의 viewBox 값을 창의 크기에 맞게 조정
+        svg.setAttribute('viewBox', `0 0 ${windowWidth} ${windowHeight}`);
+    };
+
+    // 초기 SVG 크기 설정
+    updateSVGSize();
+
+    // 창 크기 변경 시 SVG 크기 업데이트
+    window.addEventListener('resize', updateSVGSize);
+
     return `
-    <div class="post-card-container clamp">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="fffefe">
+    <div class="post-card-container">
+        <svg xmlns="http://www.w3.org/2000/svg" width="${postcardX}" height="${postcardY}" fill="fffefe">
             <style>               
                 .header { font: bold 15px 'Warhaven', Sans-Serif; fill: #343A40;}
                 .log-title { font: bold 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #212529 }
@@ -114,6 +121,7 @@ const postcardSVG = (title, thumbnail, short_description, tags, user) => {
             <!-- 태그 추가 -->
            ${tagsGroup.join('\n')}
         </svg>
+    </div>
     `;
 };
 
