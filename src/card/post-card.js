@@ -2,6 +2,14 @@
     // 패딩 값 설정
     const padding = 20;
 
+    // 그림자포함 전체 postCard 크기
+    const postcardX = 440;
+    const postcardY = 310;
+
+    // 실제 cardBody 크기
+    const cardbodyX = 430;
+    const cardbodyY = 300;
+
     // 이미지의 고정된 너비와 높이 설정
     const thumbnailWidth = 430;
     const thumbnailHeight = 190;
@@ -35,94 +43,53 @@
         `);
     });
 
-    // SVG의 viewBox 값을 조정하는 함수
-    const updateSVGSize = () => {
-        const svg = document.getElementById('postcard-svg');
-        const windowWidth = window.innerWidth;
-        const windowHeight = window.innerHeight;
+    // SVG 요소 생성
+    const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg.setAttribute("width", postcardX);
+    svg.setAttribute("height", postcardY);
+    svg.setAttribute("fill", "#fffefe");
 
-        // SVG의 viewBox 값을 창의 크기에 맞게 조정
-        svg.setAttribute('viewBox', `0 0 ${windowWidth} ${windowHeight}`);
-    };
+    // 스타일 추가
+    const style = document.createElement("style");
+    style.textContent = `
+        .header { font: bold 15px 'Warhaven', Sans-Serif; fill: #343A40;}
+        .log-title { font: bold 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #212529 }
+        .log-description { font-size: 16px; fill: #495057}
+        .tag-item { font-size: 14px; fill: #12B886;}
+        .heart-count { font-size: 12px; fill: #495057;}
+        .log-title:hover{ fill: #12B886; text-decoration: underline;}
+        .list-style{ font-size:14px; fill: #212529; }
+      
+        /* 호버 애니메이션 */
+        .post-card-container {
+            transition: transform 0.3s ease-out; /* 호버와 호버 해제에 대한 트랜지션 설정 */
+        }
 
-    // 초기 SVG 크기 설정
-    updateSVGSize();
+        .post-card-container:hover {
+            transform: translateY(-5px); /* 호버될 때 위로 이동하는 애니메이션 */
+        }
 
-    // 창 크기 변경 시 SVG 크기 업데이트
-    window.addEventListener('resize', updateSVGSize);
-
-    return `
-    <div class="post-card-container">
-        <svg id="postcard-svg" xmlns="http://www.w3.org/2000/svg" fill="fffefe">
-            <style>               
-                .header { font: bold 15px 'Warhaven', Sans-Serif; fill: #343A40;}
-                .log-title { font: bold 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #212529 }
-                .log-description { font-size: 16px; fill: #495057}
-                .tag-item { font-size: 14px; fill: #12B886;}
-                .heart-count { font-size: 12px; fill: #495057;}
-                .log-title:hover{ fill: #12B886; text-decoration: underline;}
-                .list-style{ font-size:14px; fill: #212529; }
-              
-                /* 호버 애니메이션 */
-                .post-card-container {
-                    transition: transform 0.3s ease-out; /* 호버와 호버 해제에 대한 트랜지션 설정 */
-                }
-
-                .post-card-container:hover {
-                    transform: translateY(-5px); /* 호버될 때 위로 이동하는 애니메이션 */
-                }
-
-                /* 마우스가 빠져나갈 때 다시 원래 자리로 이동하는 애니메이션 */
-                .post-card-container:not(:hover) {
-                    transform: translateY(0);
-                }
-            </style>
-            <defs>
-                <clipPath id="clip-path">
-                    <rect rx="5" width=${thumbnailWidth} height=${thumbnailHeight} />
-                </clipPath>
-                <!-- 그림자 효과를 위한 필터 정의 -->
-                <filter id="drop-shadow" x="-20%" y="-20%" width="130%" height="130%">
-                    <feGaussianBlur in="SourceAlpha" stdDeviation="2.5"/> 
-                    <feOffset dx="0.5" dy="0.5" result="offsetblur"/>
-                    <feComponentTransfer>
-                        <feFuncA type="linear" slope="0.2"/>
-                    </feComponentTransfer>
-                    <feMerge> 
-                        <feMergeNode/> 
-                        <feMergeNode in="SourceGraphic"/> 
-                    </feMerge>
-                </filter>
-            </defs>
-            <!-- 그림자가 있는 사각형 -->
-            <rect x="5" y="5" rx="5" width="${thumbnailWidth}" height="${thumbnailHeight}" fill="#ffffff" filter="url(#drop-shadow)" />
-            <!-- 썸네일 테두리 추가 -->
-            <rect x="${thumbnailX}" y="${thumbnailY}" rx="8" width="${thumbnailWidth}" height="${thumbnailHeight}" fill="none" />
-            <!-- 썸네일 이미지 추가 -->
-            <image xlink:href="${thumbnail}" transform="translate(${thumbnailX} , ${thumbnailY})" width="${thumbnailWidth}" height="${thumbnailHeight}" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-path)" />
-            <g data-testid="card-username" transform="translate(${(thumbnailWidth - (thumbnailWidth - (padding * 2))) / 2}, 183)">
-                <svg width=${thumbnailWidth - (padding * 2)} height="${thumbnailHeight}">
-                    <!-- 유저네임 패딩 적용 -->
-                    <text class="header" x="0" y="35" data-testid="header">${user.username + ".log"}</text>
-                </svg>
-            </g>
-            <g data-testid="card-title" transform="translate(${(thumbnailWidth - (thumbnailWidth - (padding * 2))) / 2}, 206)">
-                <svg width=${thumbnailWidth - (padding * 2)} height="${thumbnailHeight}">
-                    <!-- 타이틀에 패딩 적용 -->
-                    <text class="log-title" x="0" y="35" data-testid="log-title">${title}</text>
-                </svg>
-            </g>
-            <g data-testid="card-body" transform="translate(${(thumbnailWidth - (thumbnailWidth - (padding * 2))) / 2}, 227)">
-                <svg width=${thumbnailWidth - (padding * 2)} height="${thumbnailHeight}">
-                    <!-- 쇼트 디스크립션에 패딩 적용 -->
-                    <text class="log-description" x="0" y="35">${short_description}</text>
-                </svg>
-            </g>
-            <!-- 태그 추가 -->
-           ${tagsGroup.join('\n')}
-        </svg>
-    </div>
+        /* 마우스가 빠져나갈 때 다시 원래 자리로 이동하는 애니메이션 */
+        .post-card-container:not(:hover) {
+            transform: translateY(0);
+        }
     `;
+    svg.appendChild(style);
+
+    // 나머지 SVG 요소들 추가
+    // ...
+
+    // 태그 그룹 추가
+    const tagsContainer = document.createElement("g");
+    tagsContainer.innerHTML = tagsGroup.join("\n");
+    svg.appendChild(tagsContainer);
+
+    // postcard-container 요소 생성
+    const postcardContainer = document.createElement("div");
+    postcardContainer.classList.add("post-card-container");
+    postcardContainer.appendChild(svg);
+
+    return postcardContainer;
 };
 
 // 태그의 너비를 계산하는 함수
