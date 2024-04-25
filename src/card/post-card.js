@@ -3,7 +3,7 @@
     let padding = 20;
 
     // 그림자포함 전체 postCard 크기
-    let postcardX = 440;
+    let postcardX = 600;
     let postcardY = 310;
 
     // 실제 cardBody 크기
