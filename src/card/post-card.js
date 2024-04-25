@@ -6,7 +6,8 @@
     const postcardX = 440;
     const postcardY = 310;
     
-    let testV = document.documentElement.clientWidth;
+    let testV = screenX;
+    
     // 실제 cardBody 크기
     const cardbodyX = 430;
     const cardbodyY = 300;
