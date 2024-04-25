@@ -1,33 +1,31 @@
-﻿const postcardSVG = (title, thumbnail, short_description, tags, user) => {
+﻿let postcardSVG = (title, thumbnail, short_description, tags, user) => {
     // 패딩 값 설정
-    const padding = 20;
+    let padding = 20;
 
     // 그림자포함 전체 postCard 크기
-    const postcardX = 440;
-    const postcardY = 310;
-    
-    let testV = screenX;
-    
+    let postcardX = 440;
+    let postcardY = 310;
+
     // 실제 cardBody 크기
-    const cardbodyX = 430;
-    const cardbodyY = 300;
+    let cardbodyX = 430;
+    let cardbodyY = 300;
     
     // 이미지의 고정된 너비와 높이 설정
-    const thumbnailWidth = 430;
-    const thumbnailHeight = 190;
+    let thumbnailWidth = 430;
+    let thumbnailHeight = 190;
     
     // 썸네일 이미지를 원하는 위치로 이동시키기 위한 좌표 설정
-    const thumbnailX = 5;
-    const thumbnailY = 5; 
+    let thumbnailX = 5;
+    let thumbnailY = 5; 
     
     // 각 태그의 사이 간격
-    const tagSpacing = 5;
+    let tagSpacing = 5;
 
     // 태그를 담을 그룹 요소의 시작 y 좌표
     let tagGroupY = 274;
     
     // 태그를 담을 그룹 요소 생성
-    const tagsGroup = [];
+    let tagsGroup = [];
     let accumulatedWidth = 0;
     tags.forEach((tag, index) => {
         // 태그의 폭을 계산하는 함수 호출
@@ -103,7 +101,7 @@
             <g data-testid="card-title" transform="translate(${(cardbodyX - (cardbodyX - (padding * 2))) / 2}, 206)">
                 <svg width=${cardbodyX - (padding * 2)} height="${cardbodyY}">
                     <!-- 타이틀에 패딩 적용 -->
-                    <text class="log-title" x="0" y="35" data-testid="log-title">${testV}</text>
+                    <text class="log-title" x="0" y="35" data-testid="log-title">${title}</text>
                 </svg>
             </g>
             <g data-testid="card-body" transform="translate(${(cardbodyX - (cardbodyX - (padding * 2))) / 2}, 227)">
@@ -119,10 +117,10 @@
 };
 
 // 태그의 너비를 계산하는 함수
-const calculateTagWidth = (tag) => {
+let calculateTagWidth = (tag) => {
     let width = 0;
     for (let i = 0; i < tag.length; i++) {
-        const char = tag[i];
+        let char = tag[i];
         // 한글인 경우
         if (/[\u3131-\uD79D]/.test(char)) {
             width += 15; // 한글 폭
