@@ -53,7 +53,7 @@
 
     return `
     <div class="post-card-container">
-        <svg xmlns="http://www.w3.org/2000/svg" width="${postcardX}" height="${postcardY}" fill="fffefe">
+        <svg id="postcard-svg" xmlns="http://www.w3.org/2000/svg" fill="fffefe">
             <style>               
                 .header { font: bold 15px 'Warhaven', Sans-Serif; fill: #343A40;}
                 .log-title { font: bold 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #212529 }
