@@ -45,7 +45,7 @@
 
     return `
     <div class="post-card-container">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${postcardY} ${postcardX}" width="100%" preserveAspectRatio="xMidYMid slice">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${postcardX} ${postcardY}" width="100%" preserveAspectRatio="xMidYMid slice">
             <style>               
                 .header { font: bold 15px 'Warhaven', Sans-Serif; fill: #343A40;}
                 .log-title { font: bold 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #212529 }
