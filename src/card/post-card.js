@@ -3,10 +3,9 @@
     const padding = 20;
 
     // 그림자포함 전체 postCard 크기
-    let postcardX = document.getElementById("postcardX");
+    let postcardX = document.querySelector("#postcard-svg");
     window.onresize = function(event){
-        var innerWidth = window.innerWidth;
-        postcardX = innerWidth;
+        postcardX.setAttribute("width", window.innerWidth.toString());
     }
     const postcardY = 310;
 
