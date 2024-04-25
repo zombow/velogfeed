@@ -3,7 +3,7 @@
     const padding = 20;
 
     // 그림자포함 전체 postCard 크기
-    const postcardX = document.documentElement.clientWidth;
+    const postcardX = 440;
     const postcardY = 310;
 
     // 실제 cardBody 크기
