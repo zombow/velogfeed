@@ -49,15 +49,18 @@
             <style>               
                 .header { font: bold 15px 'Warhaven', Sans-Serif; fill: #343A40;}
                 .log-title { font: bold 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #212529 }
-                .log-description {  display: inline-block; /* 또는 inline */
-  white-space: nowrap;
-  text-overflow: ellipsis;!important
-  font-size: 16px; fill: #495057}
+                .log-description { font-size: 16px; fill: #495057}
                 .tag-item { font-size: 14px; fill: #12B886;}
                 .heart-count { font-size: 12px; fill: #495057;}
                 .log-title:hover{ fill: #12B886; text-decoration: underline;}
                 .list-style{ font-size:14px; fill: #212529; }
-              
+              .line1-ellipsis {
+display: block;/* 블록태그로 만들어준다 */
+text-overflow: ellipsis;/* 말줄임 css */
+white-space: nowrap;/*글자를 한줄로 모아준다*/
+overflow: hidden;
+background:pink;/*실제 글자 영역 상태 확인하기 위함*/
+}
                 /* 호버 애니메이션 */
                 .post-card-container {
                     transition: transform 0.3s ease-out; /* 호버와 호버 해제에 대한 트랜지션 설정 */
@@ -110,7 +113,7 @@
             <g data-testid="card-body" transform="translate(${(cardbodyX - (cardbodyX - (padding * 2))) / 2}, 227)">
                 <svg width=${cardbodyX - (padding * 2)} height="${cardbodyY}">
                     <!-- 쇼트 디스크립션에 패딩 적용 -->
-                    <text class="log-description" x="0" y="35">${short_description}</text>
+                    <text class="log-description line1-ellipsis" x="0" y="35"">${short_description}</text>
                 </svg>
             </g>
             <!-- 태그 추가 -->
