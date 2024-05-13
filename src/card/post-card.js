@@ -55,7 +55,7 @@
                 .log-title:hover{ fill: #12B886; text-decoration: underline;}
                 .list-style{ font-size:14px; fill: #212529; }
                 .ellipsis {
-                    background:pink;
+                    font-size:100px;
                 }
                 /* 호버 애니메이션 */
                 .post-card-container {
