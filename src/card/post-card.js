@@ -56,10 +56,11 @@
                 .list-style{ font-size:14px; fill: #212529; }
                 .ellipsis{
                 display:block;
-                white-space:nowrap;
-                overflow:hidden;
-                text-overflow:ellipsis;
-                }
+         width: 250px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden; 
+}
               
                 /* 호버 애니메이션 */
                 .post-card-container {
