@@ -55,7 +55,6 @@
                 .log-title:hover{ fill: #12B886; text-decoration: underline;}
                 .list-style{ font-size:14px; fill: #212529; }
               .line1-ellipsis {
-display: block;/* 블록태그로 만들어준다 */
 
 }
                 /* 호버 애니메이션 */
