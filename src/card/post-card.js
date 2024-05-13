@@ -49,13 +49,13 @@
             <style>               
                 .header { font: bold 15px 'Warhaven', Sans-Serif; fill: #343A40;}
                 .log-title { font: bold 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #212529 }
-                .log-description { font-size: 16px; fill: #495057}
+                .log-description { font-size: 16px;}
                 .tag-item { font-size: 14px; fill: #12B886;}
                 .heart-count { font-size: 12px; fill: #495057;}
                 .log-title:hover{ fill: #12B886; text-decoration: underline;}
                 .list-style{ font-size:14px; fill: #212529; }
                 .ellipsis {
-                    font-size:100px;
+                    background:pink;
                 }
                 /* 호버 애니메이션 */
                 .post-card-container {
