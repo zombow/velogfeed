@@ -54,10 +54,13 @@
                 .heart-count { font-size: 12px; fill: #495057;}
                 .log-title:hover{ fill: #12B886; text-decoration: underline;}
                 .list-style{ font-size:14px; fill: #212529; }
-                .textellipsis{
-                overflow: hidden;
-                text-overflow-ellipsis: elipsis;
+                .text-container {
+                    width: 200px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                 }
+
                 /* 호버 애니메이션 */
                 .post-card-container {
                     transition: transform 0.3s ease-out; /* 호버와 호버 해제에 대한 트랜지션 설정 */
@@ -110,7 +113,7 @@
             <g data-testid="card-body" transform="translate(${(cardbodyX - (cardbodyX - (padding * 2))) / 2}, 227)">
                 <svg width=${cardbodyX} height="${cardbodyY}">
                     <!-- 쇼트 디스크립션에 패딩 적용 -->
-                    <text class="log-description textellipsis" x="0" y="35" lengthAdjust="spacingAndGlyphs">${short_description}</text>
+                    <text class="log-description text-container" x="0" y="35" lengthAdjust="spacingAndGlyphs">${short_description}</text>
                 </svg>
             </g>
             <!-- 태그 추가 -->
