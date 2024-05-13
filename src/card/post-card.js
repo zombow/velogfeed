@@ -4,7 +4,7 @@
 
     // 그림자포함 전체 postCard 크기
     let postcardX = 440;
-    let postcardY = 3100;
+    let postcardY = 310;
 
     // 실제 cardBody 크기
     let cardbodyX = 430;
