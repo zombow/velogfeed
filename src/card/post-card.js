@@ -9,21 +9,21 @@
     // 실제 cardBody 크기
     let cardbodyX = 430;
     let cardbodyY = 300;
-
+    
     // 이미지의 고정된 너비와 높이 설정
     let thumbnailWidth = 430;
     let thumbnailHeight = 190;
-
+    
     // 썸네일 이미지를 원하는 위치로 이동시키기 위한 좌표 설정
     let thumbnailX = 5;
-    let thumbnailY = 5;
-
+    let thumbnailY = 5; 
+    
     // 각 태그의 사이 간격
     let tagSpacing = 5;
 
     // 태그를 담을 그룹 요소의 시작 y 좌표
     let tagGroupY = 274;
-
+    
     // 태그를 담을 그룹 요소 생성
     let tagsGroup = [];
     let accumulatedWidth = 0;
@@ -43,35 +43,6 @@
         `);
     });
 
-    // 텍스트 끝에 '...'을 붙이는 함수
-    function addEllipsis(text, maxLength) {
-        if (text.length > maxLength) {
-            return text.slice(0, maxLength - 3) + '...'; // 맨 끝에 '...'을 추가합니다.
-        } else {
-            return text;
-        }
-    }
-
-    // 특정 엘리먼트의 텍스트 끝에 '...'을 붙이고 배열로 반환하는 함수
-    function addEllipsisToElements(selector, maxLength) {
-        const elements = document.querySelectorAll(selector);
-        const truncatedTexts = [];
-        elements.forEach(element => {
-            const text = element.textContent.trim();
-            const truncatedText = addEllipsis(text, maxLength);
-            truncatedTexts.push(truncatedText);
-            element.textContent = truncatedText;
-        });
-        return truncatedTexts;
-    }
-
-    // 원하는 엘리먼트를 셀렉하고, 텍스트 끝에 '...'을 붙인 후 배열로 반환
-    const truncatedTexts = addEllipsisToElements('.tit', 50); // 여기서 50은 원하는 길이입니다.
-
-    // 셀렉된 엘리먼트의 텍스트가 배열로 반환되었습니다. 이를 원하는 대로 활용할 수 있습니다.
-
-    // 여기에 반환된 배열을 어떻게 활용하고 싶으신지에 따라 코드를 추가하시면 됩니다.
-
     return `
     <div class="post-card-container">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${postcardX} ${postcardY}" width="100%" preserveAspectRatio="xMidYMid slice">
@@ -83,7 +54,13 @@
                 .heart-count { font-size: 12px; fill: #495057;}
                 .log-title:hover{ fill: #12B886; text-decoration: underline;}
                 .list-style{ font-size:14px; fill: #212529; }
-                
+                .ellipsis{
+                display:block;
+                white-space:nowrap;
+                overflow:hidden;
+                text-overflow-ellipsis: ;
+                }
+              
                 /* 호버 애니메이션 */
                 .post-card-container {
                     transition: transform 0.3s ease-out; /* 호버와 호버 해제에 대한 트랜지션 설정 */
@@ -134,9 +111,9 @@
                 </svg>
             </g>
             <g data-testid="card-body" transform="translate(${(cardbodyX - (cardbodyX - (padding * 2))) / 2}, 227)">
-                <svg width=${cardbodyX} height="${cardbodyY}">
+                <svg width=${cardbodyX - (padding * 2)} height="${cardbodyY}">
                     <!-- 쇼트 디스크립션에 패딩 적용 -->
-                    <text class="log-description" x="0" y="35">${truncatedDescription}</text>
+                    <text class="log-description ellipsis" x="0" y="35">${short_description}</text>
                 </svg>
             </g>
             <!-- 태그 추가 -->
