@@ -51,7 +51,7 @@
                 .log-title { font: bold 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #212529 }
                 .log-description {  display: inline-block; /* 또는 inline */
   white-space: nowrap;
-  text-overflow: ellipsis;
+  text-overflow: ellipsis;!important
   font-size: 16px; fill: #495057}
                 .tag-item { font-size: 14px; fill: #12B886;}
                 .heart-count { font-size: 12px; fill: #495057;}
