@@ -9,21 +9,21 @@
     // 실제 cardBody 크기
     let cardbodyX = 430;
     let cardbodyY = 300;
-    
+
     // 이미지의 고정된 너비와 높이 설정
     let thumbnailWidth = 430;
     let thumbnailHeight = 190;
-    
+
     // 썸네일 이미지를 원하는 위치로 이동시키기 위한 좌표 설정
     let thumbnailX = 5;
-    let thumbnailY = 5; 
-    
+    let thumbnailY = 5;
+
     // 각 태그의 사이 간격
     let tagSpacing = 5;
 
     // 태그를 담을 그룹 요소의 시작 y 좌표
     let tagGroupY = 274;
-    
+
     // 태그를 담을 그룹 요소 생성
     let tagsGroup = [];
     let accumulatedWidth = 0;
@@ -54,13 +54,14 @@
                 .heart-count { font-size: 12px; fill: #495057;}
                 .log-title:hover{ fill: #12B886; text-decoration: underline;}
                 .list-style{ font-size:14px; fill: #212529; }
-              .div2 {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-}
+                .text-container {
+                    width: 100%;
+                    display: block;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+
                 /* 호버 애니메이션 */
                 .post-card-container {
                     transition: transform 0.3s ease-out; /* 호버와 호버 해제에 대한 트랜지션 설정 */
@@ -113,7 +114,7 @@
             <g data-testid="card-body" transform="translate(${(cardbodyX - (cardbodyX - (padding * 2))) / 2}, 227)">
                 <svg width=${cardbodyX} height="${cardbodyY}">
                     <!-- 쇼트 디스크립션에 패딩 적용 -->
-                    <text class="log-description div2" x="0" y="35">${short_description}</text>
+                    <text class="log-description text-container" x="0" y="35">${short_description}</text>
                 </svg>
             </g>
             <!-- 태그 추가 -->
