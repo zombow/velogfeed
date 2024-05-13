@@ -56,9 +56,7 @@
                 .list-style{ font-size:14px; fill: #212529; }
               .line1-ellipsis {
 display: block;/* 블록태그로 만들어준다 */
-white-space: nowrap;/*글자를 한줄로 모아준다*/
-overflow: hidden;
-background:pink;/*실제 글자 영역 상태 확인하기 위함*/
+
 }
                 /* 호버 애니메이션 */
                 .post-card-container {
