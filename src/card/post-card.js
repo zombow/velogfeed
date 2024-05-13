@@ -55,8 +55,6 @@
                 .log-title:hover{ fill: #12B886; text-decoration: underline;}
                 .list-style{ font-size:14px; fill: #212529; }
                 .ellipsis {
-                    display: block;
-
                     background:pink;
                 }
                 /* 호버 애니메이션 */
