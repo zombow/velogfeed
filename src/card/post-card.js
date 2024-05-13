@@ -54,12 +54,8 @@
                 .heart-count { font-size: 12px; fill: #495057;}
                 .log-title:hover{ fill: #12B886; text-decoration: underline;}
                 .list-style{ font-size:14px; fill: #212529; }
-                .ellipsis {
-                    display: block;
-                    overflow: hidden;
-                    white-space: nowrap;
+                p{
                     text-overflow: ellipsis;
-                    background:pink;
                 }
                 /* 호버 애니메이션 */
                 .post-card-container {
@@ -113,7 +109,7 @@
             <g data-testid="card-body" transform="translate(${(cardbodyX - (cardbodyX - (padding * 2))) / 2}, 227)">
                 <svg width=${cardbodyX - (padding * 2)} height="${cardbodyY}">
                     <!-- 쇼트 디스크립션에 패딩 적용 -->
-                    <div class="log-description ellipsis" x="0" y="35">${short_description} </div>
+                    <p class="log-description" x="0" y="35">${short_description}</p>
                 </svg>
             </g>
             <!-- 태그 추가 -->
