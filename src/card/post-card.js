@@ -56,7 +56,7 @@
                 .list-style{ font-size:14px; fill: #212529; }
                 .ellipsis{
                 display:block;
-         width: 250px;
+         width: 25px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden; 
