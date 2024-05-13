@@ -32,7 +32,7 @@
     
     var ellipsisText = shorttext;
     while (true) {
-    if (ellipsisText.offsetWidth <= maxWidth) {
+    if (ellipsisText.offsetWidth <= 100) {
         break;
     }
     ellipsisText = ellipsisText.slice(0, -1);
