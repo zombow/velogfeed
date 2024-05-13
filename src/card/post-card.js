@@ -56,9 +56,7 @@
                 .list-style{ font-size:14px; fill: #212529; }
                 .ellipsis {
                     display: block;
-                    overflow: hidden;
-                    white-space: nowrap;
-                    text-overflow: ellipsis;
+
                     background:pink;
                 }
                 /* 호버 애니메이션 */
