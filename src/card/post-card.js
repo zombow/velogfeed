@@ -48,7 +48,10 @@
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${postcardX} ${postcardY}" width="100%" preserveAspectRatio="xMidYMid slice">
             <style>               
                 .header { font: bold 15px 'Warhaven', Sans-Serif; fill: #343A40;}
-                .log-title { font: bold 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #212529 }
+                .log-title {  display: inline-block; /* 또는 inline */
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font: bold 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #212529 }
                 .log-description { font-size: 16px; fill: #495057}
                 .tag-item { font-size: 14px; fill: #12B886;}
                 .heart-count { font-size: 12px; fill: #495057;}
