@@ -27,6 +27,17 @@
     // 태그를 담을 그룹 요소 생성
     let tagsGroup = [];
     let accumulatedWidth = 0;
+    
+    var shorttext = short_description;
+    
+    var ellipsisText = shorttext;
+    while (true) {
+    if (ellipsisText.offsetWidth <= maxWidth) {
+        break;
+    }
+    ellipsisText = ellipsisText.slice(0, -1);
+}
+ellipsisText += '...'; // 말줄임표 추가
     tags.forEach((tag, index) => {
         // 태그의 폭을 계산하는 함수 호출
         const tagWidth = calculateTagWidth(tag);
@@ -54,8 +65,8 @@
                 .heart-count { font-size: 12px; fill: #495057;}
                 .log-title:hover{ fill: #12B886; text-decoration: underline;}
                 .list-style{ font-size:14px; fill: #212529; }
-                .text-ellipsis {
-
+                .text-ellipsis{
+                text-overflow: ellipsis;
                 }
                 /* 호버 애니메이션 */
                 .post-card-container {
@@ -106,12 +117,12 @@
                     <text class="log-title" x="0" y="35" data-testid="log-title">${title}</text>
                 </svg>
             </g>
-            <div>
+            <g data-testid="card-body" transform="translate(${(cardbodyX - (cardbodyX - (padding * 2))) / 2}, 227)">
                 <svg width=${cardbodyX - (padding * 2)} height="${cardbodyY}">
                     <!-- 쇼트 디스크립션에 패딩 적용 -->
-                    <text class="log-description" x="0" y="35">${short_description}</text>
+                    <text class="log-description" x="0" y="35">${ellipsisText}</text>
                 </svg>
-            </div>
+            </g>
             <!-- 태그 추가 -->
            ${tagsGroup.join('\n')}
         </svg>
