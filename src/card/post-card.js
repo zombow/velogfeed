@@ -48,11 +48,11 @@
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${postcardX} ${postcardY}" width="100%" preserveAspectRatio="xMidYMid slice">
             <style>               
                 .header { font: bold 15px 'Warhaven', Sans-Serif; fill: #343A40;}
-                .log-title {  display: inline-block; /* 또는 inline */
+                .log-title { font: bold 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #212529 }
+                .log-description {  display: inline-block; /* 또는 inline */
   white-space: nowrap;
   text-overflow: ellipsis;
-  font: bold 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #212529 }
-                .log-description { font-size: 16px; fill: #495057}
+  font-size: 16px; fill: #495057}
                 .tag-item { font-size: 14px; fill: #12B886;}
                 .heart-count { font-size: 12px; fill: #495057;}
                 .log-title:hover{ fill: #12B886; text-decoration: underline;}
@@ -107,11 +107,12 @@
                     <text class="log-title" x="0" y="35" data-testid="log-title">${title}</text>
                 </svg>
             </g>
-<g data-testid="card-body" transform="translate(${(cardbodyX - (cardbodyX - (padding * 2))) / 2}, 227)">
-        <svg class="ellipsis" width=${cardbodyX - (padding * 2)} height="${cardbodyY}">
-            <text class="log-description" x="0" y="35" style="white-space: nowrap; text-overflow: ellipsis;">${short_description}</text>
-        </svg>
-    </g>
+            <g data-testid="card-body" transform="translate(${(cardbodyX - (cardbodyX - (padding * 2))) / 2}, 227)">
+                <svg width=${cardbodyX - (padding * 2)} height="${cardbodyY}">
+                    <!-- 쇼트 디스크립션에 패딩 적용 -->
+                    <text class="log-description" x="0" y="35">${short_description}</text>
+                </svg>
+            </g>
             <!-- 태그 추가 -->
            ${tagsGroup.join('\n')}
         </svg>
