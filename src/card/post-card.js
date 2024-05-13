@@ -104,12 +104,11 @@
                     <text class="log-title" x="0" y="35" data-testid="log-title">${title}</text>
                 </svg>
             </g>
-            <g data-testid="card-body" transform="translate(${(cardbodyX - (cardbodyX - (padding * 2))) / 2}, 227)">
-                <svg width=${cardbodyX - (padding * 2)} height="${cardbodyY}">
-                    <!-- 쇼트 디스크립션에 패딩 적용 -->
-                    <text class="log-description" x="0" y="35">${short_description}</text>
-                </svg>
-            </g>
+<g data-testid="card-body" transform="translate(${(cardbodyX - (cardbodyX - (padding * 2))) / 2}, 227)">
+        <svg class="ellipsis" width=${cardbodyX - (padding * 2)} height="${cardbodyY}">
+            <text class="log-description" x="0" y="35" style="white-space: nowrap; text-overflow: ellipsis;">${short_description}</text>
+        </svg>
+    </g>
             <!-- 태그 추가 -->
            ${tagsGroup.join('\n')}
         </svg>
@@ -121,25 +120,13 @@ let calculateTagWidth = (tag) => {
     let width = 0;
     for (let i = 0; i < tag.length; i++) {
         let char = tag[i];
-
         // 한글인 경우
         if (/[\u3131-\uD79D]/.test(char)) {
-            // 실제 한글자 너비 계산
-            let span = document.createElement('span');
-            span.textContent = char;
-            span.style.visibility = 'hidden';
-            document.body.appendChild(span);
-            width += span.clientWidth;
-            document.body.removeChild(span);
-        } else if (char === ' ') {
-            // 공백 제외
-            continue;
+            width += 15; // 한글 폭
         } else {
-            // 영문 및 특수문자: 8픽셀로 계산
-            width += 8;
+            width += 8; // 영문 및 그 외 폭
         }
     }
-
     return width + 23; // 간격을 추가하여 반환
 };
 
