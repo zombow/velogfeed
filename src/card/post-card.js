@@ -4,7 +4,7 @@
 
     // 그림자포함 전체 postCard 크기
     let postcardX = 440;
-    let postcardY = 310;
+    let postcardY = 3100;
 
     // 실제 cardBody 크기
     let cardbodyX = 430;
@@ -49,14 +49,7 @@
             <style>               
                 .header { font: bold 15px 'Warhaven', Sans-Serif; fill: #343A40;}
                 .log-title { font: bold 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #212529 }
-                .log-description { 
-                 font-size: 16px;
-                 fill: #495057;
-                 display:block;
-                 white-space:nowrap;
-                 overflow:hidden;
-                 text-overflow:ellipsis;
-                 }
+                .log-description { font-size: 16px; fill: #495057;}
                 .tag-item { font-size: 14px; fill: #12B886;}
                 .heart-count { font-size: 12px; fill: #495057;}
                 .log-title:hover{ fill: #12B886; text-decoration: underline;}
@@ -120,7 +113,7 @@
             <g data-testid="card-body" transform="translate(${(cardbodyX - (cardbodyX - (padding * 2))) / 2}, 227)">
                 <svg width=${cardbodyX - (padding * 2)} height="${cardbodyY}">
                     <!-- 쇼트 디스크립션에 패딩 적용 -->
-                    <text class="ellipsis" x="0" y="35">${short_description}</text>
+                    <text class="log-description ellipsis" x="0" y="35">${short_description}</text>
                 </svg>
             </g>
             <!-- 태그 추가 -->
