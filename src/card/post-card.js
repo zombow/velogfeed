@@ -110,7 +110,9 @@
             <g data-testid="card-body" transform="translate(${(cardbodyX - (cardbodyX - (padding * 2))) / 2}, 227)">
                 <svg width=${cardbodyX - (padding * 2)} height="${cardbodyY}">
                     <!-- 쇼트 디스크립션에 패딩 적용 -->
-                    <text class="log-description text-ellipsis" x="0" y="35">${short_description}</text>
+                    <div>
+                        <text class="log-description text-ellipsis" x="0" y="35">${short_description}</text>
+                    </div>
                 </svg>
             </g>
             <!-- 태그 추가 -->
