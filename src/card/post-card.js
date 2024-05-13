@@ -55,7 +55,11 @@
                 .log-title:hover{ fill: #12B886; text-decoration: underline;}
                 .list-style{ font-size:14px; fill: #212529; }
                 .ellipsis {
-                    background:pink;
+                    display: block;/* 블록태그로 만들어준다 */
+                    text-overflow: ellipsis;/* 말줄임 css */
+                    white-space: nowrap;/*글자를 한줄로 모아준다*/
+                    overflow: hidden;
+                    background:pink;/*실제 글자 영역 상태 확인하기 위함*/
                 }
                 /* 호버 애니메이션 */
                 .post-card-container {
@@ -110,6 +114,7 @@
                 <svg width=${cardbodyX - (padding * 2)} height="${cardbodyY}">
                     <!-- 쇼트 디스크립션에 패딩 적용 -->
                     <text class="log-description ellipsis" x="0" y="35">${short_description}</text>
+                    <div class="ellipsis">"aaaaaaaaaaaaaaaaaaaaaa"</div>
                 </svg>
             </g>
             <!-- 태그 추가 -->
