@@ -111,7 +111,7 @@
                 </svg>
             </g>
             <g data-testid="card-body" transform="translate(${(cardbodyX - (cardbodyX - (padding * 2))) / 2}, 227)">
-                <svg width=${cardbodyX - (padding * 2)} height="${cardbodyY}">
+                <svg width=${cardbodyX} height="${cardbodyY}">
                     <!-- 쇼트 디스크립션에 패딩 적용 -->
                     <text class="log-description div2" x="0" y="35">${short_description}</text>
                 </svg>
